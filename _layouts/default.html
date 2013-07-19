@@ -15,15 +15,7 @@
 </head>
 
 <body>
-  <header>
-    <h1><a href="/">{{ site.name }}</a></h1>
-  </header>
-
   {{ content }}
-
-  <footer>
-    <a href="http://www.w3.org/html/logo/"><img src="{% asset_path  html5-badge-h-css3-semantics.png %}" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" width="165" height="64" /></a>
-  </footer>
 
   <script>
     document.write( ( '__proto__' in {} ? '{{ "vendor/zepto" | javascript | replace:"/script","\/script" }}' : '{{ "vendor/jquery" | javascript | replace:"/script","\/script" }}' ) );

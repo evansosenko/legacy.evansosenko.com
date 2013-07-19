@@ -1,0 +1,44 @@
+a
+  text-decoration: none
+  color: inherit
+  &:visited, &:hover
+    color: inherit
+
+#top
+  text-align: center
+  margin-bottom: 3em
+
+#banner
+  width: 100%
+  height: $banner_height
+  margin: 0.2 * $banner_height auto
+  margin-bottom: 1em
+  padding-top: 0.5 * $banner_height
+  background-color: $clr_blue_green
+
+#title
+  color: $site_title_clr
+  font-family: $site_title_font
+  font-size: $site_title_font_size
+  font-weight: normal
+  text-transform: lowercase
+  &:before
+    content: "{"
+  &:after
+    content: "}"
+  span
+    width: 0
+    margin-left: -0.35em
+    display: inline-block
+    &:before
+      content: "|"
+      font-weight: bold
+
+#external
+  display: inline-block
+  margin-top: emCalc( 10px )
+  ul
+    +horizontal-list
+
+#email_modal
+  text-align: center
