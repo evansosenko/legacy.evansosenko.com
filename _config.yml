@@ -12,3 +12,8 @@ assets:
 google_analytics: UA-19631381-1
 piwik: evansosenko.com/piwik/
 
+:deploy:
+  :server: evansosenko.com
+  :user: webmaster
+  :port: 50000
+  :path: /usr/local/www/vhosts/evansosenko.com/htdocs/
