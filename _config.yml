@@ -8,3 +8,6 @@ assets:
   compress:
     css: sass
     js: uglifier
+
+google_analytics: UA-19631381-1
+
