@@ -1,7 +1,6 @@
 # Jekyll & ZURB
 
-Source for your personal blog running on Jekyll and Foundation.
-Just clone and blog: create the `_posts` and `_drafts` folder.
+Source for my personal blog running on Jekyll and Foundation.
 
 - Bare bones: HTML5 & CSS3 ready.
 - Running [Foundation by ZURB](http://foundation.zurb.com/).
