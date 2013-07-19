@@ -10,4 +10,5 @@ assets:
     js: uglifier
 
 google_analytics: UA-19631381-1
+piwik: evansosenko.com/piwik/
 
