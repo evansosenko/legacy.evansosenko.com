@@ -12,14 +12,13 @@ a
   width: 100%
   height: $banner_height
   margin: 0.2 * $banner_height auto
-  margin-bottom: 1em
-  padding-top: 0.5 * $banner_height
+  margin-bottom: 0.2em
+  padding-top: 0.3 * $banner_height
   background-color: $clr_blue_green
 
 #title
   color: $site_title_clr
   font-family: $site_title_font
-  font-size: $site_title_font_size
   font-weight: normal
   text-transform: lowercase
   &:before
@@ -36,9 +35,8 @@ a
 
 #external
   display: inline-block
-  margin-top: emCalc( 10px )
   ul
-    +horizontal-list
+    +inline-list
 
 #email_modal
   text-align: center
