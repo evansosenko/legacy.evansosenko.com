@@ -70,13 +70,16 @@ $cv_first_column_padding: 30px
       visibility: hidden
       height: 0
       position: absolute
-      top: -50px
-      @media only screen and (max-width: 767px)
-        top: -100px
+      top: -100px
+      @media #{$small}
+        top: -50px
     .entry
       +grid-column
       +grid-row
-      @media only screen and (min-width: 767px)
+      padding-left: emCalc(40px)
+      .date
+        margin-bottom: 0
+      @media #{$small}
         .name
           +grid-column(8, $push: 4)
           padding-left: 0
@@ -86,10 +89,7 @@ $cv_first_column_padding: 30px
         .info
           +grid-column(8, $offset: 4)
           padding-left: 0
-      @media only screen and (max-width: 767px)
-        padding-left: emCalc(40px)
-        .date
-          margin-bottom: 0
+
     .list
       +horizontal-list-container
       .name
@@ -101,7 +101,7 @@ $cv_first_column_padding: 30px
             content: "· "
           &:first-child:before
             content: ""
-      @media only screen and (min-width: 767px)
+      @media #{$small}
         +grid-row
         .info
           +grid-column(8)
