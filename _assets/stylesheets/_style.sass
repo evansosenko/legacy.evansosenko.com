@@ -40,3 +40,57 @@ a
 
 #email_modal
   text-align: center
+
+$cv_first_column_padding: 30px
+
+#cv
+  h1
+    text-align: center
+  .pdf
+    float: left
+  nav
+    +sub-nav
+    background-color: $clr_blue_green
+    dt a
+      color: #FFF
+      font-weight: bold
+      +simple_bullets( $pdf_icon, $pdf_icon_padding )
+
+  section
+    +grid-row
+    +panel
+    .entry
+      +grid-column
+      +grid-row
+      @media only screen and (min-width: 767px)
+        .name
+          +grid-column(8, $push: 4)
+          padding-left: 0
+        .date
+          +grid-column(4, $pull: 8)
+          padding-left: emCalc( $cv_first_column_padding )
+        .info
+          +grid-column(8, $offset: 4)
+          padding-left: 0
+      @media only screen and (max-width: 767px)
+        padding-left: emCalc(40px)
+        .date
+          margin-bottom: 0
+    .list
+      +horizontal-list-container
+      .name
+        clear: both
+      .info
+        dd
+          +horizontal-list-item
+          &:before
+            content: "· "
+          &:first-child:before
+            content: ""
+      @media only screen and (min-width: 767px)
+        +grid-row
+        .info
+          +grid-column(8)
+        .name
+          +grid-column(4)
+          padding-left: emCalc( $cv_first_column_padding + 10px )
