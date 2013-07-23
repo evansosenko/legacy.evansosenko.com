@@ -64,6 +64,15 @@ $cv_first_column_padding: 30px
   section
     +grid-row
     +panel
+    // give magellan a target above the title
+    position: relative
+    .magellan-destination
+      visibility: hidden
+      height: 0
+      position: absolute
+      top: -50px
+      @media only screen and (max-width: 767px)
+        top: -100px
     .entry
       +grid-column
       +grid-row

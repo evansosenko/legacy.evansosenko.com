@@ -156,8 +156,8 @@ cv:
       {% endif %}
 
       {% unless forloop.first %}</section>{% endunless %}
-
-      <section id="{{ cv.id }}" data-magellan-destination="{{ cv.id }}">
+      <section>
+        <div id="{{ cv.id }}" class="magellan-destination" data-magellan-destination="{{ cv.id }}">a</div>
         <h2>{{ title }}</h2>
     {% when 'entry' %}
       <div class="entry">
