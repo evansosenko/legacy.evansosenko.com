@@ -1,3 +1,26 @@
+---
+external:
+  - name: GitHub
+    url: https://github.com/razor-x
+    image: github.com.png
+
+  - name: RubyGems.org
+    url: https://rubygems.org/profiles/49715
+    image: rubygems.org.png
+
+  - name: Google+
+    url: https://plus.google.com/118056675600044327520/
+    image: plus.google.com.png
+
+  - name: Facebook
+    url: https://www.facebook.com/evan.sosenko
+    image: www.facebook.com.png
+
+  - name: Twitter
+    url: https://twitter.com/ThatsMr_n00b_2u
+    image: twitter.com.png
+---
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
@@ -21,13 +44,11 @@
 
     <nav id="external">
       <ul>
-        <li><a href="https://github.com/razor-x"><img src="{% asset_path github.com.png %}" width="16" height="16" alt="GitHub" /></a></li>
-        <li><a href="https://rubygems.org/profiles/49715"><img src="{% asset_path rubygems.org.png %}" width="16" height="16" alt="RubyGems.org" /></a></li>
-        <li><a href="https://plus.google.com/118056675600044327520/"><img src="{% asset_path plus.google.com.png %}" width="16" height="16" alt="Google+" /></a></li>
-        <li><a href="https://www.facebook.com/evan.sosenko"><img src="{% asset_path www.facebook.com.png %}" width="16" height="16" alt="Facebook" /></a></li>
-        <li><a href="https://twitter.com/ThatsMr_n00b_2u"><img src="{% asset_path twitter.com.png %}" width="16" height="16" alt="Twitter" /></a></li>
-        <li><a href="/cv">cv</a></li>
+      {% for item in page.external %}
+        <li><a href="{{ item.url }}"><img src="{{ item.image | asset_path}}" width="16" height="16" alt="{{ item.name }}" /></a></li>
+      {% endfor %}
         <li><a href="" data-reveal-id="email_modal">@</a></li>
+        <li><a href="/cv">CV</a></li>
       </ul>
     </nav>
   </header>
