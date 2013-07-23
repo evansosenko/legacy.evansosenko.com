@@ -14,7 +14,7 @@ piwik: evansosenko.com/piwik/
 
 :deploy:
   :protocol: :rsync
-  :server: evansosenko.com
+  :server: ssh.evansosenko.com
   :user: webmaster
   :port: 50000
   :path: /usr/local/www/vhosts/evansosenko.com/htdocs/
