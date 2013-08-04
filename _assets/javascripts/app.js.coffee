@@ -4,4 +4,5 @@
 #= require vendor/foundation/foundation.magellan
 
 # Foundation decides to load jQuery or Zepto and stores it in libFuncName
+# uncomment the line line below to bind $ to jQuery / Zepto
 $ = libFuncName
