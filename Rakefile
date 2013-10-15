@@ -13,7 +13,7 @@ dev_config = '_config.yml,_config.dev.yml'
 # Set "rake watch" as default task
 task :default => :draft
 
-# spawn a server and kill it gracefully when interrupt is received
+# Spawn a server and kill it gracefully when interrupt is received
 def spawn *cmd
   pid = Process.spawn *cmd
 
@@ -54,7 +54,7 @@ end
 desc 'Start a server and watch the site for changes.' + "\n" +
      'Include all drafts in site.'
 task :draft do
-  spawn 'jekyll', 'serve', '--watch', '--drafts', testing_config
+  spawn 'jekyll', 'serve', '--watch', '--drafts', '--config', testing_config
 end
 
 # rake deploy
@@ -68,21 +68,26 @@ task :deploy => :build do
   user = config[:deploy][:user]
   port = config[:deploy][:port]
   path = config[:deploy][:path]
+  upload_only = config[:deploy][:upload_only]
 
   case protocol
   when :rsync
 
-    flags = %w{ -r -t --del -z -v }
-    rsync = [ 'rsync', *flags, '-e', %Q{"ssh -p #{port}"}, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
+    flags = %w{-r -t -z -v}
+    if port.to_i != 22
+      flags << '-e'
+      flags << %Q{"ssh -p #{port}"}
+    end
+
+    excludes = upload_only.collect { |e| "--exclude=#{e}" }
+    includes = upload_only.collect { |e| "--include=#{e}" }
+
+    rsync = [ 'rsync', *flags, '--del', *excludes, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+    rsync_uploads = [ 'rsync', *flags, '--exclude="*"', *includes, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+
     p "Now running: #{rsync}"
     system rsync
-
-  when :sftp
-    Net::SFTP.start "#{server}", user, :port => port, :compression => 'zlib'  do |sftp|
-      p "Now uploading via sftp"
-      sftp.rmdir path
-      sftp.mkdir path
-      sftp.upload local, path
-    end
+    p "Now running: #{rsync_uploads}"
+    system rsync_uploads
   end
 end
