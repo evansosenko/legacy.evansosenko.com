@@ -51,6 +51,7 @@ piwik: evansosenko.com/piwik/
   # remote content will not be removed from these files and folders
   :upload_only:
     - content/
+    - "cv/Evan Sosenko - Curriculum Vitae.pdf"
 
 # Foundation Interchange markup support added to
 # Jekyll Picture Tag (https://github.com/robwierzbowski/jekyll-picture-tag)
