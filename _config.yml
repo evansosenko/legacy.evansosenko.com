@@ -1,4 +1,5 @@
 name: Evan Sosenko
+domain: http://evansosenko.com
 markdown: redcarpet
 pygments: true
 
@@ -9,12 +10,78 @@ assets:
     css: sass
     js: uglifier
 
-google_analytics: UA-19631381-1
+# Keywords will be merged with categories, tags, and page keywords.
+keywords: [ blog, personal ]
+
+# Uncomment below to set default meta info.
+meta:
+  locale: en_US
+  title:
+    prefix: ""
+    suffix: " - Evan Sosenko"
+#   twitter:
+#     site: "@example.com"
+#     creator: "@username"
+
+# Uncomment below and add your Disqus Shortname to enable Disqus.
+# disqus: shortname
+
+# Uncomment below and add your Tracking ID and URL to enable Google Analytics.
+google_analytics:
+  id: UA-19631381-4
+  url: evansosenko.com
+
+# Uncomment below and add your Piwik URL to enable Piwik.
 piwik: evansosenko.com/piwik/
 
+# Uncomment below to enable deploy.
 :deploy:
+  # only :rsync supported
   :protocol: :rsync
+  # domain name
   :server: ssh.evansosenko.com
+  # remote username
   :user: webmaster
-  :port: 50000
+  # remote port
+  :port: 22
+  # path to remote folder where contents of _site should go
+  # must have trailing slash
   :path: /usr/local/www/vhosts/evansosenko.com/htdocs/
+  # site files and folders that should be uploaded but not synced
+  # remote content will not be removed from these files and folders
+  :upload_only:
+    - content/
+
+# Foundation Interchange markup support added to
+# Jekyll Picture Tag (https://github.com/robwierzbowski/jekyll-picture-tag)
+# Uncomment below to enable responsive images.
+# picture:
+#   markup: 'interchange'
+#   source: pictures/fullsize
+#   output: pictures
+#   presets:
+#     default:
+#       ppi: [ 1, 1.5, 2 ]
+#       source_large:
+#         media: '(large)'
+#         width: '1440'
+#       source_medium:
+#         media: '(medium)'
+#         width: '1280'
+#       source_small:
+#         media: '(small)'
+#         width: '768'
+#       source_default:
+#         width: '500'
+
+# Uncomment below to configure social media.
+# social:
+#   facebook:
+#     enabled: true
+#   google:
+#     enabled: true
+#     gcfg:
+#       lang: en-US
+#       parsetags: onload
+#   twitter:
+#     enabled: true
