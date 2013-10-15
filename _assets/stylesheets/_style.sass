@@ -76,7 +76,7 @@ $cv_first_column_padding: 30px
     .entry
       +grid-column
       +grid-row
-      padding-left: emCalc(40px)
+      padding-left: em-calc(40px)
       .date
         margin-bottom: 0
       @media #{$small}
@@ -85,7 +85,7 @@ $cv_first_column_padding: 30px
           padding-left: 0
         .date
           +grid-column(4, $pull: 8)
-          padding-left: emCalc( $cv_first_column_padding )
+          padding-left: em-calc( $cv_first_column_padding )
         .info
           +grid-column(8, $offset: 4)
           padding-left: 0
@@ -107,4 +107,4 @@ $cv_first_column_padding: 30px
           +grid-column(8)
         .name
           +grid-column(4)
-          padding-left: emCalc( $cv_first_column_padding + 10px )
+          padding-left: em-calc( $cv_first_column_padding + 10px )
