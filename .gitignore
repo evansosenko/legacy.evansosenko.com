@@ -1,6 +1,7 @@
 .jekyll-assets-cache/
 .kateproject.d/
-_site
 Gemfile.lock
+_site/
+bower_components/
 cv/Evan Sosenko - Curriculum Vitae.pdf
 content/
