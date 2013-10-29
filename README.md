@@ -18,7 +18,7 @@ Source for my personal blog running on Jekyll and Foundation.
 
 Just clone this with
 
-    git clone git@github.com:razor-x/jekyll-and-zurb.git my_blog
+    git clone https://github.com/razor-x/jekyll-and-zurb.git my_blog
 
 run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
@@ -45,8 +45,9 @@ which you can then merge into your other branches.
 The `Gemfile` is using pessimistic version constraints for everything,
 so if you want major updates, you need to bump the versions yourself.
 
-If you update Foundation, but sure to also update the JavaScript in `_assets/javascripts/vendor/`.
-Note that `custom.modernizr.js` has been renamed `custom_modernizr.js` for this project.
+JavaScript library versions need to be updated in `bower.json` and `_config.yml`.
+
+If you update Foundation, but sure to update the version numbers in `Gemfile` and `bower.json`.
 
 ## License
 
