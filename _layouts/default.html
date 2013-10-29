@@ -82,6 +82,7 @@ external:
   <div id="fb-root"></div>
 {% endif %}
 
+{% capture site_javascript %}
   <script>
     Modernizr.load([
     {% for lib in site.cdn.libs %}
@@ -120,5 +121,7 @@ external:
     {% asset vendor/piwik %}
   {% endif %}
   </script>
+{% endcapture %}
+{{ site_javascript | strip_newlines }}
 </body>
 </html>
