@@ -1,26 +1,3 @@
----
-external:
-  - name: GitHub
-    url: https://github.com/razor-x
-    image: github.com.png
-
-  - name: RubyGems.org
-    url: https://rubygems.org/profiles/49715
-    image: rubygems.org.png
-
-  - name: Google+
-    url: https://plus.google.com/118056675600044327520/
-    image: plus.google.com.png
-
-  - name: Facebook
-    url: https://www.facebook.com/evan.sosenko
-    image: www.facebook.com.png
-
-  - name: Twitter
-    url: https://twitter.com/ThatsMr_n00b_2u
-    image: twitter.com.png
----
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
@@ -41,7 +18,7 @@ external:
 
     <nav id="external">
       <ul>
-      {% for item in page.external %}
+      {% for item in site.data.external_links %}
         <li><a href="{{ item.url }}"><img src="{{ item.image | asset_path }}" width="16" height="16" alt="{{ item.name }}" /></a></li>
       {% endfor %}
         <li><a href="" data-reveal-id="email_modal">@</a></li>
