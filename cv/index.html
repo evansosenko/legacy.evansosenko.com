@@ -1,127 +1,6 @@
 ---
 layout: default
 title: Curriculum Vitae
-
-cv:
-  - type: section
-    id: education
-
-  - type: entry
-    name: Ph.D. Physics in condensed matter theory
-    start: 2011
-    end: present
-    location: University of California, Riverside, Riverside, CA, US
-
-  - type: entry
-    name: M.A. Physics
-    start: 2011
-    end: 2012
-    location: University of California, Riverside, Riverside, CA, US
-
-  - type: entry
-    name: B.S. Physics with minor in mathematics
-    start: 2006
-    end: 2011
-    location: University of California, Santa Barbara, Santa Barbara, CA, US
-
-  - type: section
-    id: fellowships
-
-  - type: entry
-    name: Chancellor's Distinguished Fellowship Award
-    start: 2011
-    end: 2016
-    location: University of California, Riverside, Riverside, CA, US
-
-  - type: entry
-    name: CCS Summer Undergraduate Research Fellowship (SURF)
-    start: 2010
-    end: 2010
-    location: University of California, Santa Barbara, Santa Barbara, CA, US
-
-  - type: section
-    id: scholarships
-
-  - type: entry
-    name: Regents Scholarship Award
-    start: 2006
-    end: 2010
-    location: University of California, Santa Barbara, Santa Barbara, CA, US
-
-  - type: entry
-    name: Xi Nu Zeta of Beta Sigma Phi Scholarship
-    start: 2006
-    end: 2006
-    location: SCV Scholarship Foundation, Santa Clarita, CA, US
-
-  - type: section
-    id: research
-
-  - type: entry
-    name: Graduate Research Assistant
-    start: 2011
-    end: present
-    location: Department of Physics and Astronomy, Riverside, CA, US
-    description: "Condensed matter theory: spintronics and topological materials."
-
-  - type: entry
-    name: Undergraduate Research Assistant
-    start: 2009
-    end: 2011
-    location: UCSB Astronomy &amp; Astrophysics, Santa Barbara, CA, US
-    description: Pulsar radio astronomy and scattering in interstellar media. Applications and limits of the stationary phase approximation. Under the supervision of Dr. Carl R. Gwinn.
-
-  - type: entry
-    name: Undergraduate Research Assistant
-    start: 2008
-    end: 2009
-    location: UCSB Center for Terahertz Science and Technology, Santa Barbara, CA, US
-    description: Experimental work on THz absorption of proteins in solution. Under the supervision of Dr. James Allen.
-
-  - type: section
-    id: instruction
-
-  - type: entry
-    name: Teaching Assistant
-    start: 2011
-    end: present
-    location: Department of Physics and Astronomy, Riverside, CA, US
-
-  - type: entry
-    name: Grader
-    start: 2011
-    end: 2011
-    location: UCSB Physics Department, Santa Barbara, CA, US
-    description: "Grader for PHYS 231B, graduate course in general relativity; instructor: Dr. Donald Marolf."
-
-  - type: section
-    id: business
-
-  - type: entry
-    name: Owner &amp; Technical Administrator
-    start: 2001
-    end: present
-    location: OurTownRentals.com, Valencia, CA, US
-    description: Commercial website for USA vacation rentals founded in 2001. Responsible for web design, development, server administration, and business management.
-
-  - type: section
-    id: technical
-    name: technical skills
-
-  - type: list
-    lists:
-      - [ platforms, Unix, Linux, Microsoft Windows ]
-      - [ tools, Latex, Git, Office ]
-      - [ scientific, Mathematica, LabVIEW, Autodesk Inventor ]
-      - [ design, Compass, Adobe Illustrator, Adobe Photoshop ]
-      - [ languages, Ruby, PHP, SQL, HTML, CSS, SASS, JavaScript ]
-
-  - type: section
-    id: languages
-
-  - type: list
-    lists:
-      - [ english, fluent ]
 ---
 
 <section id="cv">
@@ -129,7 +8,7 @@ cv:
   <nav data-magellan-expedition="fixed">
   <dl>
     <dt><a href="Evan Sosenko - Curriculum Vitae.pdf">CV</a></dt>
-    {% for cv in page.cv %}
+    {% for cv in site.data.cv %}
       {% if cv.type == 'section' %}
 
       {% if cv.name %}
@@ -145,7 +24,7 @@ cv:
   </dl>
   </nav>
 
-  {% for cv in page.cv %}
+  {% for cv in site.data.cv %}
     {% case cv.type %}
     {% when 'section' %}
 
