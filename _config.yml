@@ -4,6 +4,9 @@ domain: http://evansosenko.com
 markdown: redcarpet
 pygments: true
 
+# Uncomment below to enable pagination.
+# paginate: 5
+
 exclude:
   - CHANGELOG.md
   - LICENSE.txt
@@ -42,7 +45,9 @@ meta:
   title:
     prefix: ""
     suffix: " - Evan Sosenko"
+#   description: "My Site's default description."
 #   twitter:
+#     default_card: summary
 #     site: "@example.com"
 #     creator: "@username"
 
