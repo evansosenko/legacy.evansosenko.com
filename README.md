@@ -38,17 +38,16 @@ Then add an origin and push master
     git remote add origin git@github.com:username/username-blog.git
     git push -u origin master
 
-Now, the `razorx-jekyll-and-zurb` branch will pull changes from this project,
+Now, the `jekyll-and-zurb` branch will pull changes from this project,
 which you can then merge into your other branches.
 
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,
-so if you want major updates, you need to bump the versions yourself.
+so if you don't want to wait for updates, you need to bump the versions yourself.
 
-JavaScript library versions need to be updated in `bower.json` and `_config.yml`.
-
-If you update Foundation, but sure to update the version numbers in `Gemfile` and `bower.json`.
+JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN support).
+If you want to update Foundation, update the version number in `bower.json`.
 
 ## License
 

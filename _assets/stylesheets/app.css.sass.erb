@@ -1,7 +1,9 @@
-// syntax highlighting support
-//= require vendor/syntax
+//= require normalize-css/normalize.css
+//= require vendor/syntax.css
 
-@import "compass/reset"
+// Make sure the charset is set appropriately
+@charset "UTF-8"
+
 @import "compass/typography/lists/horizontal-list"
 @import "compass/typography/lists/bullets"
 
@@ -27,7 +29,6 @@ $clr_laughs_and: #3CB8AE
 $clr_blue_green: #467D91
 
 // Fonts
-@import url( 'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' )
 @import "compass/css3/font-face"
 +font-face( "CMUBright-Roman", url( 'fonts/cmunbmr.otf' ) )
 
@@ -39,67 +40,10 @@ $site_title_font_weight: normal
 $pdf_icon: url( asset_path('pdficon_small.png') )
 $pdf_icon_padding: 25px
 
-// Comment out this import if you don't want to use normalize
-// @import vendor/normalize
-
-// Comment out this import if you are customizing you imports below
-// @import foundation
-
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
-
-@import "foundation/components/global"
-// ^*always required
-@import "foundation/components/grid"
-
-//
-// Use this grid if you want to start using the new Foundation 5 grid early.
-// It will change breakpoints to min-width: 640px and 1024px.
-//
-// @import "foundation/components/grid-5"
-//
-
-// @import "foundation/components/visibility"
-// @import "foundation/components/block-grid"
-@import "foundation/components/type"
-// @import "foundation/components/buttons"
-// @import "foundation/components/forms"
-// ^ *requires components/buttons
-// @import "foundation/components/custom-forms"
-// ^*requires components/buttons, components/forms
-// @import "foundation/components/button-groups"
-// ^*requires components/buttons
-// @import "foundation/components/dropdown-buttons"
-// ^*requires components/buttons
-// @import "foundation/components/split-buttons"
-// ^*requires components/buttons
-// @import "foundation/components/flex-video"
-// @import "foundation/components/section"
-// @import "foundation/components/top-bar"
-// ^*requires components/grid
-// @import "foundation/components/orbit"
-@import "foundation/components/reveal"
-// @import "foundation/components/joyride"
-// @import "foundation/components/clearing"
-// @import "foundation/components/alert-boxes"
-// @import "foundation/components/breadcrumbs"
-// @import "foundation/components/keystrokes"
-// @import "foundation/components/labels"
-@import "foundation/components/inline-lists"
-// @import "foundation/components/pagination"
-// @import "foundation/components/panels"
-// @import "foundation/components/pricing-tables"
-// @import "foundation/components/progress-bars"
-// @import "foundation/components/side-nav"
-@import "foundation/components/sub-nav"
-// @import "foundation/components/switch"
-@import "foundation/components/magellan"
-// @import "foundation/components/tables"
-// @import "foundation/components/thumbs"
-// @import "foundation/components/tooltips"
-// @import "foundation/components/dropdown"
-
 // Global Foundation Settings
 @import "settings"
-@import "foundation"
+
+// Import Foundation
+@import "foundation/scss/foundation"
+
 @import "style"

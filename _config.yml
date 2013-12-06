@@ -18,6 +18,12 @@ exclude:
   - bower.json
   - bower_components
 
+gems:
+  - json
+  - jekyll-assets
+  - jekyll-assets/compass
+  - coffee_script
+
 # Jekyll::AssetsPlugin options.
 assets:
   sources:
@@ -42,10 +48,10 @@ keywords: [ blog, personal ]
 # Uncomment below to set default meta info.
 meta:
   locale: en_US
+#   description: "My Site's default description."
   title:
     prefix: ""
     suffix: " - Evan Sosenko"
-#   description: "My Site's default description."
 #   twitter:
 #     default_card: summary
 #     site: "@example.com"
