@@ -10,8 +10,9 @@ testing_config = '_config.yml,_config.testing.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
 config[:destination] ||= '_site/'
+config[:sub_content] ||= []
 
-# Set "rake watch" as default task
+# Set "rake draft" as default task
 task :default => :draft
 
 # Spawn a server and kill it gracefully when interrupt is received
@@ -30,6 +31,22 @@ end
 desc 'Generate the site'
 task :build do
   system 'bundle', 'exec', 'jekyll', 'build'
+
+  config[:sub_content].each do |content|
+    repo = content[0]
+    branch = content[1]
+    dir = content[2]
+    rev = content[3]
+    Dir.chdir config[:destination] do
+      FileUtils.mkdir_p dir
+      system "git clone -b #{branch} #{repo} #{dir}"
+      Dir.chdir dir do
+        system "git checkout #{rev}" if rev
+        FileUtils.remove_entry_secure '.git'
+        FileUtils.remove_entry_secure '.nojekyll' if File.exists? '.nojekyll'
+      end if dir
+    end if Dir.exists? config[:destination]
+  end
 end
 
 # rake test
@@ -95,13 +112,12 @@ task :deploy => :build do
   end
 end
 
-
 desc 'Generate site from Travis CI and publish site to GitHub Pages.'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop
   if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
     puts 'Pull request detected. Executing build only.'
-    system 'bundle exec jekyll build'
+    system 'bundle exec rake build'
     next
   end
 
