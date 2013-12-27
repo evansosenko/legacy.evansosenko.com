@@ -38,6 +38,8 @@ a
 
 #external
   display: inline-block
+  a.icon
+    font-size: 1.3em
   ul
     +inline-list
 
@@ -58,7 +60,6 @@ $cv_first_column_padding: 30px
       color: #FFF
       font-weight: bold
       +simple_bullets( $pdf_icon, $pdf_icon_padding )
-      background-size: contain
       &:after
         content: " :"
 

@@ -1,0 +1,33 @@
+//
+// Custom mixins
+//
+
+=simple_bullets($img, $padding)
+  background-image: url(asset_path($img))
+  background-repeat: no-repeat
+  background-position: left center
+  background-size: contain
+  padding-left: $padding
+
+//
+// Colors
+//
+
+// Web
+$clr_qwhite: #EEEEEE
+$clr_sky_eyes: #D0EFF1
+$clr_waves: #79BCC4
+$clr_laughs_and: #3CB8AE
+$clr_blue_green: #467D91
+
+// Fonts
+@import "compass/css3/font-face"
++font-face( "CMUBright-Roman", url( 'fonts/cmunbmr.otf' ) )
+
+// vars
+$banner_height: 100px
+$site_title_font: "CMUBright-Roman", sans-serf
+$site_title_clr: white
+$site_title_font_weight: normal
+$pdf_icon: "icon-pdf.svg"
+$pdf_icon_padding: 25px

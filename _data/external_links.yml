@@ -1,19 +1,15 @@
 - name: GitHub
   url: https://github.com/razor-x
-  image: github.com.png
-
-- name: RubyGems.org
-  url: https://rubygems.org/profiles/49715
-  image: rubygems.org.png
+  icon: fi-social-github
 
 - name: Google+
   url: https://plus.google.com/118056675600044327520/
-  image: plus.google.com.png
+  icon: fi-social-google-plus
 
 - name: Facebook
   url: https://www.facebook.com/evan.sosenko
-  image: www.facebook.com.png
+  icon: fi-social-facebook
 
 - name: Twitter
   url: https://twitter.com/ThatsMr_n00b_2u
-  image: twitter.com.png
+  icon: fi-social-twitter
