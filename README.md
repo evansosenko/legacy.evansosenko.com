@@ -1,8 +1,11 @@
-# Jekyll & ZURB
+# evansosenko.com
 
 [![Build Status](https://travis-ci.org/razor-x/evansosenko.com.png?branch=master)](https://travis-ci.org/razor-x/evansosenko.com)
 
 Source for my personal blog running on Jekyll and Foundation.
+
+The rest of this README, except for the License,
+is just cloned from [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
 
 - Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
 - Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
@@ -122,7 +125,9 @@ If you want to update Foundation, update the version number in `bower.json`.
 
 ## License
 
-This code is licensed under the MIT license.
+This code is Copyright 2013 Evan Sosenko,
+This site is built with [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb)
+which is licensed under the MIT license.
 
 ## Warranty
 
