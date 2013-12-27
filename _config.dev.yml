@@ -2,7 +2,7 @@ domain: null
 
 assets:
   baseurl: /assets/
-  cachebust: hard
+  cachebust: none
   cache: true
   compress:
     css: null

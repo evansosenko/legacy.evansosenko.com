@@ -32,6 +32,7 @@ assets:
     - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
+    - _assets/fonts
     - bower_components
   compress:
     css: sass
