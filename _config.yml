@@ -1,6 +1,6 @@
 # Jekyll options.
 name: Evan Sosenko
-domain: http://evansosenko.com
+domain: http://razor-x.github.io/evansosenko.com
 markdown: redcarpet
 pygments: true
 
@@ -26,6 +26,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
+  baseurl: http://razor-x.github.io/evansosenko.com/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -69,23 +70,22 @@ google_analytics:
 piwik: evansosenko.com/piwik/
 
 # Uncomment below to enable deploy.
-:deploy:
-  # only :rsync supported
-  :protocol: :rsync
-  # domain name
-  :server: ssh.evansosenko.com
-  # remote username
-  :user: webmaster
-  # remote port
-  :port: 22
-  # path to remote folder where contents of _site should go
-  # must have trailing slash
-  :path: /usr/local/www/vhosts/evansosenko.com/htdocs/
-  # site files and folders that should be uploaded but not synced
-  # remote content will not be removed from these files and folders
-  :upload_only:
-    - content/
-    - "cv/Evan Sosenko - Curriculum Vitae.pdf"
+# :deploy:
+#   # only :rsync supported
+#   :protocol: :rsync
+#   # domain name
+#   :server: example.com
+#   # remote username
+#   :user: www
+#   # remote port
+#   :port: 22
+#   # path to remote folder where contents of _site should go
+#   # must have trailing slash
+#   :path: /var/www/example.com/htdocs/
+#   # site files and folders that should be uploaded but not synced
+#   # remote content will not be removed from these files and folders
+#   :upload_only:
+#     - content/
 
 # Foundation Interchange markup support added to
 # Jekyll Picture Tag (https://github.com/robwierzbowski/jekyll-picture-tag)
