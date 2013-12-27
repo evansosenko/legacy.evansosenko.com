@@ -1,6 +1,6 @@
 # Jekyll options.
 name: Evan Sosenko
-domain: http://razor-x.github.io/evansosenko.com
+domain: http://evansosenko.com
 cdn_domain: http://razor-x.github.io
 markdown: redcarpet
 pygments: true
@@ -27,7 +27,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://razor-x.github.io/evansosenko.com/assets/
+  baseurl: http://evansosenko.com/assets/
   sources:
     - _assets/images
     - _assets/javascripts

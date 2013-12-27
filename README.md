@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/razor-x/evansosenko.com.png?branch=master)](https://travis-ci.org/razor-x/evansosenko.com)
 
-Source for my personal blog running on Jekyll and Foundation.
+Source for [my personal site](http://evansosenko.com/) running on Jekyll and Foundation.
 
 The rest of this README, except for the License,
 is just cloned from [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
