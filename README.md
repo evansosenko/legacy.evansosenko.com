@@ -1,5 +1,7 @@
 # Jekyll & ZURB
 
+[![Build Status](https://travis-ci.org/razor-x/evansosenko.com.png?branch=master)](https://travis-ci.org/razor-x/evansosenko.com)
+
 Source for my personal blog running on Jekyll and Foundation.
 
 - Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
