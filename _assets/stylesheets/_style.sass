@@ -7,6 +7,9 @@ a
   &:visited, &:hover
     color: inherit
 
+div.highlight
+  +panel
+
 #top
   text-align: center
   margin-bottom: $top_margin-bottom
@@ -46,6 +49,26 @@ a
 
 #email_modal
   text-align: center
+
+section.posts
+  +grid-row
+  text-align: center
+  h2
+    font-size: 1.3em
+    +grid-column($columns: 8, $center: true)
+  ul.posts
+    +grid-column($columns: 8, $center: true)
+    li
+      list-style-type: none
+
+article.post.single
+  margin-left: rem-calc(30)
+  margin-right: rem-calc(30)
+  section.content
+    +grid-row
+  aside.social-buttons
+    margin-bottom: rem-calc(20)
+    margin-top: rem-calc(20)
 
 #cv
   h1

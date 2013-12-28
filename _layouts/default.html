@@ -16,18 +16,10 @@
 <body>
   <header id="top">
     <h1 id="banner"><a id="title" href="{{ site.root_url }}/">Evan <span></span> Sosenko</a></h1>
-    <p>Ph.D. physics student and online business owner.</p>
-
-    <nav id="personal_links">
-      <ul>
-      {% for item in site.data.personal_links %}
-        <li><a class="icon {{ item.icon }}" href="{{ item.url }}"></a></li>
-      {% endfor %}
-        <li><a href="" data-reveal-id="email_modal">@</a></li>
-        <li><a href="{{ site.domain }}/cv/">CV</a></li>
-      </ul>
-    </nav>
-  </header>
+    {% if page.personal_links %}
+      {% include personal_links.html %}
+    {% endif %}
+   </header>
 
   {{ content }}
 
@@ -35,7 +27,6 @@
     <p>razorx {at} evansosenko.com
     <a class="close-reveal-modal">&#215;</a>
   </div>
-
 
 {% if site.social.facebook.enabled %}
   <div id="fb-root"></div>

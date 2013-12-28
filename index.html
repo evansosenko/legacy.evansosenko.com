@@ -1,4 +1,22 @@
 ---
 layout: default
 title: "{evan|sosenko}"
+personal_links: true
 ---
+
+{% if site.paginate %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+<section class="posts">
+  <h2>posts and such</h2>
+  <ul class="posts">
+  {% for post in posts %}
+    <li><a href="{{ site.root_url }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+</section>
+
+{% include pagination.html %}

@@ -1,0 +1,11 @@
+<p>Ph.D. physics student and online business owner.</p>
+
+<nav id="personal_links">
+  <ul>
+  {% for item in site.data.personal_links %}
+    <li><a class="icon {{ item.icon }}" href="{{ item.url }}"></a></li>
+  {% endfor %}
+    <li><a href="" data-reveal-id="email_modal">@</a></li>
+    <li><a href="{{ site.root_url }}/cv/">CV</a></li>
+  </ul>
+</nav>

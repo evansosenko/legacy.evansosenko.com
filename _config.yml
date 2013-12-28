@@ -56,13 +56,13 @@ meta:
   title:
     prefix: ""
     suffix: " - Evan Sosenko"
-#   twitter:
-#     default_card: summary
-#     site: "@example.com"
-#     creator: "@username"
+  twitter:
+    default_card: summary
+    site: "@ThatsMr_n00b_2u"
+    creator: "@ThatsMr_n00b_2u"
 
 # Uncomment below and add your Disqus Shortname to enable Disqus.
-# disqus: shortname
+disqus: evansosenko
 
 # Uncomment below and add your Tracking ID and URL to enable Google Analytics.
 google_analytics:
@@ -113,16 +113,16 @@ piwik: evansosenko.com/piwik/
 #         width: '500'
 
 # Uncomment below to configure social media.
-# social:
-#   facebook:
-#     enabled: true
-#   google:
-#     enabled: true
-#     gcfg:
-#       lang: en-US
-#       parsetags: onload
-#   twitter:
-#     enabled: true
+social:
+  facebook:
+    enabled: false
+  google:
+    enabled: true
+    gcfg:
+      lang: en-US
+      parsetags: onload
+  twitter:
+    enabled: true
 
 # Include code from other repos in the final build.
 # Each array has the format
