@@ -109,7 +109,7 @@
     - [ tools, Latex, Git, Office ]
     - [ scientific, Mathematica, LabVIEW, Autodesk Inventor ]
     - [ design, Compass, Adobe Illustrator, Adobe Photoshop ]
-    - [ languages, Ruby, PHP, SQL, HTML, CSS, SASS, JavaScript ]
+    - [ languages, Ruby, Python, PHP, SQL, HTML, CSS, SASS, JavaScript ]
 
 - type: section
   id: languages
