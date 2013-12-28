@@ -1,7 +1,4 @@
-//
 // Custom mixins
-//
-
 =simple_bullets($img, $padding)
   background-image: url(asset_path($img))
   background-repeat: no-repeat
@@ -9,19 +6,34 @@
   background-size: contain
   padding-left: $padding
 
-//
 // Colors
-//
+
+$clr_white: #fff
 
 // Web
-$clr_qwhite: #EEEEEE
-$clr_sky_eyes: #D0EFF1
-$clr_waves: #79BCC4
-$clr_laughs_and: #3CB8AE
-$clr_blue_green: #467D91
+$clr_qwhite: #eeeeee
+$clr_sky_eyes: #d0eff1
+$clr_waves: #79bcc4
+$clr_laughs_and: #3cb8ae
+$clr_blue_green: #467d91
 
 // Style and layout variables
-$banner_height: 100px
+
+// Top
+$top_margin-bottom: rem-calc(50)
+
+// Banner
+$banner_height: rem-calc(100)
+$banner_margin-bottom: rem-calc(20)
 $site_title_font: "CMUBright-Roman", sans-serf
-$site_title_clr: white
+$site_title_clr: $clr_white
 $site_title_font_weight: normal
+
+// cv
+$cv_nav_padding-right: rem-calc(5)
+$cv_nav_color: white
+$cv_nav_font-weight: bold
+
+$cv_first_column_padding-left: 30
+$cv_entry_padding-left: rem-calc(40)
+$cv_list_margin-bottom: rem-calc(10)

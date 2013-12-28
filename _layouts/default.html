@@ -18,9 +18,9 @@
     <h1 id="banner"><a id="title" href="{{ site.domain }}/">Evan <span></span> Sosenko</a></h1>
     <p>Ph.D. physics student and online business owner.</p>
 
-    <nav id="external">
+    <nav id="personal_links">
       <ul>
-      {% for item in site.data.external_links %}
+      {% for item in site.data.personal_links %}
         <li><a class="icon {{ item.icon }}" href="{{ item.url }}"></a></li>
       {% endfor %}
         <li><a href="" data-reveal-id="email_modal">@</a></li>
@@ -29,12 +29,13 @@
     </nav>
   </header>
 
+  {{ content }}
+
   <div id="email_modal" class="reveal-modal" data-reveal>
     <p>razorx {at} evansosenko.com
     <a class="close-reveal-modal">&#215;</a>
   </div>
 
-  {{ content }}
   {% if site.social.facebook.enabled %}
     <div class="fb-like" data-href="{{ site.domain }}{{ page.url }}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
   {% endif %}
