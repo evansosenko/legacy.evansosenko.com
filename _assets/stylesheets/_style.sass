@@ -25,7 +25,7 @@ div.highlight
 #title
   color: $site_title_clr
   font-family: $site_title_font
-  font-weight: normal
+  font-weight: $site_title_font_weight
   text-transform: lowercase
   &:before
     content: "{"
@@ -34,10 +34,10 @@ div.highlight
   span
     width: 0
     margin-left: -0.35em
+    margin-right: 0.2em
     display: inline-block
     &:before
       content: "|"
-      font-weight: bold
 
 #personal_links
   display: inline-block
