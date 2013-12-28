@@ -15,7 +15,7 @@
 
 <body>
   <header id="top">
-    <h1 id="banner"><a id="title" href="{{ site.domain }}/">Evan <span></span> Sosenko</a></h1>
+    <h1 id="banner"><a id="title" href="{{ site.root_url }}/">Evan <span></span> Sosenko</a></h1>
     <p>Ph.D. physics student and online business owner.</p>
 
     <nav id="personal_links">
@@ -37,7 +37,7 @@
   </div>
 
   {% if site.social.facebook.enabled %}
-    <div class="fb-like" data-href="{{ site.domain }}{{ page.url }}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+    <div class="fb-like" data-href="{{ site.root_url }}{{ page.url }}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
   {% endif %}
 
   {% if site.social.google.enabled %}
