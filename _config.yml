@@ -1,7 +1,7 @@
 # Jekyll options.
 name: Evan Sosenko
 domain: http://evansosenko.com
-root_url: http://evansosenko.com
+baseurl: http://evansosenko.com
 cdn_domain: http://razor-x.github.io
 markdown: redcarpet
 pygments: true
