@@ -2,7 +2,7 @@
 name: Evan Sosenko
 domain: http://evansosenko.com
 baseurl: http://evansosenko.com
-io_domain: http://razor-x.github.io
+io_domain: http://io.evansosenko.com
 markdown: redcarpet
 pygments: true
 
