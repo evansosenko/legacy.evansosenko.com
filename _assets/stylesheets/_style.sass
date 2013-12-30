@@ -101,7 +101,9 @@ article.post.single
       font-size: 1.6em
   section.content
     +grid-row
-    +grid-column(9)
+    +grid-column(12)
+    @media #{$small}
+      +grid-column(9)
     a
       color: $clr_blue_green
   aside.social-buttons
