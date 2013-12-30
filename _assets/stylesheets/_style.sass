@@ -49,16 +49,15 @@ h2.tagline
   font-weight: $site_title_font_weight
   text-transform: lowercase
   +simple_emboss
-  &:before
+  &::before
     content: "{"
-  &:after
+  &::after
     content: "}"
   span
     width: 0
-    margin-left: -0.35em
-    margin-right: 0.2em
     display: inline-block
-    &:before
+    &::before
+      margin-left: -0.2em
       content: "|"
 
 #personal_links
@@ -86,10 +85,10 @@ section.posts
       text-transform: lowercase
       list-style-type: none
       $local_margin: rem-calc(5)
-      &:before
+      &::before
         margin-right: $local-margin
         content: "«"
-      &:after
+      &::after
         margin-left: $local-margin
         content: "»"
 
@@ -168,9 +167,9 @@ article.post.single
       .info
         dd
           +horizontal-list-item
-          &:before
+          &::before
             content: "· "
-          &:first-child:before
+          &:first-child::before
             content: ""
       @media #{$small}
         +grid-row
