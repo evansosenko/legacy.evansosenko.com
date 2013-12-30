@@ -115,7 +115,7 @@ google_analytics:
 # Uncomment below to configure social media.
 social:
   facebook:
-    enabled: false
+    enabled: true
   google:
     enabled: true
     gcfg:
