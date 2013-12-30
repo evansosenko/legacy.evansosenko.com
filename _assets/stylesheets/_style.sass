@@ -70,21 +70,37 @@ section.posts
   +grid-row
   text-align: center
   h2
-    font-size: 1.3em
     +grid-column($columns: 8, $center: true)
+    font-size: 1.3em
   ul.posts
     +grid-column($columns: 8, $center: true)
     li
+      text-transform: lowercase
       list-style-type: none
+      &:before
+        content: "« "
+      &:after
+        content: " »"
 
 article.post.single
-  margin-left: rem-calc(30)
-  margin-right: rem-calc(30)
+  header
+    +grid-row
+    +grid-column(9)
+    h1
+      font-size: 1.6em
   section.content
     +grid-row
+    +grid-column(9)
+    a
+      color: $clr_blue_green
   aside.social-buttons
+    +grid-row
+    +grid-column(12)
     margin-bottom: rem-calc(20)
     margin-top: rem-calc(20)
+  aside.comments
+    +grid-row
+    +grid-column(12)
 
 #cv
   h1
