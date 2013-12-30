@@ -5,6 +5,7 @@ baseurl: http://evansosenko.com
 io_domain: http://io.evansosenko.com
 markdown: redcarpet
 pygments: true
+permalink: /posts/:title
 
 # Uncomment below to enable pagination.
 # paginate: 5
