@@ -7,6 +7,8 @@ Source for [my personal site](http://evansosenko.com/) running on Jekyll and Fou
 The rest of this README, except for the License,
 is just cloned from [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
 
+Demo at [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+
 Lots of baked in features that work even if you don't want to use Foundation.
 
 - Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
@@ -51,7 +53,7 @@ The `example` branch is a full website that will contain
 real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
-[Examples site hosted on GitHub pages.](http://razor-x.github.io/jekyll-and-zurb/)
+Examples site hosted on GitHub pages: [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
 
 ## Add future update support
 
