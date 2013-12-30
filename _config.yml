@@ -58,8 +58,8 @@ meta:
     suffix: " - Evan Sosenko"
   twitter:
     default_card: summary
-    site: "@ThatsMr_n00b_2u"
-    creator: "@ThatsMr_n00b_2u"
+    site: "@evansosenko"
+    creator: "@evansosenko"
 
 # Uncomment below and add your Disqus Shortname to enable Disqus.
 disqus: evansosenko
