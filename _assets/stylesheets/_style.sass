@@ -26,23 +26,29 @@ pre code
     text-align: right
     opacity: 0.5
 
+h2.tagline
+  +simple_emboss(#fff)
+  font-size: 0.9em
+  text-align: center
+
 #top
   text-align: center
   margin-bottom: $top_margin-bottom
+  background-color: $clr_blue_green
 
 #banner
   width: 100%
   height: $banner_height
   margin: 0.2 * $banner_height auto
-  margin-bottom: $banner_margin-bottom
   padding-top: 0.3 * $banner_height
-  background-color: $clr_blue_green
 
 #title
+  margin-bottom: $title_margin-bottom
   color: $site_title_clr
   font-family: $site_title_font
   font-weight: $site_title_font_weight
   text-transform: lowercase
+  +simple_emboss
   &:before
     content: "{"
   &:after
@@ -56,7 +62,9 @@ pre code
       content: "|"
 
 #personal_links
+  +simple_emboss
   display: inline-block
+  color: $site_title_clr
   a.icon
     line-height: normal
     font-size: 1.3em
@@ -77,10 +85,13 @@ section.posts
     li
       text-transform: lowercase
       list-style-type: none
+      $local_margin: rem-calc(5)
       &:before
-        content: "« "
+        margin-right: $local-margin
+        content: "«"
       &:after
-        content: " »"
+        margin-left: $local-margin
+        content: "»"
 
 article.post.single
   header
