@@ -69,7 +69,7 @@ google_analytics:
   url: evansosenko.com
 
 # Uncomment below and add your Piwik URL to enable Piwik.
-piwik: evansosenko.com/piwik/
+# piwik: example.com/piwik/
 
 # Uncomment below to enable deploy.
 # :deploy:
