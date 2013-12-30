@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Automatic publishing to GitHub Pages with Travis CI - Evan Sosenko</title>
+  <meta property="og:title" content="Automatic publishing to GitHub Pages with Travis CI" />
+
+
+
+  
+
+
+
+  <meta name="description" content="I&#39;ve been working on improving my site
+and moving it over to GitHub pages over the holiday.
+This involved a lot of work on Jekyll &amp; ZURB,
+the Jekyll scaffold I created.
+It has a lot of (optional) features and modern optimizations,
+while still being a clean starting point for any static site.
+" />
+  <meta property="og:description" content="I&#39;ve been working on improving my site
+and moving it over to GitHub pages over the holiday.
+This involved a lot of work on Jekyll &amp; ZURB,
+the Jekyll scaffold I created.
+It has a lot of (optional) features and modern optimizations,
+while still being a clean starting point for any static site.
+" />
+
+
+<link rel="canonical" href="http://evansosenko.com/posts/automatic-publishing-github-pages-travis-ci" />
+<meta property="og:url" content="http://evansosenko.com/posts/automatic-publishing-github-pages-travis-ci" />
+<meta property="og:site_name" content="Evan Sosenko" />
+
+<meta property="og:updated_time" content="2013-12-30T00:00:00+00:00" />
+
+
+  <meta property="og:locale" content="en_US" />
+
+
+
+
+
+  <meta property="keywords" content="blog,personal" />
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+
+
+
+  <meta name="twitter:site" content="@ThatsMr_n00b_2u" />
+
+
+
+  <meta name="twitter:creator" content="@ThatsMr_n00b_2u" />
+
+
+  <link type="text/plain" rel="author" href="humans.txt" />
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
+  <link rel="stylesheet" href="http://evansosenko.com/assets/app-71f17594bcb16127d9498987509575f3.css">
+  <script>(function(){WebFont.load({google:{families:["Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic:latin,latin-ext","Inconsolata:400,700"]}})}).call(this);</script>
+  <script src="http://evansosenko.com/assets/vendor/modernizr-b12e94240f62a9387f708abe6488cbcc.js"></script>
+</head>
+
+<body>
+  <header id="top">
+    <h1 id="banner" title="Ph.D. physics student, online business owner, and developer."><a id="title" href="http://evansosenko.com/">Evan <span></span> Sosenko</a></h1>
+    <nav id="personal_links">
+  <ul>
+  
+    <li><a class="icon fi-social-github" href="https://github.com/razor-x" title="GitHub"></a></li>
+  
+    <li><a class="icon fi-social-google-plus" href="https://plus.google.com/+EvanSosenko" title="Google+"></a></li>
+  
+    <li><a class="icon fi-social-facebook" href="https://www.facebook.com/evan.sosenko" title="Facebook"></a></li>
+  
+    <li><a class="icon fi-social-twitter" href="https://twitter.com/ThatsMr_n00b_2u" title="Twitter"></a></li>
+  
+    <li><a href="" data-reveal-id="email_modal" title="Email">@</a></li>
+    <li><a href="http://evansosenko.com/cv/" title="Curriculum Vitae">CV</a></li>
+  </ul>
+</nav>
+
+   </header>
+
+  <article class="post single">
+  <header>
+    <h1>Automatic publishing to GitHub Pages with Travis CI</h1>
+    <p>30 Dec 2013</p>
+  </header>
+
+  <section class="content">
+    <p>I&#39;ve been working on improving my site
+and moving it over to <a href="https://pages.github.com/">GitHub pages</a> over the holiday.
+This involved a lot of work on <a href="https://github.com/razor-x/jekyll-and-zurb">Jekyll &amp; ZURB</a>,
+the Jekyll scaffold I created.
+It has a lot of (optional) features and modern optimizations,
+while still being a clean starting point for any static site.</p>
+
+<p>Eventually, the <a href="http://io.evansosenko.com/jekyll-and-zurb/">example site</a>
+will function as the primary source of documentation and feature demos,
+but for my first post here I wanted to talk about the coolest feature I added:
+getting <a href="https://travis-ci.org/">Travis CI</a> to build and publish the site
+to <a href="http://pages.github.com/">GitHub Pages</a> on new commits.
+I got the idea from <a href="http://awestruct.org/auto-deploy-to-github-pages/">the { :awestruct } docs</a>.</p>
+
+<p>This method should work with any static site generator,
+or really anything as I only make the following assumptions:</p>
+
+<ul>
+<li>There is a rake task, <code>rake build</code> that will build your site.</li>
+<li>The variable <code>config[:destination]</code> is defined in your <code>Rakefile</code>,
+and points to the output directory for the build
+(with Jekyll, <code>config[:destination] = &#39;_site&#39;</code>).</li>
+<li>Your repo is hosted on GitHub.</li>
+</ul>
+
+<p>That&#39;s it!</p>
+
+<p>I&#39;ll step through the code a few lines at a time,
+but if you want to skip to the answer, there is a link to a Gist at the end.
+These instructions assume you will use the <code>gh-pages</code> branch,
+but the case where you need to use <code>master</code> is not that different.</p>
+
+<h2>GitHub Pages branch</h2>
+
+<p>First, setup a <code>gh-pages</code> branch (if you don&#39;t have one already).
+We use an orphan branch since the history is separate.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>git checkout --orphan gh-pages
+</code></pre></div>
+<p>Next, you will need to <strong>remove all files and folders except the <code>.git</code> directory.</strong>
+Then, make an initial commit with only <code>index.html</code>, push it, and make sure it goes live online.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>git add --all
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;GitHub Pages placeholder&quot;</span> &gt; index.html
+<span class="nv">$ </span>git add index.html
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;GitHub Pages placeholder&quot;</span>
+<span class="nv">$ </span>git push -u origin gh-pages
+<span class="nv">$ </span>git checkout master
+</code></pre></div>
+<h2>Credentials</h2>
+
+<p>Now, you need to set up credentials that will let Travis CI login and push to GitHub.</p>
+
+<p>Install the travis gem,</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>gem install travis
+</code></pre></div>
+<p>Create a <a href="https://github.com/settings/applications">GitHub Personal Access Token</a>,
+and add your name, email, and token to travis as encrypted data
+(fill in your values in the command below).
+Be sure to run this inside the git repo for your site.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>travis encrypt <span class="s1">&#39;GIT_NAME=&quot;Your Name&quot; GIT_EMAIL=you@example.com GH_TOKEN=token&#39;</span>
+</code></pre></div>
+<p>This will give you a value you need to add to your <code>.travis.yml</code>, e.g.,</p>
+<div class="highlight"><pre><code class="yaml language-yaml" data-lang="yaml"><span class="c1"># .travis.yml</span>
+
+<span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rake travis</span>
+
+<span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">&quot;big</span><span class="nv"> </span><span class="s">long</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">string&quot;</span>
+
+<span class="l-Scalar-Plain">branches</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">only</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">master</span>
+</code></pre></div>
+<p>Note we also specify what branch to build the site from,
+and that <code>rake travis</code> should be run for the build.</p>
+
+<h2>Rake task</h2>
+
+<p>The last step is adding the rake task that Travis CI
+will run to build and publish your site.</p>
+
+<p>Most of the steps configure git settings so
+Travis CI can pull and push to the <code>gh-pages</code> branch.</p>
+
+<p>Grab the rake task below.</p>
+
+<p><span class="fi-social-github"></span>
+<a href="https://gist.github.com/razor-x/8166421">gist.github.com/razor-x/8166421</a></p>
+
+<script src="https://gist.github.com/8166421.js"> </script>
+
+  </section>
+
+  <aside class="social-buttons">
+
+  <div class="fb-like" data-href="http://evansosenko.com/posts/automatic-publishing-github-pages-travis-ci" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+
+
+
+  <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+
+
+
+  
+    
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="@ThatsMr_n00b_2u">Tweet</a>
+
+</aside>
+
+
+  
+    <aside class="comments">
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
+  
+</article>
+
+
+  <div id="email_modal" class="reveal-modal" data-reveal>
+    <p>razorx {at} evansosenko.com
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+
+  <div id="fb-root"></div>
+
+
+
+  <script>    Modernizr.load([          {        load: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js',        complete: function () {          if ( !window.jQuery ) {            Modernizr.load('http://evansosenko.com/assets/jquery/jquery-46c4fab69fc2a31c4fda115a4fc119db.js');          }        }      },          'http://evansosenko.com/assets/app-00ec4825600098701d23490c076e7b05.js'    ]);      !function(e,t,n){var c,o=e.getElementsByTagName(t)[0];e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="//connect.facebook.net/en_US/all.js#xfbml=1",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk");        window.___gcfg={lang:"en-US",parsetags:"onload"},function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://apis.google.com/js/plusone.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();        !function(t,e,r){var n,s=t.getElementsByTagName(e)[0],i=/^http:/.test(t.location)?"http":"https";t.getElementById(r)||(n=t.createElement(e),n.id=r,n.src=i+"://platform.twitter.com/widgets.js",s.parentNode.insertBefore(n,s))}(document,"script","twitter-wjs");        var disqus_shortname="evansosenko";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}();        !function(e,n,a,t,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=n.createElement(a),s=n.getElementsByTagName(a)[0],o.async=1,o.src=t,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-19631381-4","evansosenko.com"),ga("send","pageview");      </script>
+</body>
+</html>
