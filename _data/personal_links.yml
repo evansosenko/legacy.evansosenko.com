@@ -2,13 +2,13 @@
   url: https://github.com/razor-x
   icon: fi-social-github
 
+# - name: LinkedIn
+#   url: http://www.linkedin.com/pub/evan-sosenko/83/b04/599
+#   icon: fi-social-linkedin
+
 - name: Google+
   url: https://plus.google.com/+EvanSosenko
   icon: fi-social-google-plus
-
-- name: Facebook
-  url: https://www.facebook.com/evan.sosenko
-  icon: fi-social-facebook
 
 - name: Twitter
   url: https://twitter.com/ThatsMr_n00b_2u
