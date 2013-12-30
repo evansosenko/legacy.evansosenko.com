@@ -89,7 +89,7 @@ branches:
     - master
 ```
 
-Note we also specify what branch to build the site with,
+Note we also specify what branch to build the site from,
 and that `rake travis` should be run for the build.
 
 ## Rake task
@@ -104,3 +104,5 @@ Grab the rake task below.
 
 <span class="fi-social-github"></span>
 [gist.github.com/razor-x/8166421](https://gist.github.com/razor-x/8166421)
+
+{% gist 8166421 %}
