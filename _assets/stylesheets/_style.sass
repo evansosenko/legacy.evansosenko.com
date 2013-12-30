@@ -7,8 +7,24 @@ a
   &:visited, &:hover
     color: inherit
 
-div.highlight
+pre
   +panel
+
+// Add presentational line numbers to code blocks;
+// based on Presentational line numbering by Adam Prescott:
+//
+// https://aprescott.com/posts/presentational-line-numbering
+//
+pre code
+  counter-reset: line-numbering
+
+  .line::before
+    content: counter(line-numbering)
+    counter-increment: line-numbering
+    padding-right: 1em
+    width: 1.5em
+    text-align: right
+    opacity: 0.5
 
 #top
   text-align: center
