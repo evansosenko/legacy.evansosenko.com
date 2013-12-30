@@ -43,6 +43,9 @@
         }
       },
     {% endfor %}
+    {% if page.mathjax %}
+      '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
+    {% endif %}
       '{% asset_path app.js %}'
     ]);
   {% if site.social.facebook.enabled %}
