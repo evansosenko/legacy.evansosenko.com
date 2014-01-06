@@ -62,18 +62,19 @@ $ git clone https://github.com/razor-x/jekyll-and-zurb.git my-blog
 run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
 
-## Example site and documentation
+## Demo site and documentation
 
 The `master` branch of this project is designed to be used
 as a starting point for your site and as a branch to pull updates from.
 Thus, most features are disabled by default,
 and only the `index.html` page has been created with minimal markup.
 
-The `example` branch is a full website that will contain
+The `demo` branch is a full website that will contain
 real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
-Examples site hosted on GitHub pages: [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+Demo site hosted on GitHub pages:
+[io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
 
 ## Add future update support
 
