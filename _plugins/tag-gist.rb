@@ -13,7 +13,7 @@ module Jekyll
       href = %Q{href="https://gist.github.com/#{gist_id}"}
       text = %Q{#{file_str} gist #{gist_id}}
 
-      inner << %Q{<span class="fi-social-github"></span>}
+      inner << %Q{<span class="loader fi-social-github"></span>}
       inner << %Q{<a #{href}><code>#{text}</code></a>}
 
       %Q{<div class="gist" data-gist="#{gist_id}"#{file_data_attr}>#{inner}</div>}
