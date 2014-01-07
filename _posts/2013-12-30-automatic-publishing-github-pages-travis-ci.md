@@ -102,7 +102,4 @@ Travis CI can pull and push to the `gh-pages` branch.
 
 Grab the rake task below.
 
-<span class="fi-social-github"></span>
-[gist.github.com/razor-x/8166421](https://gist.github.com/razor-x/8166421)
-
 {% gist 8166421 %}
