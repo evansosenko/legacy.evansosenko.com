@@ -1,7 +1,7 @@
 //= require normalize-css/normalize.css
 //= require highlightjs/styles/zenburn
 
-// Make sure the charset is set appropriately
+// Make sure the charset is set appropriately.
 @charset "UTF-8"
 
 //
@@ -18,6 +18,9 @@
 
 // Import Foundation
 @import "foundation/scss/foundation"
+
+// Load this when using social buttons.
+<%= '@import "social-buttons"' if site.config['social'] %>
 
 // Ouroboros Sass/CSS Spinner
 @import "compass/css3/transition"
