@@ -37,14 +37,14 @@ pre code
   .line::before
     content: counter(line-numbering)
     counter-increment: line-numbering
-    padding-right: 1em
-    width: 1.5em
+    padding-right: 1rem
+    width: 1.5rem
     text-align: right
     opacity: 0.5
 
 h2.tagline
   +simple_emboss(#fff)
-  font-size: 0.9em
+  font-size: 0.9rem
   text-align: center
 
 #top
@@ -81,10 +81,10 @@ h2.tagline
   display: inline-block
   color: $site_title_clr
   a
-    font-size: 1.2em
+    font-size: 1.2rem
     line-height: normal
     &.icon
-      font-size: 1.3em
+      font-size: 1.3rem
   ul
     +inline-list
 
@@ -96,7 +96,7 @@ section.posts
   text-align: center
   h2
     +grid-column($columns: 8, $center: true)
-    font-size: 1.3em
+    font-size: 1.3rem
   ul.posts
     +grid-column($columns: 8, $center: true)
     li
@@ -115,7 +115,7 @@ article.post.single
     +grid-row
     +grid-column(9)
     h1
-      font-size: 1.6em
+      font-size: 1.6rem
   section.content
     +grid-row
     +grid-column(12)
