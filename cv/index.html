@@ -4,23 +4,25 @@ title: Curriculum Vitae
 ---
 
 <section id="cv">
-  <h1>Curriculum Vitae</h1>
+  <h1 data-magellan-destination="top">Curriculum Vitae</h1>
   <nav data-magellan-expedition="fixed">
   <dl>
-    <dt><a href="{{ site.io_domain }}/curriculum-vitae/Evan Sosenko - Curriculum Vitae.pdf"><span class="fi-page-pdf"></span>pdf - cv</a></dt>
-    {% for cv in site.data.cv %}
-      {% if cv.type == 'section' %}
-
+    <dt>
+      <a href="{{ site.io_domain }}/curriculum-vitae/Evan Sosenko - Curriculum Vitae.pdf"><span class="fi-page-pdf"></span>pdf - cv</a>
+    </dt>
+    <dd data-magellan-arrival="top"><a class="fi-arrow-up" href="#top" title="top"></a></dd>
+  {% for cv in site.data.cv %}
+    {% if cv.type == 'section' %}
       {% if cv.name %}
         {% assign title = cv.name %}
       {% else %}
         {% assign title = cv.id %}
       {% endif %}
-
       <dd data-magellan-arrival="{{ cv.id }}"><a href="#{{ cv.id }}">{{ title }}</a></dd>
-
     {% endif %}
   {% endfor %}
+    <dd class="magellan-hide-button"><a class="fi-minus-circle" title="hide this"> hide nav</a></dd>
+    <dd class="magellan-show-button"><a class="fi-list" title="show nav"> show nav</a></dd>
   </dl>
   </nav>
 

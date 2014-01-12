@@ -32,3 +32,23 @@ hljs.initHighlightingOnLoad()
 #
 $('pre code').html (index, html) ->
   html.trim().replace /^(.*)$/mg, "<span class=\"line\">$1</span>"
+
+$ ->
+  nav = $('#cv nav')
+  nav_links = $('#cv dd[data-magellan-arrival]')
+  hide_button = $('#cv .magellan-hide-button')
+  show_button = $('#cv .magellan-show-button')
+
+  hide_button.click ->
+    nav.fadeOut '400', ->
+      hide_button.hide()
+      nav_links.hide()
+      show_button.show()
+      nav.fadeIn()
+
+  show_button.click ->
+    nav.fadeOut '400', ->
+      show_button.hide()
+      nav_links.show()
+      hide_button.show()
+      nav.fadeIn()
