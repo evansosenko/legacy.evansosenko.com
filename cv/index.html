@@ -40,11 +40,21 @@ title: Curriculum Vitae
         <h2>{{ title }}</h2>
     {% when 'entry' %}
       <div class="entry">
-        <h3 class="name">{{ cv.name }}</h3>
-        <p class="date">{{ cv.start }}{% unless cv.start == cv.end %}–{{ cv.end }}{% endunless %}</p>
+        <h3 class="name">
+        {% if cv.url %}<a href="{{ cv.url }}">{% endif %}
+          {% if cv.icon %}<span class="{{ cv.icon }}"></span>{% endif %}
+          {{ cv.name }}
+        {% if cv.url %}</a>{% endif %}
+        </h3>
+        <p class="date">{{ cv.start }}{% if cv.end %}{% unless cv.start == cv.end %}–{{ cv.end }}{% endunless %}{% endif %}</p>
         <div class="info">
           <p class="location">{{ cv.location }}</p>
-          {% if cv.description %}<p class="description">{{ cv.description }}</p>{% endif %}
+          {% if cv.description %}
+            <p class="description">
+              {{ cv.description }}
+              {% if cv.url %}<a href="{{ cv.url }}" title="view this online"><span class="fi-link"></span></a>{% endif %}
+            </p>
+          {% endif %}
         </div>
       </div>
     {% when 'list' %}

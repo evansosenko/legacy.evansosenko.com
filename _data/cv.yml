@@ -98,6 +98,7 @@
   end: present
   location: OurTownRentals.com, Valencia, CA, US
   description: Commercial website for USA vacation rentals founded in 2001. Responsible for web design, development, server administration, and business management.
+  url: https://ourtownrentals.com/
 
 - type: section
   id: technical
