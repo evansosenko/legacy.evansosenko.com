@@ -8,6 +8,8 @@ a
     color: inherit
 
 code
+  white-space: pre
+  overflow-x: auto
   color: $clr_purple
 
 pre
@@ -25,22 +27,6 @@ div.gist div.gist-data.gist-syntax
   table.lines.highlight
     background: transparent
     border: none
-
-// Add presentational line numbers to code blocks;
-// based on Presentational line numbering by Adam Prescott:
-//
-// https://aprescott.com/posts/presentational-line-numbering
-//
-pre code
-  counter-reset: line-numbering
-
-  .line::before
-    content: counter(line-numbering)
-    counter-increment: line-numbering
-    padding-right: 1rem
-    width: 1.5rem
-    text-align: right
-    opacity: 0.5
 
 h2.tagline
   +simple_emboss(#fff)

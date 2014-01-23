@@ -25,14 +25,6 @@ $(document).foundation()
 # Invoke highlight.js on page load.
 hljs.initHighlightingOnLoad()
 
-# Add presentational line numbers to code blocks;
-# based on Presentational line numbering by Adam Prescott:
-#
-# https://aprescott.com/posts/presentational-line-numbering
-#
-$('pre code').html (index, html) ->
-  html.trim().replace /^(.*)$/mg, "<span class=\"line\">$1</span>"
-
 $ ->
   nav = $('#cv nav')
   nav_links = $('#cv dd[data-magellan-arrival]')
