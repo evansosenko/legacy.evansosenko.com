@@ -39,13 +39,9 @@ h2.tagline
   background-color: $clr_blue_green
 
 #banner
-  width: 100%
   height: $banner_height
-  margin: 0.2 * $banner_height auto
-  padding-top: 0.3 * $banner_height
 
 #title
-  margin-bottom: $title_margin-bottom
   color: $site_title_clr
   font-size: 3rem
   font-family: $site_title_font
@@ -78,8 +74,26 @@ h2.tagline
 #email_modal
   text-align: center
 
+html.flexbox body
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  section.posts
+    display: flex
+    align-items: center
+    justify-content: center
+    flex: 1
+
+html.no-flexbox
+  #banner
+    width: 100%
+    margin: 0 auto
+
+  section.posts
+    width: 100%
+    margin-top: 3rem
+
 section.posts
-  width: 100%
   text-align: center
   h2
     font-size: 1.3rem

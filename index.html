@@ -12,12 +12,14 @@ title: "{evan|sosenko}"
 <h2 class="tagline">{{ site.data.text.tagline }}</h2>
 
 <section class="posts">
-  <h2>{{ site.data.text.post_list_title }}</h2>
-  <ul class="posts">
-  {% for post in posts %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-  </ul>
+  <div>
+    <h2>{{ site.data.text.post_list_title }}</h2>
+    <ul class="posts">
+    {% for post in posts %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
 </section>
 
 {% include pagination.html %}
