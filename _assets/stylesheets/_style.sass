@@ -117,24 +117,26 @@ section.posts
 article.post.single
   header
     +grid-row
-    +grid-column(9)
+    +grid-column(12)
     h1
       font-size: 1.6rem
   section.content
     +grid-row
     +grid-column(12)
-    @media #{$small}
-      +grid-column(9)
+    clear: both
+    max-width: 700px
     a
       color: $clr_blue_green
   aside.social-buttons
     +grid-row
     +grid-column(12)
+    clear: both
     margin-bottom: rem-calc(20)
     margin-top: rem-calc(20)
   aside.comments
     +grid-row
     +grid-column(12)
+    clear: both
 
 #cv
   h1
