@@ -50,7 +50,8 @@
   location: SCV Scholarship Foundation, Santa Clarita, CA, US
 
 - type: section
-  id: publications and talks
+  id: publications-talks
+  name: publications and talks
 
 - type: entry
   name: Contributed Talk, APS March Meeting
