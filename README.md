@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/razor-x/evansosenko.com.png?branch=master)](https://travis-ci.org/razor-x/evansosenko.com)
 [![Dependency Status](https://gemnasium.com/razor-x/evansosenko.com.png)](https://gemnasium.com/razor-x/evansosenko.com)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/evansosenko.com/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Source for [my personal site](http://evansosenko.com/) running on Jekyll and Foundation.
 
