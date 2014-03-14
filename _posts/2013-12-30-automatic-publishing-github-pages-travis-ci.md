@@ -22,9 +22,9 @@ This method should work with any static site generator,
 or really anything as I only make the following assumptions:
 
 - There is a rake task, `rake build` that will build your site.
-- The variable `config[:destination]` is defined in your `Rakefile`,
+- The variable `destination` is defined in your `Rakefile`,
   and points to the output directory for the build
-  (with Jekyll, `config[:destination] = '_site'`).
+  (when using Jekyll defaults, set `destination = '_site'`).
 - Your repo is hosted on GitHub.
 
 That's it!
