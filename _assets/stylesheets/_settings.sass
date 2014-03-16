@@ -1,3 +1,7 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
 //
 // FOUNDATION SETTINGS
 //
@@ -116,7 +120,7 @@ $body-font-family: $font-family-base
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family
-// $header-font-weight: 300
+// $header-font-weight: normal
 // $header-font-style: normal
 // $header-font-color: #222
 // $header-line-height: 1.4
@@ -273,6 +277,7 @@ $body-font-family: $font-family-base
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12
 // $block-grid-default-spacing: rem-calc(20)
+// $align-block-grid-to-grid: true
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 $block-grid-media-queries: false
@@ -590,7 +595,7 @@ $block-grid-media-queries: false
 
 // Keystrokes
 
-// $include-html-type-classes: $include-html-classes
+// $include-html-keystroke-classes: $include-html-classes
 
 // We use these to control text styles.
 // $keystroke-font: "Consolas", "Menlo", "Courier", monospace
@@ -677,8 +682,10 @@ $block-grid-media-queries: false
 // $tabbar-menu-icon-padding: 0
 
 // $tabbar-hamburger-icon-width: rem-calc(16)
-// $tabbar-hamburger-icon-left: rem-calc(13)
-// $tabbar-hamburger-icon-top: rem-calc(5)
+// $tabbar-hamburger-icon-left: false
+// $tabbar-hamburger-icon-top: false
+// $tapbar-hamburger-icon-thickness: 1px
+// $tapbar-hamburger-icon-gap: 6px
 
 // Off Canvas Back-Link Overlay
 // $off-canvas-overlay-transition: background 300ms ease
@@ -811,7 +818,6 @@ $block-grid-media-queries: false
 // $price-money-size: rem-calc(32)
 // $price-money-font-family: $body-font-family
 
-
 // We use these to control the description styles
 // $price-bg: #fff
 // $price-desc-color: #777
@@ -910,8 +916,6 @@ $reveal-modal-bg: $clr_qwhite
 // $side-nav-font-family: $body-font-family
 // $side-nav-active-font-family: $side-nav-font-family
 
-
-
 // We use these to control border styles
 // $side-nav-divider-size: 1px
 // $side-nav-divider-style: solid
@@ -971,7 +975,6 @@ $sub-nav-font-color: $clr_sky_eyes
 // $sub-nav-text-decoration: none
 // $sub-nav-border-radius: 3px
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%)
-
 
 // We use these to control the active item styles
 
@@ -1157,8 +1160,11 @@ $sub-nav-active-bg: $clr_waves
 // $topbar-link-bg-active: $primary-color
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%)
 // $topbar-link-font-family: $body-font-family
+// $topbar-link-text-transform: none
+// $topbar-link-padding: $topbar-height / 3
 
 // $topbar-button-font-size: 0.75rem
+// $topbar-button-top: 7px
 
 // $topbar-dropdown-label-color: #777
 // $topbar-dropdown-label-text-transform: uppercase
@@ -1194,3 +1200,39 @@ $sub-nav-active-bg: $clr_waves
 //
 
 // $include-html-visibility-classes: $include-html-classes
+// $include-table-visibility-classes: true
+// $include-legacy-visibility-classes: true
+
+//
+// RANGE SLIDER
+//
+
+// $include-html-range-slider-classes: $include-html-classes
+
+// These variabels define the slider bar styles
+// $range-slider-bar-width: 100%
+// $range-slider-bar-height: rem-calc(16)
+
+// $range-slider-bar-border-width: 1px
+// $range-slider-bar-border-style: solid
+// $range-slider-bar-border-color: #ddd
+// $range-slider-radius: $global-radius
+// $range-slider-round: $global-rounded
+// $range-slider-bar-bg-color: #fafafa
+
+// Vertical bar styles
+// $range-slider-vertical-bar-width: rem-calc(16)
+// $range-slider-vertical-bar-height: rem-calc(200)
+
+// These variabels define the slider handle styles
+// $range-slider-handle-width: rem-calc(32)
+// $range-slider-handle-height: rem-calc(22)
+// $range-slider-handle-position-top: rem-calc(-5)
+// $range-slider-handle-bg-color: $primary-color
+// $range-slider-handle-border-width: 1px
+// $range-slider-handle-border-style: solid
+// $range-slider-handle-border-color: none
+// $range-slider-handle-radius: $global-radius
+// $range-slider-handle-round: $global-rounded
+// $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%)
+// $range-slider-handle-cursor: pointer
