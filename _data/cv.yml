@@ -118,7 +118,7 @@
 
 - type: list
   lists:
-    - [ platforms, Unix, Linux, Microsoft Windows ]
+    - [ platforms, FreeBSD, Linux, Microsoft Windows ]
     - [ tools, Latex, Git, Office ]
     - [ scientific, Mathematica, LabVIEW, Autodesk Inventor ]
     - [ design, Compass, Adobe Illustrator, Adobe Photoshop ]
