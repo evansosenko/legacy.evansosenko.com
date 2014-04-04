@@ -152,9 +152,17 @@ article.post.single
       span
         padding-right: $cv_nav_padding-right
       a
-        color: $cv_nav_color
+        color: $cv_nav_color_a
         font-weight: $cv_nav_font-weight
 
+        &:hover
+          color: $cv_nav_color_b
+    dd
+      a
+        color: $cv_nav_color_b
+
+        &:hover
+          color: $cv_nav_color_a
     .magellan-show-button
       display: none
 
