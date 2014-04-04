@@ -1,3 +1,9 @@
+// Foundation 5.2.1 sets
+// height: 100%
+// which breaks the layout
+body, html
+  height: auto
+
 body
   overflow-y: scroll
 
@@ -148,6 +154,8 @@ article.post.single
     margin: 0
     margin-bottom: rem-calc(5)
     background-color: $clr_blue_green
+    dt a, dd a
+      padding: 0
     dt
       span
         padding-right: $cv_nav_padding-right
