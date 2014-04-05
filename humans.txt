@@ -11,3 +11,7 @@ Components: Modernizr, jQuery, Web Font Loader, highlight.js, Foundation by ZURB
 Software: Ruby, Rake, Jekyll, Jekyll::AssetsPlugin, Sprockets, Compass, Sass, Uglifier
 Source: https://github.com/razor-x/evansosenko.com
 Hosting: GitHub Pages, CloudFlare
+
+/* LICENSE */
+
+Copyright © 2013-2014 Evan Sosenko

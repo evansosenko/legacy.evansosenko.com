@@ -168,9 +168,10 @@ If you want to update Foundation, update the version number in `bower.json`.
 
 ## License
 
-This code is Copyright 2013 Evan Sosenko,
+The code and content for this site is Copyright © 2013-2014 Evan Sosenko.
+
 This site is built with [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb)
-which is licensed under the MIT license.
+which is licensed under the [MIT license](./MIT-LICENSE.txt).
 
 ## Warranty
 
