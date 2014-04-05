@@ -1,7 +1,7 @@
 # evansosenko.com
 
-[![Build Status](https://travis-ci.org/razor-x/evansosenko.com.png?branch=master)](https://travis-ci.org/razor-x/evansosenko.com)
-[![Dependency Status](https://gemnasium.com/razor-x/evansosenko.com.png)](https://gemnasium.com/razor-x/evansosenko.com)
+[![Dependency Status](http://img.shields.io/gemnasium/razor-x/evansosenko.com.svg)](https://gemnasium.com/razor-x/evansosenko.com)
+[![Build Status](http://img.shields.io/travis/razor-x/evansosenko.com/master.svg)](https://travis-ci.org/razor-x/evansosenko.com)
 
 Source for [my personal site](http://evansosenko.com/) running on Jekyll and Foundation.
 
