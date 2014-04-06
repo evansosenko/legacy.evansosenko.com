@@ -1,6 +1,5 @@
 {
   "name": "Jekyll & ZURB",
-  "version": "2.1.0",
   "dependencies": {
     "ouroboros": "tomgenoni/ouroboros",
     "fastclick": "1.0.0",
