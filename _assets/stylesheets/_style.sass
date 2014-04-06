@@ -10,6 +10,7 @@ body
 a
   text-decoration: none
   color: inherit
+
   &:visited, &:hover
     color: inherit
 
@@ -24,12 +25,14 @@ pre
 
 div.gist
   +ui-spinner($size: 15px, $hole-color: black, $bkg-color-dark: $clr_blue_green)
+
   .ui-spinner
     display: inline-block
     margin-bottom: -4px
 
 div.gist div.gist-data.gist-syntax
   background: transparent
+
   table.lines.highlight
     background: transparent
     border: none
@@ -54,13 +57,17 @@ h2.tagline
   font-weight: $site_title_font_weight
   text-transform: lowercase
   +simple_emboss
+
   &::before
     content: "{"
+
   &::after
     content: "}"
+
   span
     width: 0
     display: inline-block
+
     &::before
       margin-left: rem-calc(-5)
       content: "|"
@@ -69,11 +76,14 @@ h2.tagline
   +simple_emboss
   display: inline-block
   color: $site_title_clr
+
   a
     font-size: $personal_links_font-size
     line-height: normal
+
     &.icon
       font-size: $personal_links_font-size
+
   ul
     +inline-list
 
@@ -84,6 +94,7 @@ html.flexbox body
   display: flex
   min-height: 100vh
   flex-direction: column
+
   section.posts
     display: flex
     align-items: center
@@ -101,22 +112,29 @@ html.no-flexbox
 
 section.posts
   text-align: center
+
   h2
     font-size: 1.3rem
+
   ul.posts
     margin-left: 0
+
     li
       text-transform: lowercase
       list-style-type: none
       $local_margin: rem-calc(5)
+
       &::before
         margin-right: $local-margin
         content: "«"
+
       &::after
         margin-left: $local-margin
         content: "»"
+
       &:hover::before
         content: "»"
+
       &:hover::after
         content: "«"
 
@@ -124,21 +142,26 @@ article.post.single
   header
     +grid-row
     +grid-column(12)
+
     h1
       font-size: 1.6rem
+
   section.content
     +grid-row
     +grid-column(12)
     clear: both
     max-width: 700px
+
     a
       color: $clr_blue_green
+
   aside.social-buttons
     +grid-row
     +grid-column(12)
     clear: both
     margin-bottom: rem-calc(20)
     margin-top: rem-calc(20)
+
   aside.comments
     +grid-row
     +grid-column(12)
@@ -147,18 +170,23 @@ article.post.single
 #cv
   h1
     text-align: center
+
   .pdf
     float: left
+
   nav
     +sub-nav
     margin: 0
     margin-bottom: rem-calc(5)
     background-color: $clr_blue_green
+
     dt a, dd a
       padding: 0
+
     dt
       span
         padding-right: $cv_nav_padding-right
+
       a
         color: $cv_nav_color_a
         font-weight: $cv_nav_font-weight
@@ -171,6 +199,7 @@ article.post.single
 
         &:hover
           color: $cv_nav_color_a
+
     .magellan-show-button
       display: none
 
@@ -183,47 +212,62 @@ article.post.single
     +panel
     // give magellan a target above the title
     position: relative
+
     .magellan-destination
       visibility: hidden
       height: 0
       position: absolute
       top: -100px
+
       @media #{$small}
         top: -50px
+
     .entry
       +grid-column
       +grid-row
       padding-left: $cv_entry_padding-left
+
       .date
         margin-bottom: 0
+
       @media #{$small}
         .name
           +grid-column(8, $push: 4)
           padding-left: 0
+
         .date
           +grid-column(4, $pull: 8)
           padding-left: rem-calc($cv_first_column_padding-left)
+
         .info
           +grid-column(8, $offset: 4)
           padding-left: 0
 
     .list
       +horizontal-list-container
+
       dt
         margin-bottom: $cv_list_margin-bottom
+
       .name
         clear: both
+
       .info
         dd
           +horizontal-list-item
+
           &::before
             content: "· "
+
           &:first-child::before
             content: ""
+
       @media #{$small}
         +grid-row
+
         .info
           +grid-column(8)
+
         .name
           +grid-column(4)
           padding-left: rem-calc($cv_first_column_padding-left + 10)
