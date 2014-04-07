@@ -9,6 +9,10 @@
 =simple_emboss($color:#000)
   text-shadow: 0px 1px 0px $color
 
+=post_min_width($size, $range)
+  @media #{$size}
+    min-width: lower-bound($range)
+
 // Colors
 
 $clr_white: #fff
