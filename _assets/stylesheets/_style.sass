@@ -139,7 +139,9 @@ section.posts
         content: "«"
 
 article.post.single
-  margin: 0 auto
+
+  @media #{$small}
+    margin: 0 auto
 
   header
     +grid-row
