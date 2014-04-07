@@ -27,6 +27,7 @@ gems:
   - jekyll-assets
   - jekyll-assets/compass
   - coffee_script
+  - jekyll/scholar
 
 # Jekyll::AssetsPlugin options.
 assets:
@@ -132,3 +133,7 @@ social:
 # http://razor-x.github.io/jekyll-and-zurb/inception/jekyll-and-zurb/
 # :sub_content:
 #   - [ "https://github.com/razor-x/jekyll-and-zurb", gh-pages, inception/jekyll-and-zurb ]
+
+scholar:
+  source: bower_components/references
+  reference_tagname: cite
