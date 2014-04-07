@@ -137,3 +137,6 @@ social:
 scholar:
   source: bower_components/references
   reference_tagname: cite
+  bibtex_filters:
+    - latex
+    - html
