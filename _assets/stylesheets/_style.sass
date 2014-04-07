@@ -151,13 +151,20 @@ article.post.single
     +grid-column(12)
 
     h1
-      font-size: 1.6rem
+      font-size: 0.6 * $h1-font-size
 
   section.content
     +grid-row
     +grid-column(12)
     clear: both
     max-width: 700px
+
+    h2
+      font-size: 0.6 * $h2-font-size
+
+    h3
+      font-size: 0.6 * $h2-font-size
+      font-style: italic
 
     a
       color: $clr_blue_green
