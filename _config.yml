@@ -5,6 +5,9 @@ domain: http://evansosenko.com
 baseurl: http://evansosenko.com
 io_domain: http://io.evansosenko.com
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
 pygments: true
 permalink: /posts/:title/
 
