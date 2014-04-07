@@ -13,7 +13,9 @@ layout: default
     {{ content }}
   </section>
 
-  {% include social-buttons.html %}
+  {% unless page.social_buttons_disabled %}
+    {% include social-buttons.html %}
+  {% endunless %}
 
   {% if page.comments and site.disqus %}
     <aside class="comments">
