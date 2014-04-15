@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Automatic publishing to GitHub Pages with Travis CI
+keywords: [ travis ci, jekyll, static site generators, github, github pages, git, rake, ruby ]
+meta:
+  description: "Rake task to push static site to GitHub Pages with Travis CI."
 comments: true
 ---
 
