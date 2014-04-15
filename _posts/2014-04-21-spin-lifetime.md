@@ -82,7 +82,7 @@ on the GitHub repository
 ### BibTeX
 
 The `.bib` files used to generate the references are hosted on GitHub at
-[razor-x/references#694a162ab761e22b28ade71f169141197ddd8084][references:aps].
+[razor-x/references][references:aps].
 
 ### TeX source
 
