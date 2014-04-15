@@ -71,7 +71,7 @@ if unsure of the associated license.
 
 ### Nonlocal spin valve figure
 
-Fig. 1 is a Nonlocal Spin Valve written in TikZ.
+Figure 1 is a Nonlocal Spin Valve written in TikZ.
 It is available under the
 Creative Commons Attribution 4.0 International License
 on the GitHub repository
