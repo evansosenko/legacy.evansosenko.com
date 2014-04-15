@@ -75,9 +75,9 @@ Figure 1 is a Nonlocal Spin Valve written in TikZ.
 It is available under the
 Creative Commons Attribution 4.0 International License
 on the GitHub repository
-[razor-x/tikz-nonlocal_spin_valve](https://github.com/razor-x/tikz-nonlocal_spin_valve).
+[razor-x/tikz-nonlocal_spin_valve][tikz-nonlocal_spin_valve].
 
-{% picture tikz-nonlocal_spin_valve.png %}
+[{% picture tikz-nonlocal_spin_valve.png alt="Nonlocal Spin Valve in TikZ." %}][tikz-nonlocal_spin_valve]
 
 ### BibTeX
 
@@ -104,3 +104,4 @@ The full TeX source may be released and linked here after official publication i
 [scipy-data_fitting:docs:fit]: https://pythonhosted.org/scipy-data_fitting/#scipy_data_fitting.Fit
 [spin-lifetime-analysis]: https://github.com/razor-x/spin-lifetime-analysis
 [spin-lifetime-analysis:releases]: https://github.com/razor-x/spin-lifetime-analysis/releases
+[tikz-nonlocal_spin_valve]: https://github.com/razor-x/tikz-nonlocal_spin_valve
