@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spin lifetime and Hanle curve fitting resources
+picture: tikz-nonlocal_spin_valve.png
 comments: true
 permalink: spin-lifetime
 social_buttons_disabled: true
@@ -75,6 +76,8 @@ It is available under the
 Creative Commons Attribution 4.0 International License
 on the GitHub repository
 [razor-x/tikz-nonlocal_spin_valve](https://github.com/razor-x/tikz-nonlocal_spin_valve).
+
+{% picture tikz-nonlocal_spin_valve.png %}
 
 ### BibTeX
 
