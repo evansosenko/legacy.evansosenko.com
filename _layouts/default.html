@@ -22,8 +22,15 @@
   {{ content }}
 
   <div id="email_modal" class="reveal-modal" data-reveal>
-    <p>razorx {at} evansosenko.com
-    <a class="close-reveal-modal">&#215;</a>
+  {% if site.data.text.emails %}
+    <dl>
+    {% for item in site.data.text.emails %}
+      <dt>{{ item.name }}</dt>
+      <dd>{{ item.email }}</dd>
+    <dl>
+    {% endfor %}
+  {% endif %}
+    <a class="close-reveal-modal" title="Close modal.">×</a>
   </div>
 
 {% if site.social.facebook.enabled %}
