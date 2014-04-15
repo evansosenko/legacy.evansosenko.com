@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Spin lifetime and Hanle curve fitting
+keywords: [ spintronics, spin lifetime, spin transport, spin injection, graphene, Hanle, curve fitting, data analysis ]
+meta:
+  description: "Software for spin lifetime measurements via Hanle curve fitting."
 picture: tikz-nonlocal_spin_valve.png
 comments: true
 permalink: spin-lifetime
