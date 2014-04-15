@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spin lifetime and Hanle curve fitting resources
+title: Spin lifetime and Hanle curve fitting
 picture: tikz-nonlocal_spin_valve.png
 comments: true
 permalink: spin-lifetime
