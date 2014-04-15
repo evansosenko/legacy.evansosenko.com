@@ -221,7 +221,7 @@ article.post.single
     .magellan-show-button
       display: none
 
-    @media #{$small-up}
+    @media #{$medium-up}
       .magellan-hide-button
         display: none
 
@@ -237,18 +237,19 @@ article.post.single
       position: absolute
       top: -100px
 
-      @media #{$small-up}
+      @media #{$medium-up}
         top: -50px
 
     .entry
       +grid-column
       +grid-row
-      padding-left: $cv_entry_padding-left
 
       .date
         margin-bottom: 0
 
-      @media #{$small-up}
+      @media #{$medium-up}
+        padding-left: $cv_entry_padding-left
+
         .name
           +grid-column(8, $push: 4)
           padding-left: 0
@@ -280,7 +281,7 @@ article.post.single
           &:first-child::before
             content: ""
 
-      @media #{$small-up}
+      @media #{$medium-up}
         +grid-row
 
         .info
