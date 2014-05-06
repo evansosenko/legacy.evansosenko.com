@@ -3,13 +3,13 @@
   "dependencies": {
     "references": "https://github.com/razor-x/references.git#master",
     "ouroboros": "tomgenoni/ouroboros",
-    "fastclick": "1.0.0",
+    "fastclick": "1.0.1",
     "highlightjs": "8.0",
     "foundation": "5.2.2",
     "foundation-icon-fonts": "latest",
     "jquery": "2.1.0",
-    "normalize-css": "3.0.0",
-    "modernizr": "2.7.2",
+    "normalize-css": "3.0.1",
+    "modernizr": "2.8.1",
     "yepnope": "1.5.4"
   }
 }
