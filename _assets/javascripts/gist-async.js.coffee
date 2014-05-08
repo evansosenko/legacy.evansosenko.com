@@ -32,10 +32,10 @@ $ ->
 
   elements.addClass('loading')
 
-  $('div.loading[data-gist] span.loader').fadeOut 'fast', ->
-    loader = $(spinnerHTML)
-    $(this).replaceWith(loader)
-    loader.fadeIn
+  $('div.loading[data-gist] span.spinner').fadeOut 'fast', ->
+    spinner = $(spinnerHTML)
+    $(this).replaceWith(spinner)
+    spinner.fadeIn
 
   # Get elements referencing a gist
   # and build a gists hash referencing
