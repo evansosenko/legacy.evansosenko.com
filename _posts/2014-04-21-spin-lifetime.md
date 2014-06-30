@@ -65,7 +65,7 @@ if unsure of the associated license.
 
 ### Figure generation
 
-- The full source code used to generate figures 2, 3 and 4
+- The full source code used to generate the figures containing the fits
   is hosted on the GitHub repository
   [razor-x/aps-spin-lifetime-plots][aps-spin-lifetime-plots].
 
