@@ -156,7 +156,7 @@ Be sure to run this inside the git repo for your site.</p>
 <p>This will give you a value you need to add to your <code>.travis.yml</code>, e.g.,</p>
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># .travis.yml</span>
 
-<span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rake travis</span>
+<span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">bundle exec rake travis</span>
 
 <span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">&quot;big</span><span class="nv"> </span><span class="s">long</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">string&quot;</span>
