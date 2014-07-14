@@ -82,7 +82,7 @@ This will give you a value you need to add to your `.travis.yml`, e.g.,
 ```yaml
 # .travis.yml
 
-script: rake travis
+script: bundle exec rake travis
 
 env:
   - secure: "big long encrypted string"
