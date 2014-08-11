@@ -128,7 +128,7 @@
 - type: list
   lists:
     - [ platforms, FreeBSD, Linux, Microsoft Windows ]
-    - [ tools, Latex, Git, Office ]
+    - [ tools, Chef, LaTeX, Git ]
     - [ scientific, Mathematica, LabVIEW, Autodesk Inventor ]
     - [ design, Compass, Adobe Illustrator, Adobe Photoshop ]
     - [ languages, Ruby, Python, PHP, SQL, HTML, CSS, SASS, JavaScript ]
