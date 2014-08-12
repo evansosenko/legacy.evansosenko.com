@@ -8,18 +8,18 @@ comments: true
 ---
 
 I've been working on improving my site
-and moving it over to [GitHub pages](https://pages.github.com/) over the holiday.
-This involved a lot of work on [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb),
+and moving it over to [GitHub pages] over the holiday.
+This involved a lot of work on [Jekyll & ZURB],
 the Jekyll scaffold I created.
 It has a lot of (optional) features and modern optimizations,
 while still being a clean starting point for any static site.
 
-Eventually, the [example site](http://io.evansosenko.com/jekyll-and-zurb/)
+Eventually, the [example site]
 will function as the primary source of documentation and feature demos,
 but for my first post here I wanted to talk about the coolest feature I added:
-getting [Travis CI](https://travis-ci.org/) to build and publish the site
-to [GitHub Pages](http://pages.github.com/) on new commits.
-I got the idea from [the { :awestruct } docs](http://awestruct.org/auto-deploy-to-github-pages/).
+getting [Travis CI] to build and publish the site
+to [GitHub Pages] on new commits.
+I got the idea from the [{ :awestruct } docs].
 
 This method should work with any static site generator,
 or really anything as I only make the following assumptions:
@@ -68,7 +68,7 @@ Install the travis gem,
 $ gem install travis
 ```
 
-Create a [GitHub Personal Access Token](https://github.com/settings/applications),
+Create a [GitHub Personal Access Token],
 and add your name, email, and token to travis as encrypted data
 (fill in your values in the command below).
 Be sure to run this inside the git repo for your site.
@@ -106,3 +106,10 @@ Travis CI can pull and push to the `gh-pages` branch.
 Grab the rake task below.
 
 {% gist 8166421 %}
+
+[{ :awestruct } docs]: http://awestruct.org/auto-deploy-to-github-pages/
+[example site]: http://io.evansosenko.com/jekyll-and-zurb/
+[GitHub Pages]: http://pages.github.com/
+[GitHub Personal Access Token]: https://github.com/settings/applications
+[Jekyll & ZURB]: https://github.com/razor-x/jekyll-and-zurb/
+[Travis CI]: https://travis-ci.org/
