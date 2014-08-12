@@ -39,8 +39,10 @@ div.gist div.gist-data.gist-syntax
 
 h2.tagline
   +simple_emboss(#fff)
+  width: 50%
+  margin: 0 auto
+  margin-top: rem-calc(20)
   font-size: 1.2rem
-  text-align: center
 
 #top
   text-align: center
@@ -99,48 +101,52 @@ html.flexbox body
   min-height: 100vh
   flex-direction: column
 
-  section.posts
+  dl.projects
     display: flex
-    align-items: center
-    justify-content: center
-    flex: 1
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: center
+    justify-content: space-between
+
+    div
+      min-width: rem-calc(100)
+
+    @media #{$medium-up}
+      div
+        width: 45%
 
 html.no-flexbox
   #banner
     width: 100%
     margin: 0 auto
 
-  section.posts
-    width: 100%
-    margin-top: 3rem
-
+section.projects,
 section.posts
-  text-align: center
+  width: 50%
+  margin: 0 auto
+  margin-top: rem-calc(20)
 
   h2
+    margin-bottom: rem-calc(20)
     font-size: 1.3rem
+
+    &.icon::before
+      margin-right: rem-calc(10)
+
+    dl.projects div
+      +hover_glow($body_hover_color)
 
   ul.posts
     margin-left: 0
 
     li
+      +hover_glow($body_hover_color)
       text-transform: lowercase
       list-style-type: none
-      $local_margin: rem-calc(5)
 
       &::before
-        margin-right: $local-margin
-        content: "«"
-
-      &::after
-        margin-left: $local-margin
+        margin-right: rem-calc(5)
         content: "»"
-
-      &:hover::before
-        content: "»"
-
-      &:hover::after
-        content: "«"
 
 article.post.single
 
