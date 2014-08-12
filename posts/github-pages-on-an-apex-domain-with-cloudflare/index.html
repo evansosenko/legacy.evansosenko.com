@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+
+  <title>GitHub Pages on an apex domain with CloudFlare - Evan Sosenko</title>
+  <meta property="og:title" content="GitHub Pages on an apex domain with CloudFlare" />
+
+
+
+  
+
+
+
+  <meta name="description" content="GitHub Pages on an apex domain with CloudFlare." />
+  <meta property="og:description" content="GitHub Pages on an apex domain with CloudFlare." />
+
+
+<link rel="canonical" href="http://evansosenko.com/posts/github-pages-on-an-apex-domain-with-cloudflare/" />
+<meta property="og:url" content="http://evansosenko.com/posts/github-pages-on-an-apex-domain-with-cloudflare/" />
+<meta property="og:site_name" content="Evan Sosenko" />
+
+<meta property="og:updated_time" content="2014-08-12T00:00:00+00:00" />
+
+
+  <meta property="og:locale" content="en_US" />
+
+
+
+
+
+  <meta property="keywords" content="github,github pages,cloudflare,dns,cdn,physics,math,code,development,web development,blog,personal" />
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+
+
+
+  <meta name="twitter:site" content="@evansosenko" />
+
+
+
+  <meta name="twitter:creator" content="@evansosenko" />
+
+
+  <link type="text/plain" rel="author" href="humans.txt" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
+  <link rel="stylesheet" href="http://evansosenko.com/assets/app-fa1c8f115401161361f36973f36f4c71.css">
+  <script>(function(){"use strict";WebFont.load({google:{families:["Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic:latin,latin-ext","Inconsolata:400,700","Roboto:300:latin"]},custom:{families:["foundation-icons"],testStrings:{"foundation-icons":"\uf100\uf101\uf102\uf103"}}})}).call(this);</script>
+  <script src="http://evansosenko.com/assets/head-7d1a7aa0c99f621e00a2edbb5151c800.js"></script>
+</head>
+
+<body>
+  <header id="top">
+    <h1 id="banner" title="Ph.D. physics student, online business owner, and developer."><a id="title" href="http://evansosenko.com/">Evan <span></span> Sosenko</a></h1>
+    <nav id="personal_links">
+  <ul>
+  
+    <li><a class="icon fi-social-github" href="https://github.com/razor-x" title="GitHub"></a></li>
+  
+    <li><a class="icon fi-social-linkedin" href="http://www.linkedin.com/pub/evan-sosenko/83/b04/599" title="LinkedIn"></a></li>
+  
+    <li><a class="icon fi-social-google-plus" href="https://plus.google.com/+EvanSosenko?rel=author" title="Google+"></a></li>
+  
+    <li><a class="icon fi-social-twitter" href="https://twitter.com/evansosenko" title="Twitter"></a></li>
+  
+    <li><a href="" data-reveal-id="email_modal" title="Email">@</a></li>
+    <li><a href="http://evansosenko.com/cv/" title="Curriculum Vitae">CV</a></li>
+  </ul>
+</nav>
+
+   </header>
+
+  <article class="post single">
+  <header>
+    <h1>GitHub Pages on an apex domain with CloudFlare</h1>
+    <p>by Evan Sosenko</p>
+    <p>12 Aug 2014</p>
+  </header>
+
+  <section class="content">
+    <p>Even after carefully reading the <a href="https://pages.github.com/">GitHub Pages docs</a>,
+it took me a while to figure out a <a href="https://www.cloudflare.com/">CloudFlare</a> DNS configuration
+with everything working how I wanted.</p>
+
+<p>This guide makes the following assumptions:</p>
+
+<ul>
+<li>You will serve your user or organization site <code>username.github.io</code>
+from the custom domain <code>example.com</code>.</li>
+<li>You want <code>www.example.com</code> to redirect to <code>example.com</code>.</li>
+<li>You want any other project site without a custom domain
+to be served from <code>io.example.com</code>:
+<code>http://username.github.io/repository</code>
+is redirected to <code>http://io.example.com/repository</code>.</li>
+</ul>
+
+<ol>
+<li><p>Add a <code>CNAME</code> file with <code>example.com</code>
+to your user or organization repository.</p></li>
+<li><p>Setup CloudFlare with these DNS records:</p></li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Value</th>
+<th>CloudFlare Active</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A</td>
+<td>example.com</td>
+<td>192.30.252.153</td>
+<td>true</td>
+</tr>
+<tr>
+<td>A</td>
+<td>example.com</td>
+<td>192.30.252.154</td>
+<td>true</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>io</td>
+<td>username.github.io</td>
+<td>false</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>example.com</td>
+<td>true</td>
+</tr>
+</tbody></table>
+
+  </section>
+
+  
+    
+<aside class="social-buttons">
+
+  <div class="fb-like" data-href="http://evansosenko.com/posts/github-pages-on-an-apex-domain-with-cloudflare/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+
+
+
+  
+  <div class="g-plus-container">
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+  </div>
+
+
+
+  
+    
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="@evansosenko"></a>
+
+</aside>
+
+
+  
+
+  
+    <aside class="comments">
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
+  
+</article>
+
+
+  <div id="email_modal" class="reveal-modal" data-reveal>
+  
+    <dl>
+    
+      <dt>Professional</dt>
+      <dd></dd>
+    <dl>
+    
+      <dt></dt>
+      <dd>razorx {at} evansosenko.com</dd>
+    <dl>
+    
+      <dt>Academic</dt>
+      <dd></dd>
+    <dl>
+    
+      <dt></dt>
+      <dd>evan.sosenko {at} email.ucr.edu</dd>
+    <dl>
+    
+  
+    <a class="close-reveal-modal" title="Close modal.">×</a>
+  </div>
+
+
+  <div id="fb-root"></div>
+
+
+
+  <script>    'use strict';    yepnope([          {        load: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',        complete: function () {          if ( !window.jQuery ) {            yepnope('http://evansosenko.com/assets/jquery/dist/jquery-b6344b3b31afecbe538ca67683f35306.js');          }        }      },              'http://evansosenko.com/assets/app-db978413320f52fa2c0d7c88556fce6f.js'    ]);      !function(e,t,n){var c,o=e.getElementsByTagName(t)[0];e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="https://connect.facebook.net/en_US/all.js#xfbml=1",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk");        window.___gcfg={lang:"en-US",parsetags:"onload"},function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://apis.google.com/js/plusone.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();        !function(t,e,r){var n,s=t.getElementsByTagName(e)[0],i="https";t.getElementById(r)||(n=t.createElement(e),n.id=r,n.src=i+"://platform.twitter.com/widgets.js",s.parentNode.insertBefore(n,s))}(document,"script","twitter-wjs");        var disqus_shortname="evansosenko";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}();        !function(e,a,t,n,s,c,o){e.GoogleAnalyticsObject=s,e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)},e[s].l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src=n,o.parentNode.insertBefore(c,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-19631381-4","evansosenko.com"),ga("require","displayfeatures"),ga("send","pageview");      </script>
+</body>
+</html>
