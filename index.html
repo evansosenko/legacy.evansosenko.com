@@ -16,8 +16,8 @@ title: "{evan|sosenko}"
   <dl class="projects">
   {% for project in site.data.projects %}
     <div>
-      <dt><a href="{{ site.baseurl }}{{ project.url }}">{{ project.name }}</a></dt>
-      <dd><a href="{{ site.baseurl }}{{ project.url }}">{{ project.description }}</a></dd>
+      <dt><a href="{{ project.url }}">{{ project.name }}</a></dt>
+      <dd><a href="{{ project.url }}">{{ project.description }}</a></dd>
     </div>
   {% endfor %}
   </dl>
