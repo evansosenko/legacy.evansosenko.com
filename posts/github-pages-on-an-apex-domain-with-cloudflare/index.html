@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://evansosenko.com/posts/github-pages-on-an-apex-domain-with-cloudflare/" />
 <meta property="og:site_name" content="Evan Sosenko" />
 
-<meta property="og:updated_time" content="2014-08-12T00:00:00-07:00" />
+<meta property="og:updated_time" content="2014-08-12T00:00:00+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -100,18 +100,25 @@ with everything working how I wanted.</p>
 <p>This guide makes the following assumptions:</p>
 
 <ul>
-<li>You will serve your user or organization site <code>username.github.io</code>
-from the custom domain <code>example.com</code>.</li>
+<li>You will serve <code>example.com</code> from the project repository
+<code>username/example.com</code>.</li>
 <li>You want <code>www.example.com</code> to redirect to <code>example.com</code>.</li>
-<li>You want any other project site without a custom domain
-to be served from <code>io.example.com</code>:
+<li>You will serve your user or organization repository
+<code>username/username.github.io</code>
+from the custom domain <code>io.example.com</code>.</li>
+<li>You will serve any other project site
+without a custom domain from <code>io.example.com</code>:
 <code>http://username.github.io/repository</code>
 is redirected to <code>http://io.example.com/repository</code>.</li>
 </ul>
 
 <ol>
+<li><p>Add a <code>CNAME</code> file with <code>io.example.com</code>
+to the <code>username/username.github.io</code> repository.
+Optionally, redirect <code>io.example.com</code> to <code>example.com</code>
+using JavaScript (see <a href="https://github.com/razor-x/razor-x.github.io/blob/master/index.html">razor-x.github.io/index.html</a>).</p></li>
 <li><p>Add a <code>CNAME</code> file with <code>example.com</code>
-to your user or organization repository.</p></li>
+to the <code>username/example.com</code> repository.</p></li>
 <li><p>Setup CloudFlare with these DNS records:</p></li>
 </ol>
 
