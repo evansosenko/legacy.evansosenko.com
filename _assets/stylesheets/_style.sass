@@ -81,15 +81,12 @@ h2.tagline
   color: $site_title_clr
 
   a
+    +hover_glow($clr_sky_eyes)
     font-size: $personal_links_font-size
     line-height: normal
-    transition: all 0.25s ease-in
 
     &.icon
       font-size: $personal_links_font-size
-
-    &:hover
-      color: $clr_sky_eyes
 
   ul
     +inline-list
@@ -219,17 +216,14 @@ article.post.single
         padding-right: $cv_nav_padding-right
 
       a
+        +hover_glow($cv_nav_color_b)
         color: $cv_nav_color_a
         font-weight: $cv_nav_font-weight
 
-        &:hover
-          color: $cv_nav_color_b
     dd
       a
+        +hover_glow($cv_nav_color_a)
         color: $cv_nav_color_b
-
-        &:hover
-          color: $cv_nav_color_a
 
     .magellan-show-button
       display: none

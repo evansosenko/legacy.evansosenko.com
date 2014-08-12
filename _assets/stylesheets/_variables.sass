@@ -13,6 +13,12 @@
   @media #{$size}
     min-width: lower-bound($range)
 
+=hover_glow($color)
+  transition: all 0.25s ease-in
+
+  &:hover
+    color: $color
+
 // Colors
 
 $clr_white: #fff
