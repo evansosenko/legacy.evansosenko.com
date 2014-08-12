@@ -83,9 +83,13 @@ h2.tagline
   a
     font-size: $personal_links_font-size
     line-height: normal
+    transition: all 0.25s ease-in
 
     &.icon
       font-size: $personal_links_font-size
+
+    &:hover
+      color: $clr_sky_eyes
 
   ul
     +inline-list
