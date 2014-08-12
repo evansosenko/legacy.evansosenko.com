@@ -13,18 +13,26 @@ with everything working how I wanted.
 
 This guide makes the following assumptions:
 
-- You will serve your user or organization site `username.github.io`
-  from the custom domain `example.com`.
+- You will serve `example.com` from the project repository
+  `username/example.com`.
 - You want `www.example.com` to redirect to `example.com`.
-- You want any other project site without a custom domain
-  to be served from `io.example.com`:
+- You will serve your user or organization repository
+  `username/username.github.io`
+  from the custom domain `io.example.com`.
+- You will serve any other project site
+  without a custom domain from `io.example.com`:
   `http://username.github.io/repository`
   is redirected to `http://io.example.com/repository`.
 
-1. Add a `CNAME` file with `example.com`
-   to your user or organization repository.
+1. Add a `CNAME` file with `io.example.com`
+   to the `username/username.github.io` repository.
+   Optionally, redirect `io.example.com` to `example.com`
+   using JavaScript (see [razor-x.github.io/index.html]).
 
-2. Setup CloudFlare with these DNS records:
+2. Add a `CNAME` file with `example.com`
+   to the `username/example.com` repository.
+
+3. Setup CloudFlare with these DNS records:
 
 | Type  | Name        | Value              | CloudFlare Active |
 |-------|-------------|--------------------|-------------------|
@@ -35,3 +43,4 @@ This guide makes the following assumptions:
 
 [CloudFlare]: https://www.cloudflare.com/
 [GitHub Pages docs]: https://pages.github.com/
+[razor-x.github.io/index.html]: https://github.com/razor-x/razor-x.github.io/blob/master/index.html
