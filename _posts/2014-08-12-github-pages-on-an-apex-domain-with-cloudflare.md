@@ -27,7 +27,8 @@ This guide makes the following assumptions:
 1. Add a `CNAME` file with `io.example.com`
    to the `username/username.github.io` repository.
    Optionally, redirect `io.example.com` to `example.com`
-   using JavaScript (see [razor-x.github.io/index.html]).
+   using JavaScript (see [razor-x.github.io/index.html])
+   or a CloudFlare page rule.
 
 2. Add a `CNAME` file with `example.com`
    to the `username/example.com` repository.
@@ -43,4 +44,4 @@ This guide makes the following assumptions:
 
 [CloudFlare]: https://www.cloudflare.com/
 [GitHub Pages docs]: https://pages.github.com/
-[razor-x.github.io/index.html]: https://github.com/razor-x/razor-x.github.io/blob/master/index.html
+[razor-x.github.io/index.html]: https://github.com/razor-x/razor-x.github.io/blob/eafe1df72f33fe15138d130564bb043f40956322/index.html
