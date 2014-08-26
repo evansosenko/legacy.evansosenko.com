@@ -7,20 +7,20 @@
 //
 // Fonts
 //
-@import "fonts"
+@import fonts
 
 // Compass
 @import "compass/typography/lists/horizontal-list"
 @import "compass/typography/lists/bullets"
 
 // Global Foundation Settings
-@import "settings"
+@import settings
 
 // Import Foundation
-@import "foundation/scss/foundation"
+@import foundation/scss/foundation
 
 // Load this when using social buttons.
-<%= '@import "social-buttons"' if site.config['social'] %>
+<%= '@import social-buttons' if site.config['social'] %>
 
 // Ouroboros Sass/CSS Spinner
 @import "compass/css3/transition"
