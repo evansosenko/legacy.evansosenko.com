@@ -32,11 +32,6 @@ $ ->
 
   elements.addClass('loading')
 
-  $('div.loading[data-gist] span.spinner').fadeOut 'fast', ->
-    spinner = $(spinnerHTML)
-    $(this).replaceWith(spinner)
-    spinner.fadeIn
-
   # Get elements referencing a gist
   # and build a gists hash referencing
   # the elements that use it.
@@ -78,17 +73,3 @@ $ ->
         target.fadeOut 'fast', ->
           $(this).replaceWith(outer)
           outer.fadeIn()
-
-# Ouroboros Sass/CSS Spinner
-spinnerHTML =
-  """
-  <div class="ui-spinner">
-    <span class="side side-left">
-        <span class="fill"></span>
-    </span>
-
-    <span class="side side-right">
-        <span class="fill"></span>
-    </span>
-  </div>
-  """

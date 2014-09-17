@@ -2,7 +2,6 @@
   "name": "Jekyll & ZURB",
   "dependencies": {
     "references": "https://github.com/razor-x/references.git#master",
-    "ouroboros": "tomgenoni/ouroboros",
     "fastclick": "1.0.3",
     "highlightjs": "8.0.0",
     "foundation": "5.4.4",
