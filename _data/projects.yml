@@ -22,3 +22,7 @@
 - name: Chef Skeleton Cookbook
   description: Modern cookbook skeleton for Ruby Chef.
   url: https://github.com/razor-x/chef-cookbook
+
+- name: EVE Online Overview Generator
+  description: Generate DRY modular overviews.
+  url: http://io.evansosenko.com/eve-overview/
