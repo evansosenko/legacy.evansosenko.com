@@ -6,7 +6,7 @@ meta:
   description: "Software for spin lifetime measurements via Hanle curve fitting."
 picture: tikz-nonlocal_spin_valve.png
 comments: true
-permalink: spin-lifetime
+permalink: spin-lifetime/
 social_buttons_disabled: true
 ---
 
