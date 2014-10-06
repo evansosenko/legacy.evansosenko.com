@@ -2,9 +2,9 @@
 # Jekyll options.
 name: Evan Sosenko
 author: Evan Sosenko
-domain: http://evansosenko.com
-baseurl: http://evansosenko.com
-io_domain: http://io.evansosenko.com
+domain: https://evansosenko.com
+baseurl: https://evansosenko.com
+io_domain: https://io.evansosenko.com
 markdown: redcarpet
 redcarpet:
   extensions:
@@ -36,7 +36,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://evansosenko.com/assets/
+  baseurl: https://evansosenko.com/assets/
   sources:
     - _assets/images
     - _assets/javascripts
