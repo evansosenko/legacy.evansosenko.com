@@ -1,15 +1,15 @@
 # evansosenko.com
 
-[![All rights reserved](http://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/evansosenko.com.svg?style=flat)](https://gemnasium.com/razor-x/evansosenko.com)
-[![Build Status](http://img.shields.io/travis/razor-x/evansosenko.com/master.svg?style=flat)](https://travis-ci.org/razor-x/evansosenko.com)
+[![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/evansosenko.com.svg?style=flat)](https://gemnasium.com/razor-x/evansosenko.com)
+[![Build Status](https://img.shields.io/travis/razor-x/evansosenko.com/master.svg?style=flat)](https://travis-ci.org/razor-x/evansosenko.com)
 
 Source for [my personal site](http://evansosenko.com/) running on Jekyll and Foundation.
 
 The rest of this README, except for the License,
 is just cloned from [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
 
-Demo at [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+Demo at [io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
 
 Lots of baked in features that work even if you don't want to use Foundation.
 
@@ -62,7 +62,7 @@ Just clone this with
 $ git clone https://github.com/razor-x/jekyll-and-zurb.git my-blog
 ````
 
-run `bundle update && bower install` and create the `_posts` folder.
+run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
 
 Running off the `master` branch may be unstable and is not suitable for production.
@@ -80,7 +80,7 @@ real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
 Demo site hosted on GitHub pages:
-[io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+[io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
 
 ## Add future update support
 
@@ -165,7 +165,8 @@ $ git push
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,
-so if you don't want to wait for updates, you need to bump the versions yourself.
+so if you don't want to wait for updates, you need to bump the versions yourself,
+run `bundle update` and commit the updated `Gemfile.lock`.
 
 JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN support).
 If you want to update Foundation, update the version number in `bower.json`.
