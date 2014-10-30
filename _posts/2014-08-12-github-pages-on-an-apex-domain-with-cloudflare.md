@@ -21,8 +21,8 @@ This guide makes the following assumptions:
   from the custom domain `io.example.com`.
 - You will serve any other project site
   without a custom domain from `io.example.com`:
-  `http://username.github.io/repository`
-  is redirected to `http://io.example.com/repository`.
+  `https://username.github.io/repository`
+  is redirected to `https://io.example.com/repository`.
 
 1. Add a `CNAME` file with `io.example.com`
    to the `username/username.github.io` repository.
