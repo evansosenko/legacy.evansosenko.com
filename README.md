@@ -4,7 +4,7 @@
 [![Dependency Status](https://img.shields.io/gemnasium/razor-x/evansosenko.com.svg?style=flat)](https://gemnasium.com/razor-x/evansosenko.com)
 [![Build Status](https://img.shields.io/travis/razor-x/evansosenko.com/master.svg?style=flat)](https://travis-ci.org/razor-x/evansosenko.com)
 
-Source for [my personal site](http://evansosenko.com/) running on Jekyll and Foundation.
+Source for [my personal site](https://evansosenko.com/) running on Jekyll and Foundation.
 
 The rest of this README, except for the License,
 is just cloned from [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).

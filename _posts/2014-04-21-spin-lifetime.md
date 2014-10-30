@@ -99,7 +99,7 @@ The full TeX source is hosted on GitHub at [razor-x/aps-spin-lifetime][aps-spin-
 [aps-spin-lifetime-plots]: https://github.com/razor-x/aps-spin-lifetime-plots
 [aps-spin-lifetime-plots:releases]: https://github.com/razor-x/aps-spin-lifetime-plots/releases
 [fitalyzer]: https://github.com/razor-x/
-[fitalyzer:spin-lifetime:1]: http://io.evansosenko.com/fitalyzer/?firebase=spin-lifetime&set=-JKBzs0OL0DzzEimfcuq
+[fitalyzer:spin-lifetime:1]: https://io.evansosenko.com/fitalyzer/?firebase=spin-lifetime&set=-JKBzs0OL0DzzEimfcuq
 [references:aps]: https://github.com/razor-x/references
 [scipy-data_fitting]: https://github.com/razor-x/scipy-data_fitting
 [scipy-data_fitting:docs]: https://pythonhosted.org/scipy-data_fitting/

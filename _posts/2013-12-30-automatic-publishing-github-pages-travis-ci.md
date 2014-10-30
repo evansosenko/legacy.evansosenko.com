@@ -108,7 +108,7 @@ Grab the rake task below.
 {% gist 8166421 %}
 
 [{ :awestruct } docs]: http://awestruct.org/auto-deploy-to-github-pages/
-[example site]: http://io.evansosenko.com/jekyll-and-zurb/
+[example site]: https://io.evansosenko.com/jekyll-and-zurb/
 [GitHub Pages]: https://pages.github.com/
 [GitHub Personal Access Token]: https://github.com/settings/applications
 [Jekyll & ZURB]: https://github.com/razor-x/jekyll-and-zurb/
