@@ -32,10 +32,13 @@ div.gist div.gist-data.gist-syntax
 
 h2.tagline
   +simple_emboss(#fff)
-  width: 50%
-  margin: 0 auto
+  margin: 0 1em
   margin-top: rem-calc(20)
   font-size: 1.2rem
+
+  @media #{$medium-up}
+    width: 50%
+    margin: 0 auto
 
 #top
   text-align: center
@@ -116,9 +119,12 @@ html.no-flexbox
 
 section.projects,
 section.posts
-  width: 50%
-  margin: 0 auto
+  margin: 0 1em
   margin-top: rem-calc(20)
+
+  @media #{$medium-up}
+    width: 50%
+    margin: 0 auto
 
   h2
     margin-bottom: rem-calc(20)
