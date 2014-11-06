@@ -39,7 +39,7 @@ This guide makes the following assumptions:
 |-------|-------------|--------------------|-------------------|
 | A     | example.com | 192.30.252.153     | true              |
 | A     | example.com | 192.30.252.154     | true              |
-| CNAME | io          | username.github.io | false             |
+| CNAME | io          | username.github.io | true              |
 | CNAME | www         | example.com        | true              |
 
 [CloudFlare]: https://www.cloudflare.com/
