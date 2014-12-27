@@ -11,7 +11,7 @@
   <script>{% asset load.js %}</script>
 </head>
 
-<body>
+<body style="display:none;">
   <header id="top">
     <h1 id="banner" title="{{ site.data.text.tagline }}"><a id="title" href="{{ site.baseurl }}/">Evan <span></span> Sosenko</a></h1>
     {% include personal_links.html %}
@@ -37,8 +37,6 @@
 
   <script>
     'use strict';
-
-    document.getElementsByTagName('body')[0].style.display = 'none'
 
   {% if page.mathjax %}
   head.load('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML');
