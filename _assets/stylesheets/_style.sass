@@ -185,6 +185,19 @@ article.post.single
     a
       color: $clr_blue_green
 
+    span.update
+      +panel
+      display: block
+
+      .date
+        display: block
+        margin-bottom: 1rem
+        font-size: 0.8rem
+        font-weight: bold
+
+        &::after
+          content: " Update"
+
   aside.social-buttons
     +grid-row
     +grid-column(12)
