@@ -5,7 +5,14 @@ keywords: [ travis ci, jekyll, static site generators, github, github pages, git
 meta:
   description: "Rake task to push static site to GitHub Pages with Travis CI."
 comments: true
+updates:
+  - 2015-01-19 13:00:00 -0800
 ---
+
+<span class="update">
+<span class="date">{{ page.updates.first | date_to_string }}</span>
+Jakub Jirutka has adapted this into a Ruby gem: [rake-jekyll].
+</span>
 
 I've been working on improving my site
 and moving it over to [GitHub pages] over the holiday.
@@ -112,4 +119,5 @@ Grab the rake task below.
 [GitHub Pages]: https://pages.github.com/
 [GitHub Personal Access Token]: https://github.com/settings/applications
 [Jekyll & ZURB]: https://github.com/razor-x/jekyll-and-zurb/
+[rake-jekyll]: https://github.com/jirutka/rake-jekyll
 [Travis CI]: https://travis-ci.org/
