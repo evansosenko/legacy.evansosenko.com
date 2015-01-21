@@ -18,4 +18,4 @@ gem 'compass', '~> 1.0.1'
 gem 'mini_magick', '~> 4.0.1'
 
 # Additional Jekyll plugins
-gem 'jekyll-scholar', '~> 4.2.1'
+gem 'jekyll-scholar', '~> 4.3.0'
