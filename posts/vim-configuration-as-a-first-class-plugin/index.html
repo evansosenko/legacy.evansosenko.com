@@ -8,8 +8,8 @@
   
 
 
-  <title>Automatic publishing to GitHub Pages with Travis CI - Evan Sosenko</title>
-  <meta property="og:title" content="Automatic publishing to GitHub Pages with Travis CI" />
+  <title>Vim configuration as a first class plugin - Evan Sosenko</title>
+  <meta property="og:title" content="Vim configuration as a first class plugin" />
 
 
 
@@ -17,16 +17,16 @@
 
 
 
-  <meta name="description" content="Rake task to push static site to GitHub Pages with Travis CI." />
-  <meta property="og:description" content="Rake task to push static site to GitHub Pages with Travis CI." />
+  <meta name="description" content="Vim configuration as a plugin: simple but powerful." />
+  <meta property="og:description" content="Vim configuration as a plugin: simple but powerful." />
 
 
-<link rel="canonical" href="https://evansosenko.com/posts/automatic-publishing-github-pages-travis-ci/" />
-<meta property="og:url" content="https://evansosenko.com/posts/automatic-publishing-github-pages-travis-ci/" />
+<link rel="canonical" href="https://evansosenko.com/posts/vim-configuration-as-a-first-class-plugin/" />
+<meta property="og:url" content="https://evansosenko.com/posts/vim-configuration-as-a-first-class-plugin/" />
 <meta property="og:site_name" content="Evan Sosenko" />
 <meta name="application-name" content="Evan Sosenko"/>
 
-<meta property="og:updated_time" content="2013-12-30T00:00:00+00:00" />
+<meta property="og:updated_time" content="2015-02-02T00:00:00+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -35,7 +35,7 @@
 
 
 
-  <meta property="keywords" content="travis ci,jekyll,static site generators,github,github pages,git,rake,ruby,physics,math,code,development,web development,blog,personal" />
+  <meta property="keywords" content="vim,vimrc,physics,math,code,development,web development,blog,personal" />
 
 
 
@@ -107,103 +107,83 @@
 
   <article class="post single">
   <header>
-    <h1>Automatic publishing to GitHub Pages with Travis CI</h1>
+    <h1>Vim configuration as a first class plugin</h1>
     <p>by Evan Sosenko</p>
-    <p>30 Dec 2013</p>
+    <p>02 Feb 2015</p>
   </header>
 
   <section class="content">
-    <p><span class="update">
-<span class="date">19 Jan 2015</span>
-Jakub Jirutka has adapted this into a Ruby gem: <a href="https://github.com/jirutka/rake-jekyll">rake-jekyll</a>.
-</span></p>
+    <p>I&#39;ve been using <a href="http://www.vim.org/">Vim</a> as my default terminal editor for over ten years,
+but I&#39;ve yet to use it for my IDE.
+The more I use the <a href="http:/o/awesome.naquadah.org/">awesome</a> tiling window manager,
+the more I want to switch to <a href="http://tmux.sourceforge.net/">tmux</a> and Vim
+and keep my fingers on the keyboard.</p>
 
-<p>I&#39;ve been working on improving my site
-and moving it over to <a href="https://pages.github.com/">GitHub pages</a> over the holiday.
-This involved a lot of work on <a href="https://github.com/razor-x/jekyll-and-zurb/">Jekyll &amp; ZURB</a>,
-the Jekyll scaffold I created.
-It has a lot of (optional) features and modern optimizations,
-while still being a clean starting point for any static site.</p>
+<p>There&#39;s certainly no shortage of standalone vimrc files
+and full configurations like <a href="https://github.com/carlhuda/janus">janus</a> and <a href="http://vim.spf13.com/">spf13-vim</a>,
+but I wanted to roll my own from scratch.
+I know I learn better that way;
+plus I&#39;ll have something completely personalized.</p>
 
-<p>Eventually, the <a href="https://io.evansosenko.com/jekyll-and-zurb/">example site</a>
-will function as the primary source of documentation and feature demos,
-but for my first post here I wanted to talk about the coolest feature I added:
-getting <a href="https://travis-ci.org/">Travis CI</a> to build and publish the site
-to <a href="https://pages.github.com/">GitHub Pages</a> on new commits.
-I got the idea from the <a href="http://awestruct.org/auto-deploy-to-github-pages/">{ :awestruct } docs</a>.</p>
+<h2>My Requirements</h2>
 
-<p>This method should work with any static site generator,
-or really anything as I only make the following assumptions:</p>
+<ol>
+<li>Everything under version control.</li>
+<li>Not mixed in with my other dotfiles.</li>
+<li>Self-contained as a plugin with a standard plugin structure.</li>
+<li>Keep vimrc minimal and clean: everything goes in the plugin.</li>
+<li>Manages both overall configuration and plugin dependencies.</li>
+<li>One-line install from the terminal.</li>
+<li>Easy updating.</li>
+<li>Automated and native development flow.</li>
+<li>Easy to share and customize.</li>
+</ol>
 
-<ul>
-<li>There is a rake task, <code>rake build</code> that will build your site.</li>
-<li>The variable <code>destination</code> is defined in your <code>Rakefile</code>,
-and points to the output directory for the build
-(when using Jekyll defaults, set <code>destination = &#39;_site&#39;</code>).</li>
-<li>Your repo is hosted on GitHub.</li>
-</ul>
+<h2>My Solution</h2>
 
-<p>That&#39;s it!</p>
+<p class="panel">
+<span class="icon fi-social-github"></span> <a href="https://github.com/razor-x/vimrc">GitHub project: razor-x/vimrc</a>
+</p>
 
-<p>I&#39;ll step through the code a few lines at a time,
-but if you want to skip to the answer, there is a link to a Gist at the end.
-These instructions assume you will use the <code>gh-pages</code> branch,
-but the case where you need to use <code>master</code> is not that different.</p>
-
-<h2>GitHub Pages branch</h2>
-
-<p>First, setup a <code>gh-pages</code> branch (if you don&#39;t have one already).
-We use an orphan branch since the history is separate.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git checkout --orphan gh-pages
+<p>The install process is inspired by <a href="http://ohmyz.sh/">oh-my-zsh</a> and hosted on GitHub pages.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -L https://io.evansosenko.com/vimrc/install.sh <span class="p">|</span> sh
 </code></pre></div>
-<p>Next, you will need to <strong>remove all files and folders except the <code>.git</code> directory.</strong>
-Then, make an initial commit with only <code>index.html</code>, push it, and make sure it goes live online.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git add --all
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;GitHub Pages placeholder&quot;</span> &gt; index.html
-<span class="nv">$ </span>git add index.html
-<span class="nv">$ </span>git commit -m <span class="s2">&quot;GitHub Pages placeholder&quot;</span>
-<span class="nv">$ </span>git push -u origin gh-pages
-<span class="nv">$ </span>git checkout master
+<p>The <code>.vimrc</code> is installed and contains just enough
+to load the plugin which configures the rest.</p>
+<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">&quot; razor-x/vimrc</span>
+<span class="k">set</span> <span class="nb">nocompatible</span>
+
+<span class="c">&quot; Disable powerline by default.</span>
+<span class="k">let</span> <span class="k">g</span>:powerline_loaded <span class="p">=</span> <span class="m">1</span>
+
+<span class="k">filetype</span> off
+<span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle/Vundle.<span class="k">vim</span>
+<span class="k">call</span> vundle#begin<span class="p">()</span>
+
+Plugin <span class="s1">&#39;gmarik/Vundle.vim&#39;</span>
+Plugin <span class="s1">&#39;razor-x/vimrc&#39;</span>
+
+<span class="k">if</span> filereadable<span class="p">(</span>expand<span class="p">(</span><span class="s1">&#39;~/.vim/bundle/vimrc/plugins.vim&#39;</span><span class="p">))</span>
+  source <span class="p">~</span><span class="sr">/.vim/</span>bundle<span class="sr">/vimrc/</span>plugins.<span class="k">vim</span>
+<span class="k">endif</span>
+
+<span class="k">call</span> vundle#<span class="k">end</span><span class="p">()</span>
+<span class="k">filetype</span> plugin indent <span class="k">on</span>
 </code></pre></div>
-<h2>Credentials</h2>
+<p><a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is used for dependency management,
+although it would be simple enough to use an alternative.
+All plugins are loaded from <code>plugins.vim</code>.</p>
 
-<p>Now, you need to set up credentials that will let Travis CI login and push to GitHub.</p>
+<p><a href="http://gulpjs.com/">Gulp</a> handles the development environment.
+By switching to dev mode, Gulp watches for changes
+and automatically updates the local plugin files.
+Switching out of dev mode switches back to the stable plugin.</p>
 
-<p>Install the travis gem,</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gem install travis
-</code></pre></div>
-<p>Create a <a href="https://github.com/settings/applications">GitHub Personal Access Token</a>,
-and add your name, email, and token to travis as encrypted data
-(fill in your values in the command below).
-Be sure to run this inside the git repo for your site.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>travis encrypt <span class="s1">&#39;GIT_NAME=&quot;Your Name&quot; GIT_EMAIL=you@example.com GH_TOKEN=token&#39;</span>
-</code></pre></div>
-<p>This will give you a value you need to add to your <code>.travis.yml</code>, e.g.,</p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># .travis.yml</span>
+<p>My config is pretty basic right now,
+but with this I have a foundation to build a vim to call my own.</p>
 
-<span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">bundle exec rake travis</span>
-
-<span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">&quot;big</span><span class="nv"> </span><span class="s">long</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">string&quot;</span>
-
-<span class="l-Scalar-Plain">branches</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">only</span><span class="p-Indicator">:</span>
-    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">master</span>
-</code></pre></div>
-<p>Note we also specify what branch to build the site from,
-and that <code>rake travis</code> should be run for the build.</p>
-
-<h2>Rake task</h2>
-
-<p>The last step is adding the rake task that Travis CI
-will run to build and publish your site.</p>
-
-<p>Most of the steps configure git settings so
-Travis CI can pull and push to the <code>gh-pages</code> branch.</p>
-
-<p>Grab the rake task below.</p>
-
-<script src="https://gist.github.com/8166421.js"> </script>
+<p>If you like the sound of this and want to manage your Vim config the same way,
+check out the <a href="https://github.com/razor-x/vimrc#customization">Customization section of the README</a>.</p>
 
   </section>
 
@@ -211,7 +191,7 @@ Travis CI can pull and push to the <code>gh-pages</code> branch.</p>
     
 <aside class="social-buttons">
 
-  <div class="fb-like" data-href="https://evansosenko.com/posts/automatic-publishing-github-pages-travis-ci/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+  <div class="fb-like" data-href="https://evansosenko.com/posts/vim-configuration-as-a-first-class-plugin/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
 
 
