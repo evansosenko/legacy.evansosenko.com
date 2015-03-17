@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 259.637 123.676" enable-background="new 0 0 259.637 123.676" xml:space="preserve">
+<g id="Semiconductor">
+	<g id="Base">
+		<polyline fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			251.722,63.021 251.722,72.167 170.795,116.251 170.795,104.726 		"/>
+		<polyline fill="#FFFFFF" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="170.795,104.905 
+			170.795,116.251 22.512,35.282 22.512,26.862 		"/>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			170.386,104.868 22.492,26.93 99.365,6.113 251.569,63.034 		"/>
+	</g>
+	<g id="Perspective_Text_2_">
+		<g>
+			<path d="M162.53,96.693l11.395-5.658l1.594,0.781l-2.034,4.687c-0.484,1.112-1.024,2.068-1.655,2.953l0.051,0.009
+				c1.403-0.859,2.763-1.59,4.538-2.498l4.701-2.405l1.416,0.694l-11.393,5.864l-1.52-0.782l2.192-4.827
+				c0.468-1.034,0.999-2.059,1.645-2.951l-0.067-0.017c-1.334,0.749-2.66,1.445-4.552,2.39l-4.935,2.464L162.53,96.693z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="75.512" y1="52.808" x2="83.224" y2="56.757"/>
+			<g>
+				<polygon points="73.94,52.003 75.691,54.041 75.629,52.867 76.618,52.232 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="101.81" y1="66.354" x2="90.204" y2="60.361"/>
+			<g>
+				<polygon points="103.378,67.163 101.634,65.119 101.692,66.293 100.702,66.925 				"/>
+			</g>
+		</g>
+	</g>
+	<g id="Perspective_Text_9_">
+		<g>
+			<path d="M60.419,15.113l-1.572-6.696l0.847-0.221l0.735,3.404c0.183,0.836,0.348,1.677,0.459,2.332l0.018-0.005
+				c0.101-0.732,0.293-1.626,0.503-2.599l0.821-3.793l0.829-0.216l0.744,3.391c0.173,0.792,0.336,1.587,0.426,2.306l0.018-0.005
+				c0.127-0.809,0.299-1.64,0.488-2.57l0.804-3.768l0.801-0.209l-1.722,7.503l-0.823,0.224l-0.772-3.473
+				c-0.191-0.852-0.318-1.511-0.4-2.205l-0.019,0.005c-0.109,0.733-0.246,1.462-0.474,2.438l-0.876,3.928L60.419,15.113z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="24.833" y1="21.632" x2="56.572" y2="13.144"/>
+			<g>
+				<polygon points="21.422,22.544 26.753,23.223 25.087,21.563 25.703,19.296 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="94.204" y1="3.988" x2="67.273" y2="11.234"/>
+			<g>
+				<polygon points="97.613,3.071 92.281,2.4 93.949,4.057 93.337,6.326 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Ferromagnetics">
+	<g id="Injector">
+		<g>
+			<polyline fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				55.092,52.686 55.092,57.792 35.7,46.938 35.7,42.109 			"/>
+			<polyline fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				164.65,15.988 144.146,8.987 35.7,42.109 54.821,52.53 			"/>
+			<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				164.65,15.988 55.092,52.438 55.092,57.792 164.65,20.357 			"/>
+		</g>
+		<g id="Perspective_Text_3_">
+			<g>
+				<path d="M131.805,19.549l14.312-4.559l1.626,0.574l-14.319,4.592L131.805,19.549z"/>
+			</g>
+		</g>
+		<g id="Perspective_Text">
+			<g>
+				<path d="M58.265,40.267l5.567,2.819l-1.285,0.413l-4.242-2.161l-3.96,1.25l3.9,2.021l-1.29,0.414l-3.895-2.03l-5.502,1.737
+					l-1.302-0.695L58.265,40.267z"/>
+			</g>
+		</g>
+	</g>
+	<g id="Detector">
+		<g>
+			<polyline fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				121.599,88.931 121.599,94.971 94.739,79.938 94.739,74.285 			"/>
+			<polyline fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				232.847,39.277 206.181,30.171 94.719,74.272 121.198,88.703 			"/>
+			<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				232.847,39.277 121.599,88.525 121.599,94.971 232.847,44.368 			"/>
+		</g>
+		<g id="Perspective_Text_4_">
+			<g>
+				<path d="M205.529,36.035c1.106,0.293,2.369,0.666,3.654,1.12c2.344,0.827,3.565,1.615,3.809,2.383
+					c0.265,0.781-0.318,1.555-2.083,2.307c-1.795,0.766-3.928,1.158-6.16,1.151c-2.248,0-4.786-0.49-7.246-1.4
+					c-1.156-0.428-2.072-0.805-2.802-1.141L205.529,36.035z M197.431,40.592c0.343,0.178,0.923,0.404,1.558,0.638
+					c3.504,1.29,7.148,1.269,10.129,0.007c2.591-1.082,2.499-2.373-0.961-3.6c-0.839-0.298-1.536-0.495-2.043-0.614L197.431,40.592z
+					"/>
+			</g>
+		</g>
+		<g id="Perspective_Text_1_">
+			<g>
+				<path d="M119.624,71.344l7.601,3.85l-1.341,0.566l-5.8-2.954l-4.148,1.708l5.343,2.77l-1.351,0.569l-5.34-2.784l-5.783,2.382
+					l-1.786-0.954L119.624,71.344z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Current">
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="96.43" y1="10.959" x2="96.43" y2="26.522"/>
+			<g>
+				<polygon points="96.43,30.759 93.99,24.789 96.43,26.206 98.868,24.789 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="151.239" y1="40.204" x2="151.239" y2="26.599"/>
+			<g>
+				<polygon points="151.239,22.362 153.679,28.332 151.239,26.915 148.801,28.332 				"/>
+			</g>
+		</g>
+	</g>
+	<g id="Spins">
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" x1="120.06" y1="42.644" x2="120.06" y2="39.221"/>
+				<g>
+					<polygon points="121.307,39.586 120.06,37.427 118.813,39.586 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" x1="133.198" y1="48.475" x2="133.198" y2="44.829"/>
+				<g>
+					<polygon points="134.444,45.194 133.198,43.035 131.951,45.194 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" x1="122.144" y1="44.416" x2="124.558" y2="41.681"/>
+				<g>
+					<polygon points="125.25,42.779 125.745,40.336 123.381,41.13 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" x1="129.62" y1="47.457" x2="128.739" y2="43.415"/>
+				<g>
+					<polygon points="130.034,43.506 128.356,41.662 127.598,44.037 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" x1="117.097" y1="39.771" x2="135.78" y2="48.366"/>
+			<g>
+				<polygon points="138.667,49.694 133.835,49.484 135.564,48.267 135.364,46.161 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" x1="69.254" y1="19.411" x2="80.092" y2="24.437"/>
+			<g>
+				<polygon points="66.371,18.074 69.663,21.617 69.469,19.511 71.202,18.298 				"/>
+			</g>
+		</g>
+	</g>
+	<g id="Perspective_Text_7_">
+		<g>
+			<path d="M152.943,31.044c0.219-0.141,0.565-0.311,0.915-0.435c0.499-0.177,0.82-0.173,1.061,0.007
+				c0.2,0.132,0.32,0.402,0.32,0.817c0,0.509-0.246,1.043-0.652,1.393v0.016c0.366-0.006,0.795,0.254,0.795,1.036
+				c0,0.454-0.131,0.846-0.326,1.175c-0.269,0.435-0.704,0.751-1.336,0.982c-0.345,0.126-0.61,0.192-0.777,0.222V31.044z
+				 M153.445,33.033l0.454-0.163c0.528-0.19,0.837-0.677,0.837-1.186c0-0.619-0.344-0.739-0.849-0.559
+				c-0.23,0.082-0.362,0.152-0.443,0.205V33.033z M153.445,35.57c0.098-0.012,0.242-0.057,0.42-0.122
+				c0.516-0.188,0.992-0.62,0.992-1.387c0-0.72-0.452-0.855-0.998-0.659l-0.414,0.149V35.57z"/>
+		</g>
+	</g>
+	<line fill="none" x1="66.371" y1="41.662" x2="93.822" y2="52.53"/>
+	<g id="Perspective_Text_8_">
+		<g>
+			<path d="M85.017,50.819l0.731,0.365v6.635l2.439,1.258v0.811l-3.169-1.641V50.819z"/>
+		</g>
+	</g>
+</g>
+<g id="Circuit_Elements">
+	<g>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="26.869" y1="35.773" x2="13.07" y2="39.788"/>
+		
+			<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="13.07" y1="39.788" x2="13.07" y2="45.792"/>
+		
+			<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="7.378" y1="47.502" x2="18.663" y2="44.112"/>
+		
+			<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="10.237" y1="49.659" x2="15.879" y2="47.938"/>
+		
+			<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="11.657" y1="52.211" x2="14.478" y2="51.364"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M189.004,77.217
+			c0,3.226-1.911,4.962-4.249,3.889c-2.316-1.064-4.178-4.49-4.178-7.662c0-3.171,1.861-4.93,4.178-3.921
+			C187.093,70.543,189.004,73.99,189.004,77.217z"/>
+		<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="180.578,73.443 151.979,60.639 
+			151.979,69.807 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="184.755" y1="81.105" x2="184.755" y2="85.133"/>
+	</g>
+	<g id="Perspective_Text_5_">
+		<g>
+			<path d="M184.278,78.599l-1.475-6.888l0.629,0.278l0.704,3.382c0.195,0.928,0.363,1.763,0.484,2.549l0.014,0.006
+				c0.128-0.664,0.317-1.367,0.519-2.09l0.77-2.746l0.63,0.279l-1.63,5.523L184.278,78.599z"/>
+		</g>
+	</g>
+	<g id="Perspective_Text_6_">
+		<g>
+			<path d="M99.038,18.932v-0.789l0.623-0.185v-6.27l-0.623,0.178v-0.789l1.988-0.565v0.786l-0.62,0.177v6.262l0.62-0.184v0.786
+				L99.038,18.932z"/>
+		</g>
+	</g>
+</g>
+</svg>
