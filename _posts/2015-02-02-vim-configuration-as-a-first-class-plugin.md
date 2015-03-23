@@ -30,7 +30,7 @@ plus I'll have something completely personalized.
 6. One-line install from the terminal.
 7. Easy updating.
 8. Automated and native development flow.
-8. Easy to share and customize.
+9. Easy to share and customize.
 
 ## My Solution
 
@@ -67,7 +67,7 @@ endif
 
 call vundle#end()
 filetype plugin indent on
-```
+````
 
 [Vundle] is used for dependency management,
 although it would be simple enough to use an alternative.
