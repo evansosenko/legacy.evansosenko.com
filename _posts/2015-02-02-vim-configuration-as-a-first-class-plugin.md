@@ -40,14 +40,14 @@ plus I'll have something completely personalized.
 
 The install process is inspired by [oh-my-zsh] and hosted on GitHub pages.
 
-````bash
+```bash
 $ curl -L https://io.evansosenko.com/vimrc/install.sh | sh
-````
+```
 
 The `.vimrc` is installed and contains just enough
 to load the plugin which configures the rest.
 
-````vim
+```vim
 " razor-x/vimrc
 set nocompatible
 
@@ -67,7 +67,7 @@ endif
 
 call vundle#end()
 filetype plugin indent on
-````
+```
 
 [Vundle] is used for dependency management,
 although it would be simple enough to use an alternative.
