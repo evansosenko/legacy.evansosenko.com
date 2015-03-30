@@ -14,7 +14,7 @@ gem 'coffee-script', '2.3.0'
 gem 'compass', '~> 1.0.1'
 
 # Jekyll Picture Tag dependencies
-gem 'mini_magick', '~> 4.1.0'
+gem 'mini_magick', '~> 4.2.0'
 
 # Additional Jekyll plugins
 gem 'jekyll-scholar', '~> 4.3.0'
