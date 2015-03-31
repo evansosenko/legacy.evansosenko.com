@@ -12,7 +12,13 @@ before_script:
   - npm install -g bower
   - bower install
 
+# Install the travis gem.
+# Create a deploy key and encrypt it with:
+# $ travis encrypt-file deploy_key.pem
+# Commit the encrypted file and
+# replace the first command below with the generated one.
 before_install:
+  - openssl aes-256-cbc -K $encrypted_3078eeabf3e7_key -iv $encrypted_3078eeabf3e7_iv -in .deploy_key.enc -out .deploy_key -d
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
 script: bundle exec rake travis
@@ -22,10 +28,8 @@ branches:
   only:
     - master
 
-# Create a GitHub Personal Access Token.
-# Install the travis gem.
-# Run the command below (fill in your name, email, and token):
-# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
+# Run the command below (fill in your name and email):
+# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 # Replace the value of secure with your generated value.
 env:
   - secure: "NO5jZ1vPLO8Gr8GXuwktxTVrvSIvFn+Fdt8ky3Ko+ZWq4KeJ0CBjwBideBRbYtayCGx9YU0refOIMIc3VOcVTX6XO4Y8HLmKfiImf+uowH0cTyMNOW+hGO42G+3ssOfQOOrZROkq8I7DeHD65lWjn/Gv0vkKq+F92Ua3drR+uq8="
