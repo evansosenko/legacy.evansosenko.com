@@ -2,7 +2,7 @@
 
 [![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-blue.svg)](./LICENSE.txt)
 [![Dependency Status](https://img.shields.io/gemnasium/evansosenko/evansosenko.github.io.svg)](https://gemnasium.com/evansosenko/evansosenko.github.io)
-[![Build Status](https://img.shields.io/travis/evansosenko/evansosenko.github.io/master.svg)](https://travis-ci.org/evansosenko/evansosenko.github.io)
+[![Build Status](https://img.shields.io/travis/evansosenko/evansosenko.github.io/source.svg)](https://travis-ci.org/evansosenko/evansosenko.github.io)
 
 Source for [my personal site](https://evansosenko.com/) running on Jekyll and Foundation.
 
