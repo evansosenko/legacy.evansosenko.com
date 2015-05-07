@@ -18,7 +18,7 @@ related to my work on spin lifetime measurements through Hanle curve fitting.
 ## Generating Hanle fits
 
 This is the recommended procedure for creating your own Hanle fits
-using [razor-x/spin-lifetime-analysis][spin-lifetime-analysis].
+using [evansosenko/spin-lifetime-analysis][spin-lifetime-analysis].
 
 1. Obtain a copy of the code.
   - Fork or clone the [git repository][spin-lifetime-analysis] on GitHub.
@@ -57,7 +57,7 @@ if unsure of the associated license.
 
 - The full source code used to generate the Hanle fits
   is hosted on the GitHub repository
-  [razor-x/spin-lifetime-analysis][spin-lifetime-analysis].
+  [evansosenko/spin-lifetime-analysis][spin-lifetime-analysis].
 
 - A snapshot of the code used specifically for this paper can be found under
   [releases][spin-lifetime-analysis:releases].
@@ -69,7 +69,7 @@ if unsure of the associated license.
 
 - The full source code used to generate the figures containing the fits
   is hosted on the GitHub repository
-  [razor-x/aps-spin-lifetime-plots][aps-spin-lifetime-plots].
+  [evansosenko/aps-spin-lifetime-plots][aps-spin-lifetime-plots].
 
 - A snapshot of the code used specifically for this paper can be found under
   [releases][spin-lifetime-analysis:releases].
@@ -80,34 +80,34 @@ Figure 1 is a Nonlocal Spin Valve written in TikZ.
 It is available under the
 Creative Commons Attribution 4.0 International License
 on the GitHub repository
-[razor-x/tikz-nonlocal_spin_valve][tikz-nonlocal_spin_valve].
+[evansosenko/tikz-nonlocal_spin_valve][tikz-nonlocal_spin_valve].
 
 [{% picture tikz-nonlocal_spin_valve.png alt="Nonlocal Spin Valve in TikZ." %}][tikz-nonlocal_spin_valve]
 
 ### BibTeX
 
 The `.bib` files used to generate the references are hosted on GitHub at
-[razor-x/references][references:aps].
+[evansosenko/references][references:aps].
 
 ### TeX source
 
-The full TeX source is hosted on GitHub at [razor-x/aps-spin-lifetime][aps-spin-lifetime].
+The full TeX source is hosted on GitHub at [evansosenko/aps-spin-lifetime][aps-spin-lifetime].
 
 ## All related authored work
 
 {% bibliography -f spintronics --query @*[author ^= Sosenko] %}
 
-[aps-spin-lifetime]: https://github.com/razor-x/aps-spin-lifetime
-[aps-spin-lifetime-plots]: https://github.com/razor-x/aps-spin-lifetime-plots
-[aps-spin-lifetime-plots:releases]: https://github.com/razor-x/aps-spin-lifetime-plots/releases
+[aps-spin-lifetime]: https://github.com/evansosenko/aps-spin-lifetime
+[aps-spin-lifetime-plots]: https://github.com/evansosenko/aps-spin-lifetime-plots
+[aps-spin-lifetime-plots:releases]: https://github.com/evansosenko/aps-spin-lifetime-plots/releases
 [fitalyzer]: https://github.com/razor-x/
 [fitalyzer:spin-lifetime:1]: https://io.evansosenko.com/fitalyzer/?firebase=spin-lifetime&set=-JKBzs0OL0DzzEimfcuq
-[references:aps]: https://github.com/razor-x/references
+[references:aps]: https://github.com/evansosenko/references
 [scipy-data_fitting]: https://github.com/razor-x/scipy-data_fitting
 [scipy-data_fitting:docs]: https://pythonhosted.org/scipy-data_fitting/
 [scipy-data_fitting:docs:data]: https://pythonhosted.org/scipy-data_fitting/#scipy_data_fitting.Data
 [scipy-data_fitting:docs:model]: https://pythonhosted.org/scipy-data_fitting/#scipy_data_fitting.Model
 [scipy-data_fitting:docs:fit]: https://pythonhosted.org/scipy-data_fitting/#scipy_data_fitting.Fit
-[spin-lifetime-analysis]: https://github.com/razor-x/spin-lifetime-analysis
-[spin-lifetime-analysis:releases]: https://github.com/razor-x/spin-lifetime-analysis/releases
-[tikz-nonlocal_spin_valve]: https://github.com/razor-x/tikz-nonlocal_spin_valve
+[spin-lifetime-analysis]: https://github.com/evansosenko/spin-lifetime-analysis
+[spin-lifetime-analysis:releases]: https://github.com/evansosenko/spin-lifetime-analysis/releases
+[tikz-nonlocal_spin_valve]: https://github.com/evansosenko/tikz-nonlocal_spin_valve

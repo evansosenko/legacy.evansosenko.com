@@ -5,7 +5,7 @@ keywords: [ vim, vimrc ]
 meta:
   description: "Vim configuration as a plugin: simple but powerful."
 comments: true
-github: razor-x/vimrc
+github: rxrc/vimrc
 ---
 
 I've been using [Vim] as my default terminal editor for over ten years,
@@ -48,7 +48,7 @@ The `.vimrc` is installed and contains just enough
 to load the plugin which configures the rest.
 
 ```vim
-" razor-x/vimrc
+" rxrc/vimrc
 set nocompatible
 
 " Disable powerline by default.
@@ -59,7 +59,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'razor-x/vimrc'
+Plugin 'rxrc/vimrc'
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
@@ -88,10 +88,10 @@ check out the [Customization section of the README][vimrc-customization].
 [Gulp]: http://gulpjs.com/
 [oh-my-zsh]: http://ohmyz.sh/
 [janus]: https://github.com/carlhuda/janus
-[razor-x/vimrc]: https://github.com/razor-x/vimrc
+[rxrc/vimrc]: https://github.com/rxrc/vimrc
 [spf13-vim]: http://vim.spf13.com/
 [tmux]: http://tmux.sourceforge.net/
 [Vim]: http://www.vim.org/
-[vimrc]: https://github.com/razor-x/vimrc
-[vimrc-customization]: https://github.com/razor-x/vimrc#customization
+[vimrc]: https://github.com/rxrc/vimrc
+[vimrc-customization]: https://github.com/rxrc/vimrc#customization
 [Vundle]: https://github.com/gmarik/Vundle.vim
