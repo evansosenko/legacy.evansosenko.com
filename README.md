@@ -1,8 +1,8 @@
 # evansosenko.com
 
 [![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/evansosenko.com.svg)](https://gemnasium.com/razor-x/evansosenko.com)
-[![Build Status](https://img.shields.io/travis/razor-x/evansosenko.com/master.svg)](https://travis-ci.org/razor-x/evansosenko.com)
+[![Dependency Status](https://img.shields.io/gemnasium/evansosenko/evansosenko.com.svg)](https://gemnasium.com/evansosenko/evansosenko.com)
+[![Build Status](https://img.shields.io/travis/evansosenko/evansosenko.com/master.svg)](https://travis-ci.org/evansosenko/evansosenko.com)
 
 Source for [my personal site](https://evansosenko.com/) running on Jekyll and Foundation.
 
