@@ -41,7 +41,7 @@ plus I'll have something completely personalized.
 The install process is inspired by [oh-my-zsh] and hosted on GitHub pages.
 
 ```bash
-$ curl -L https://io.evansosenko.com/vimrc/install.sh | sh
+$ curl -L https://rc.evansosenko.com/vimrc/install.sh | sh
 ```
 
 The `.vimrc` is installed and contains just enough
