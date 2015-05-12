@@ -18,7 +18,7 @@ before_script:
 # Commit the encrypted file and
 # replace the first command below with the generated one.
 before_install:
-  - openssl aes-256-cbc -K $encrypted_469aa6d5fb46_key -iv $encrypted_469aa6d5fb46_iv -in .deploy_key.enc -out .deploy_key -d
+  - openssl aes-256-cbc -K $encrypted_222dce30cc26_key -iv $encrypted_222dce30cc26_iv -in .deploy_key.enc -out .deploy_key -d
   - eval "$(ssh-agent)"
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
