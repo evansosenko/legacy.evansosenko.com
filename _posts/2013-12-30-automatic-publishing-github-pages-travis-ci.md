@@ -86,7 +86,7 @@ $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
 
 This will give you a value you need to add to your `.travis.yml`, e.g.,
 
-```yaml
+```haml
 # .travis.yml
 
 script: bundle exec rake travis
