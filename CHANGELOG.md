@@ -1,7 +1,8 @@
 # Changelog
 
-## HEAD
+## 2.11.0
 
+- Use io.js v2.5.0.
 - Remove Compass.
 - Remove default webfonts.
 - Load Foundation Icon Fonts from cdnjs.
