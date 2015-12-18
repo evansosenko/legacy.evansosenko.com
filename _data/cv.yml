@@ -55,6 +55,14 @@
   name: publications and talks
 
 - type: entry
+  name: Superconductivity in transition metal dichalcogenides
+  start: December 2015
+  location: University of California, Riverside, Riverside, CA, US
+  description: 5 pages, 2 figures, Phys. Rev. B 89, 245436
+  url: http://arxiv.org/abs/1512.01261
+  icon: fi-page-filled
+
+- type: entry
   name: Contributed Talk, APS March Meeting
   start: March 2015
   location: San Antonio, TX, US
