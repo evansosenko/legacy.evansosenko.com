@@ -11,6 +11,6 @@ keywords:
   - jekyll
 
 twitter:
-  site: ~
-  creator: ~
-  card: ~
+  card: summary
+  site: '@evansosenko'
+  creator: '@evansosenko'
