@@ -1,5 +1,5 @@
-baseurl: /jekyll-site
-url: https://makenew.github.io
+baseurl: /
+url: https://evansosenko.com
 
 assets:
-  cdn: https://makenew.github.io
+  cdn: https://evansosenko.com

@@ -7,7 +7,7 @@ Email: razorx@evansosenko.com
 /* SITE */
 Last update: {{ site.time }}
 URL: {{ site.url }}{{ site.baseurl }}
-Source: https://github.com/makenew/jekyll-site
+Source: https://github.com/evansosenko/evansosenko.github.io
 
 /* LIBRARIES */
 https://github.com/paulmillr/console-polyfill

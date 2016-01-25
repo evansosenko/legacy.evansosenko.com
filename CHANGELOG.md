@@ -7,4 +7,4 @@ This change log follows the conventions of
 
 ## [Unreleased][Unreleased]
 
-[Unreleased]: https://github.com/makenew/jekyll-site/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/evansosenko/evansosenko.github.io/compare/v1.0.0...HEAD

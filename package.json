@@ -1,15 +1,15 @@
 {
-  "name": "makenew-jekyll-site",
+  "name": "evansosenko.com",
   "version": "1.0.0",
-  "description": "Jekyll site skeleton.",
+  "description": "Personal site and blog of Evan Sosenko: Ph.D. physics student, developer, gamer, and tinkerer.",
   "main": "index.html",
   "private": true,
   "keywords": [
     "jekyll"
   ],
-  "homepage": "https://github.com/makenew/jekyll-site",
-  "bugs": "https://github.com/makenew/jekyll-site/issues",
-  "repository": "makenew/jekyll-site",
+  "homepage": "https://github.com/evansosenko/evansosenko.github.io",
+  "bugs": "https://github.com/evansosenko/evansosenko.github.io/issues",
+  "repository": "evansosenko/evansosenko.github.io",
   "license": "MIT",
   "authors": [
     "Evan Sosenko <razorx@evansosenko.com>"
