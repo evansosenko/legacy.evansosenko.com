@@ -1,0 +1,176 @@
+---
+- id: education
+  type: entry
+  items:
+    - name: Ph.D. Physics in condensed matter theory
+      start: 2011
+      end: present
+      location: University of California, Riverside, Riverside, CA, US
+
+    - name: M.A. Physics
+      start: 2011
+      end: 2012
+      location: University of California, Riverside, Riverside, CA, US
+
+    - name: B.S. Physics with minor in mathematics
+      start: 2006
+      end: 2011
+      location: University of California, Santa Barbara, Santa Barbara, CA, US
+
+- id: fellowships
+  type: entry
+  items:
+    - name: Chancellor's Distinguished Fellowship Award
+      start: 2011
+      end: 2016
+      location: University of California, Riverside, Riverside, CA, US
+
+    - name: CCS Summer Undergraduate Research Fellowship (SURF)
+      start: 2010
+      end: 2010
+      location: University of California, Santa Barbara, Santa Barbara, CA, US
+
+- id: scholarships
+  type: entry
+  items:
+    - name: Regents Scholarship Award
+      start: 2006
+      end: 2010
+      location: University of California, Santa Barbara, Santa Barbara, CA, US
+
+    - name: Xi Nu Zeta of Beta Sigma Phi Scholarship
+      start: 2006
+      end: 2006
+      location: SCV Scholarship Foundation, Santa Clarita, CA, US
+
+- id: publications-talks
+  name: publications and talks
+  type: entry
+  items:
+    - name: Superconductivity in transition metal dichalcogenides
+      start: December 2015
+      location: University of California, Riverside, Riverside, CA, US
+      description: 5 pages, 2 figures, Phys. Rev. B 89, 245436
+      url: http://arxiv.org/abs/1512.01261
+      icon: zmdi-file-text
+
+    - name: Contributed Talk, APS March Meeting
+      start: March 2015
+      location: San Antonio, TX, US
+      description: >
+        Superconducting phases of monolayer transition-metal dichalcogenides.
+      url: https://evansosenko.com/deck-dichalcogenides-superconductivity/
+      icon: zmdi-tv-list
+
+    - name: Effect of contacts on spin lifetime measurements in graphene
+      start: June 2014
+      location: University of California, Riverside, Riverside, CA, US
+      description: 9 pages, 3 figures, Phys. Rev. B 89, 245436
+      url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.245436
+      icon: zmdi-file-text
+
+    - name: Contributed Talk, APS March Meeting
+      start: March 2014
+      location: Denver, CO, US
+      description: Effect of contacts on spin lifetime measurements in graphene.
+      url: https://evansosenko.com/deck-spin-lifetime/
+      icon: zmdi-tv-list
+
+- id: research
+  type: entry
+  items:
+    - name: Graduate Research Assistant
+      start: 2011
+      end: present
+      location: Department of Physics and Astronomy, Riverside, CA, US
+      description: >
+        Condensed matter theory: spintronics and topological materials.
+
+    - name: Undergraduate Research Assistant
+      start: 2009
+      end: 2011
+      location: UCSB Astronomy &amp; Astrophysics, Santa Barbara, CA, US
+      description: >
+        Pulsar radio astronomy and scattering in interstellar media.
+        Applications and limits of the stationary phase approximation.
+        Under the supervision of Dr. Carl R. Gwinn.
+
+    - name: Undergraduate Research Assistant
+      start: 2008
+      end: 2009
+      location: >
+        UCSB Center for Terahertz Science and Technology, Santa Barbara, CA, US
+      description: >
+        Experimental work on THz absorption of proteins in solution.
+        Under the supervision of Dr. James Allen.
+
+- id: instruction
+  type: entry
+  items:
+    - name: Teaching Assistant
+      start: 2011
+      end: present
+      location: Department of Physics and Astronomy, Riverside, CA, US
+
+    - name: Grader
+      start: 2011
+      end: 2011
+      location: UCSB Physics Department, Santa Barbara, CA, US
+      description: >
+        Grader for PHYS 231B, graduate course in general relativity;
+         instructor: Dr. Donald Marolf.
+
+- id: business
+  type: entry
+  items:
+    - name: Owner &amp; Technical Administrator
+      start: 2001
+      end: present
+      location: OurTownRentals.com, Valencia, CA, US
+      description: >
+        Commercial website for USA vacation rentals founded in 2001.
+        Responsible for web design, development, server administration,
+        and business management.
+      url: https://ourtownrentals.com/
+
+- id: technical
+  name: technical skills
+  type: list
+  items:
+    - name: platforms
+      items:
+        - FreeBSD
+        - Linux
+        - Microsoft Windows
+    - name: tools
+      items:
+        - Chef
+        - LaTeX
+        - Git
+    - name: scientific
+      items:
+        - Mathematica
+        - LabVIEW
+        - Autodesk Inventor
+    - name: design
+      items:
+        - Compass
+        - Adobe Illustrator
+        - Adobe Photoshop
+    - name: languages
+      items:
+        - Ruby
+        - Python
+        - PHP
+        - SQL
+        - HTML
+        - CSS
+        - SASS
+        - JavaScript
+
+- id: languages
+  type: list
+  items:
+    - name: english
+      items:
+        - fluent

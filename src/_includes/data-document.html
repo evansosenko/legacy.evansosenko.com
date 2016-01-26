@@ -1,0 +1,58 @@
+{% for section in include.data %}
+  <section{% if include.id %} id="{{ include.id }}"{% endif %}>
+    {% if section.name %}
+      {% assign title = section.name %}
+    {% else %}
+      {% assign title = section.id %}
+    {% endif %}
+    <h2>{{ title }}</h2>
+
+    {% case section.type %}
+    {% when 'entry' %}
+      {% for item in section.items %}
+        <section>
+          <h3>
+            {% if item.url %}<a href="{{ item.url }}">{% endif %}
+              {{ items.name }}
+              {% if item.icon %}
+                <i class="zmdi {{ item.icon }}"></i>
+              {% endif %}
+            {% if item.url %}</a>{% endif %}
+          </h3>
+
+          {% if item.start %}
+            {% capture enddate %}
+              {% if item.end and item.start != item.end %}
+                –{{ item.end }}
+              {% endif %}
+            {% endcapture %}
+            <p class="date">{{ item.start }}{{ enddate | strip }}</p>
+          {% endif %}
+
+          {% if item.location %}
+            <p class="location">{{ item.location }}</p>
+          {% endif %}
+
+          {% if item.description %}
+            <p class="description">
+              {{ item.description }}
+              {% if item.url %}
+                <a href="{{ item.url }}" class="link"
+                   title="view this online"></a>
+              {% endif %}
+            </p>
+          {% endif %}
+        </section>
+      {% endfor %}
+
+    {% when 'list' %}
+      <dl class="list">
+        <dt>{{ item.name }}</dt>
+          {% for item in section.items %}
+            <dd>{{ item.name }}</dd>
+          {% endfor %}
+        </dt>
+      </dl>
+    {% endcase %}
+  </section>
+{% endfor %}
