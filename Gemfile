@@ -9,6 +9,9 @@ gem 'autoprefixer-rails', '~> 6.3'
 gem 'sass', '~> 3.4'
 gem 'uglifier', '~> 2.7'
 
+# Jekyll Extensions
+gem 'redcarpet', '~> 3.3'
+
 # Development Tools
 gem 'rake', '~> 10.5'
 gem 'guard-livereload', '~> 2.5'

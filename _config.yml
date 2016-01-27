@@ -7,6 +7,8 @@ include:
 gems:
   - jekyll-assets
 
+markdown: redcarpet
+
 assets:
   sources:
     - _assets/bower_components
