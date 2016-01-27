@@ -196,6 +196,16 @@ To submit a patch:
 
 Some code and content may be licensed under other terms where noted.
 
+### Acknowledgments
+
+This site is based on [makenew/jekyll-site].
+Front end third-party libraries are listed in [`humans.txt`](src/humans.txt).
+All other libraries are listed in
+[`Gemfile`](./Gemfile), [`package.json`](./package.json),
+and [`bower.json`](./bower.json).
+
+[makenew/jekyll-site]: https://github.com/makenew/jekyll-site
+
 ## Warranty
 
 This software is provided "as is" and without any express or
