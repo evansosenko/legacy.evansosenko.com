@@ -1,3 +1,7 @@
 ---
+google:
+  analytics:
+    id: UA-19631381-4
+
 webfontloader:
   src: https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.20/webfontloader.js

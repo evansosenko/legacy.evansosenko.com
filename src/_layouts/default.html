@@ -13,5 +13,8 @@
   <body>
     {{ content }}
   </body>
+  {% if jekyll.environment == 'production' %}
+    <script>{% asset vendor/google-analytics %}</script>
+  {% endif %}
   {% javascript main %}
 </html>
