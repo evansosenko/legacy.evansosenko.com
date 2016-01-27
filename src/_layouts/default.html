@@ -16,6 +16,9 @@
   {% if jekyll.environment == 'production' %}
     <script>{% asset vendor/google-analytics %}</script>
   {% endif %}
+  {% if page.comments %}
+    {% include disqus.html %}
+  {% endif %}
   {% if page.gist %}
     <script src="{{ site.data.vendor.jquery.src }}"></script>
     <script>{% asset gist-async/js/gist-async.min %}</script>
