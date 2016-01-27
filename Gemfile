@@ -14,6 +14,7 @@ gem 'redcarpet', '~> 3.3'
 
 # Jekyll Plugins
 gem 'jekyll-gist', '~> 1.4'
+gem 'jekyll-scholar', '~> 5.5'
 
 # Development Tools
 gem 'rake', '~> 10.5'
