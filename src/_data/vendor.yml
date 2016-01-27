@@ -10,5 +10,11 @@ google:
 jquery:
   src: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js
 
+material-design-iconic-font:
+  family: Material-Design-Iconic-Font
+  src: >-
+    https://cdnjs.cloudflare.com/ajax/libs/
+    material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css
+
 webfontloader:
   src: https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.20/webfontloader.js
