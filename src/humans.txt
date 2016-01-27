@@ -16,4 +16,5 @@ https://www.google.com/analytics/
 https://modernizr.com/
 https://necolas.github.io/normalize.css/
 https://www.google.com/get/noto/
+http://prismjs.com/
 https://github.com/typekit/webfontloader
