@@ -8,6 +8,13 @@ gems:
   - jekyll-assets
 
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - disable_indented_code_blocks
+    - no_intra_emphasis
+    - smart
+    - space_after_headers
+    - tables
 
 assets:
   sources:
