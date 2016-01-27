@@ -3,5 +3,8 @@ google:
   analytics:
     id: UA-19631381-4
 
+jquery:
+  src: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js
+
 webfontloader:
   src: https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.20/webfontloader.js

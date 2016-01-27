@@ -6,6 +6,7 @@ include:
 
 gems:
   - jekyll-assets
+  - jekyll-gist
 
 highlighter: false
 markdown: redcarpet

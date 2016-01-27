@@ -12,6 +12,9 @@ gem 'uglifier', '~> 2.7'
 # Jekyll Extensions
 gem 'redcarpet', '~> 3.3'
 
+# Jekyll Plugins
+gem 'jekyll-gist', '~> 1.4'
+
 # Development Tools
 gem 'rake', '~> 10.5'
 gem 'guard-livereload', '~> 2.5'
