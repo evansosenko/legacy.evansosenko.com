@@ -15,7 +15,7 @@ https://ftlabs.github.io/fastclick/
 https://github.com/razor-x/gist-async
 https://www.google.com/analytics/
 https://modernizr.com/
-https://necolas.github.io/normalize.css/
 https://www.google.com/get/noto/
 http://prismjs.com/
+https://10up.github.io/sanitize.css/
 https://github.com/typekit/webfontloader
