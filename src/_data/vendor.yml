@@ -16,5 +16,8 @@ material-design-iconic-font:
     https://cdnjs.cloudflare.com/ajax/libs/
     material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css
 
+monoid:
+  cdn: https://cdn.rawgit.com/larsenwork/monoid/gh-pages/css
+
 webfontloader:
   src: https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.20/webfontloader.js

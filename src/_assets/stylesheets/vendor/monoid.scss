@@ -1,0 +1,34 @@
+$cdn: '{{ site.data.vendor.monoid.cdn }}';
+
+@font-face {
+  font-family: 'Monoid Regular';
+  src: url('#{$cdn}/Monoid-Regular.eot');
+  src: url('#{$cdn}/Monoid-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$cdn}/Monoid-Regular.woff2') format('woff2'),
+  url('#{$cdn}/Monoid-Regular.woff') format('woff'),
+  url('#{$cdn}/Monoid-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monoid Bold';
+  src: url('#{$cdn}/Monoid-Bold.eot');
+  src: url('#{$cdn}/Monoid-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$cdn}/Monoid-Bold.woff2') format('woff2'),
+  url('#{$cdn}/Monoid-Bold.woff') format('woff'),
+  url('#{$cdn}/Monoid-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monoid Italic';
+  src: url('#{$cdn}/Monoid-Italic.eot');
+  src: url('#{$cdn}/Monoid-Italic.eot?#iefix') format('embedded-opentype'),
+  url('#{$cdn}/Monoid-Italic.woff2') format('woff2'),
+  url('#{$cdn}/Monoid-Italic.woff') format('woff'),
+  url('#{$cdn}/Monoid-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

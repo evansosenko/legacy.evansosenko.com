@@ -17,6 +17,7 @@ https://github.com/razor-x/gist-async
 https://www.google.com/analytics/
 https://zavoloklom.github.io/material-design-iconic-font/index.html
 https://modernizr.com/
+https://larsenwork.com/monoid/
 https://www.google.com/get/noto/
 http://prismjs.com/
 https://10up.github.io/sanitize.css/

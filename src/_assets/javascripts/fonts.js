@@ -11,10 +11,12 @@ WebFont.load({
   },
   custom: {
     families: [
-      '{{ site.data.vendor.material-design-iconic-font.family }}'
+      '{{ site.data.vendor.material-design-iconic-font.family }}',
+      'Monoid Regular', 'Monoid Bold', 'Monoid Italic'
     ],
     urls: [
-      '{{ site.data.vendor.material-design-iconic-font.src | remove: " " }}'
+      '{{ site.data.vendor.material-design-iconic-font.src | remove: " " }}',
+      '{% asset_path vendor/monoid %}'
     ]
   }
 })
