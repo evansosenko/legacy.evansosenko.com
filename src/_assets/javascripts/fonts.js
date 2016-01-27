@@ -4,6 +4,9 @@
 
 WebFont.load({
   google: {
-    families: ['Noto Sans']
+    families: [
+      'Noto Sans',
+      'Material Icons'
+    ]
   }
 })

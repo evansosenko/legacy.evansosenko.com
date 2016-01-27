@@ -15,6 +15,7 @@ https://github.com/paulmillr/console-polyfill
 https://ftlabs.github.io/fastclick/
 https://github.com/razor-x/gist-async
 https://www.google.com/analytics/
+https://design.google.com/icons/
 https://modernizr.com/
 https://www.google.com/get/noto/
 http://prismjs.com/
