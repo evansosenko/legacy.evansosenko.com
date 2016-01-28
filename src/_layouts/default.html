@@ -5,6 +5,8 @@
       {% include livereload.html %}
     {% endif %}
     {% include head.html %}
+    <script src="{{ site.data.vendor.webfontloader.src }}"></script>
+    <script>{% asset fonts %}</script>
     {% stylesheet main %}
     {% javascript vendor/modernizr %}
   </head>
