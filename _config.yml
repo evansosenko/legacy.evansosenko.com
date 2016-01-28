@@ -32,3 +32,10 @@ scholar:
   bibtex_filters:
     - latex
     - markdown
+
+defaults:
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
