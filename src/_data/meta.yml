@@ -8,7 +8,13 @@ locale: en_US
 image: ~
 image_asset: ~
 keywords:
-  - jekyll
+  - physics
+  - math
+  - code
+  - development
+  - web development
+  - blog
+  - personal
 
 twitter:
   card: summary
