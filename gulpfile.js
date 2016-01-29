@@ -17,6 +17,7 @@ gulp.task('deploy', (done) => {
       clone: '.deploy',
       dotfiles: true,
       message: `Deploy ${commit} from v${pkg.version}`,
+      repo: `git@github.com:${pkg.repository}.git`,
       user: {
         name: pkg.author.name,
         email: pkg.author.email

@@ -200,6 +200,12 @@ Deploy the `dist` directory as-is with
 $ npm run gh-pages
 ```
 
+If `SOURCE_BRANCH` is set as a Travis CI environment variable,
+then commits pushed to that branch will be deployed automatically.
+This requires `.travis/deploy.key.enc` to be encrypted on Travis,
+the corresponding decryption command in `.travis/deploy.sh`, and
+the corresponding public key added as a deploy key to the GitHub repository.
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.
