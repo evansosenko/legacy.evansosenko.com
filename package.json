@@ -11,9 +11,11 @@
   "bugs": "https://github.com/evansosenko/evansosenko.github.io/issues",
   "repository": "evansosenko/evansosenko.github.io",
   "license": "MIT",
-  "authors": [
-    "Evan Sosenko <razorx@evansosenko.com>"
-  ],
+  "author": {
+    "name": "Evan Sosenko",
+    "email": 'razorx@evansosenko.com',
+    "url": "https://evansosenko.com/"
+  },
   "scripts": {
     "install": "npm run bower",
     "postinstall": "npm run modernizr",
