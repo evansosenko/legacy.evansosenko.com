@@ -28,7 +28,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-01-29T20:53:16+00:00">
+<meta property="og:updated_time" content="2016-01-29T23:54:33+00:00">
 
 
   
@@ -120,7 +120,7 @@ Author: Evan Sosenko
 Email: razorx@evansosenko.com
 
 /* SITE */
-Last update: 2016-01-29 20:53:16 +0000
+Last update: 2016-01-29 23:54:33 +0000
 URL: https://evansosenko.com/
 Source: https://github.com/evansosenko/evansosenko.github.io
 
