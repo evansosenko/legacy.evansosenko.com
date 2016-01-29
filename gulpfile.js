@@ -15,6 +15,7 @@ gulp.task('deploy', (done) => {
   ghpages.publish(
     path.join(process.cwd(), 'dist'), {
       clone: '.deploy',
+      depth: 1,
       dotfiles: true,
       message: `Deploy ${commit} from v${pkg.version}`,
       repo: `git@github.com:${pkg.repository}.git`,
