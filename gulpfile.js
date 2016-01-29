@@ -1,5 +1,28 @@
+const execFileSync = require('child_process').execFileSync
+const path = require('path')
+
+const ghpages = require('gh-pages')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
+
+const pkg = require('./package.json')
+
+gulp.task('deploy', (done) => {
+  var commit = execFileSync('git', ['rev-parse', '--short', 'HEAD'], {
+    encoding: 'utf8'
+  }).trim()
+
+  ghpages.publish(
+    path.join(process.cwd(), 'dist'), {
+      clone: '.deploy',
+      dotfiles: true,
+      message: `Deploy ${commit} from v${pkg.version}`,
+      user: {
+        name: pkg.author.name,
+        email: pkg.author.email
+      }
+    }, done)
+})
 
 gulp.task('minify', () => {
   return gulp.src('dist/**/*.html')

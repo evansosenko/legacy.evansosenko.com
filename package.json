@@ -13,13 +13,15 @@
   "license": "CC-BY-SA-4.0",
   "author": {
     "name": "Evan Sosenko",
-    "email": 'razorx@evansosenko.com',
+    "email": "razorx@evansosenko.com",
     "url": "https://evansosenko.com/"
   },
   "scripts": {
     "install": "npm run bower",
     "postinstall": "npm run modernizr",
     "bower": "bower install",
+    "deploy": "npm run minify && npm run gh-pages",
+    "gh-pages": "gulp deploy",
     "minify": "gulp minify",
     "modernizr": "modernizr -c modernizr-config.json -d src/_assets/javascripts/vendor/modernizr.js"
   },
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "bower": "^1.7.4",
+    "gh-pages": "^0.9.0",
     "gulp": "^3.9.0",
     "gulp-cli": "^1.1.0",
     "gulp-htmlmin": "^1.3.0"

@@ -185,6 +185,21 @@ Minify all `.html` files in the `dist` directory with
 $ npm run minify
 ```
 
+### Deploy to GitHub Pages
+
+Deploy the `dist` directory to GitHub Pages with
+
+```
+$ npm run deploy
+```
+
+This will minify the HTML before deployment.
+Deploy the `dist` directory as-is with
+
+```
+$ npm run gh-pages
+```
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.
