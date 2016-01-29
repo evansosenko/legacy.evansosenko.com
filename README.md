@@ -177,6 +177,14 @@ or according to the following rules.
 [Open Graph]: http://ogp.me/
 [Twitter Cards]: https://dev.twitter.com/cards/
 
+### HTMLMinifier
+
+Minify all `.html` files in the `dist` directory with
+
+```
+$ npm run minify
+```
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.
