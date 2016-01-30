@@ -11,11 +11,13 @@ WebFont.load({
   custom: {
     families: [
       '{{ site.data.vendor.material-design-iconic-font.family }}',
-      'Monoid Regular', 'Monoid Bold', 'Monoid Italic'
+      'Monoid Regular', 'Monoid Bold', 'Monoid Italic',
+      'Overpass'
     ],
     urls: [
       '{{ site.data.vendor.material-design-iconic-font.src | remove: " " }}',
-      '{% asset_path vendor/monoid %}'
+      '{% asset_path vendor/monoid %}',
+      '{% asset_path vendor/overpass %}'
     ]
   }
 })

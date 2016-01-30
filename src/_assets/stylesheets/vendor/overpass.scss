@@ -1,0 +1,104 @@
+$cdn: '{{ site.data.vendor.overpass.cdn | remove: ' ' }}';
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-Bold.eot');
+  src: url('#{$cdn}/Overpass-Bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$cdn}/Overpass-Bold.woff') format('woff'),
+       url('#{$cdn}/Overpass-Bold.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-Bold.svg#Overpass-Bold') format('svg');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-Bold-Italic.eot');
+  src: url('#{$cdn}/Overpass-Bold-Italic.eot?#iefix')
+       format('embedded-opentype'),
+       url('#{$cdn}/Overpass-Bold-Italic.woff') format('woff'),
+       url('#{$cdn}/Overpass-Bold-Italic.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-Bold-Italic.svg#Overpass-BoldItalic') format('svg');
+  font-style: italic;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-Regular.eot');
+  src: url('#{$cdn}/Overpass-Regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$cdn}/Overpass-Regular.woff') format('woff'),
+       url('#{$cdn}/Overpass-Regular.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-Regular.svg#Overpass-Regular') format('svg');
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-Italic.eot');
+  src: url('#{$cdn}/Overpass-Italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$cdn}/Overpass-Italic.woff') format('woff'),
+       url('#{$cdn}/Overpass-Italic.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-Italic.svg#Overpass-Italic') format('svg');
+  font-style: italic;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-Light.eot');
+  src: url('#{$cdn}/Overpass-Light.eot?#iefix') format('embedded-opentype'),
+       url('#{$cdn}/Overpass-Light.woff') format('woff'),
+       url('#{$cdn}/Overpass-Light.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-Light.svg#Overpass-Light') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-Light-Italic.eot');
+  src: url('#{$cdn}/Overpass-Light-Italic.eot?#iefix')
+       format('embedded-opentype'),
+       url('#{$cdn}/Overpass-Light-Italic.woff') format('woff'),
+       url('#{$cdn}/Overpass-Light-Italic.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-Light-Italic.svg#Overpass-LightItalic')
+       format('svg');
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-ExtraLight.eot');
+  src: url('#{$cdn}/Overpass-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('#{$cdn}/Overpass-ExtraLight.woff') format('woff'),
+       url('#{$cdn}/Overpass-ExtraLight.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-ExtraLight.svg#Overpass-ExtraLight') format('svg');
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('#{$cdn}/Overpass-ExtraLight-Italic.eot');
+  src: url('#{$cdn}/Overpass-ExtraLight-Italic.eot?#iefix')
+       format('embedded-opentype'),
+       url('#{$cdn}/Overpass-ExtraLight-Italic.woff') format('woff'),
+       url('#{$cdn}/Overpass-ExtraLight-Italic.ttf') format('truetype'),
+       url('#{$cdn}/Overpass-ExtraLight-Italic.svg#Overpass-ExtraLightItalic')
+       format('svg');
+  font-style: italic;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
