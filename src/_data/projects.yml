@@ -1,0 +1,27 @@
+---
+- name: Make New
+  description: >
+    Tested project skeletons to instantly bootstrap
+    and reliably maintain your next project.
+  url: https://github.com/makenew
+
+- name: Jekyll &amp; ZURB
+  description: >
+    Jekyll skeleton built on ZURB Foundation with modern web principals.
+  url: https://github.com/razor-x/jekyll-and-zurb
+
+- name: Jekyll &amp; deck.js
+  description: Jekyll skeleton for creating presentations with deck.js.
+  url: https://github.com/razor-x/jekyll-and-deck.js
+
+- name: Config Curator
+  description: Simple and intelligent configuration file management.
+  url: https://github.com/razor-x/config_curator
+
+- name: EVE Online Overview Generator
+  description: Generate DRY modular overviews.
+  url: https://io.evansosenko.com/eve-overview/
+
+- name: Data Fitting with SciPy
+  description: Complete pipeline for easy data fitting with Python.
+  url: https://github.com/razor-x/scipy-data_fitting
