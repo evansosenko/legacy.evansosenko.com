@@ -1,0 +1,20 @@
+---
+emails:
+  - name: professional
+    email: razorx@evansosenko.com
+
+  - name: academic
+    email: evan.sosenko@email.ucr.edu
+
+social:
+  - name: GitHub
+    url: https://github.com/razor-x
+    icon: zmdi-github
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/pub/evan-sosenko/83/b04/599
+    icon: zmdi-linkedin
+
+  - name: Twitter
+    url: https://twitter.com/evansosenko
+    icon: zmdi-twitter
