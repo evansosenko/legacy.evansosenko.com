@@ -1,4 +1,4 @@
-$cdn: '{{ site.data.vendor.monoid.cdn }}';
+$cdn: '{{ site.data.vendor.monoid.cdn | remove: ' ' }}';
 
 @font-face {
   font-family: 'Monoid Regular';
