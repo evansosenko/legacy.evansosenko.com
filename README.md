@@ -94,7 +94,7 @@ $ npm run bower
 Run `$ rake -T` to see all Rake tasks.
 
 ```
-rake build    # Generate a production build of the site with Jekyll
+rake build    # Generate and test a production build of the Jekyll site
 rake clean    # Remove build files with jekyll clean
 rake default  # Default task
 rake dev      # Start a local Jekyll development server
