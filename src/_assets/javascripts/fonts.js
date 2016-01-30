@@ -5,8 +5,7 @@
 WebFont.load({
   google: {
     families: [
-      'Noto Sans',
-      'Material Icons'
+      'Noto Sans'
     ]
   },
   custom: {
