@@ -1,4 +1,5 @@
 ---
+layout: ~
 ---
 /* TEAM */
 Author: Evan Sosenko
