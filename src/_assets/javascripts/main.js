@@ -1,4 +1,4 @@
 //= require console-polyfill
 //= require fastclick
-//= require _highlighter
+//= require prism
 //= require _init
