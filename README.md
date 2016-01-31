@@ -94,10 +94,11 @@ $ npm run bower
 Run `$ rake -T` to see all Rake tasks.
 
 ```
-rake build    # Generate and test a production build of the Jekyll site
-rake clean    # Remove build files with jekyll clean
-rake default  # Default task
-rake dev      # Start a local Jekyll development server
+rake build             # Generate and test a production build of the Jekyll site
+rake clean             # Remove build files with jekyll clean
+rake default           # Default task
+rake dev               # Start a local Jekyll development server
+rake scss_lint[files]  # Run `scss-lint src/_assets/stylesheets [files...]`
 ```
 
 ### LiveReload

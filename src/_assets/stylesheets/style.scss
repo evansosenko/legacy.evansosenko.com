@@ -1,0 +1,16 @@
+@import 'susy/sass/susy';
+@import 'settings';
+
+body {
+  font-family: 'Noto Sans';
+}
+
+code,
+pre {
+  color: 'blue';
+  font-family: 'Monoid Regular';
+}
+
+p {
+  border: 0;
+}

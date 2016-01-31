@@ -1,4 +1,5 @@
 require 'html/proofer'
+require 'scss_lint/rake_task'
 
 desc 'Default task'
 task default: :build
@@ -28,6 +29,11 @@ end
 desc 'Start a local Jekyll development server'
 task dev: :clean do
   spawn(*%W{bundle exec jekyll serve --host #{Socket.gethostname}})
+end
+
+# Load SCSS-Lint Rake task.
+SCSSLint::RakeTask.new do |t|
+  t.files = %w{src/_assets/stylesheets}
 end
 
 # Spawn a server and kill it gracefully when interrupt is received.
