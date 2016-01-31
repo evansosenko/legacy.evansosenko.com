@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans';
+  font-family: $font-family-sans-serif;
 }
 
 
@@ -15,7 +15,7 @@ body {
   // scss-lint:disable QualifyingElement
   code[class*='language-'],
   pre[class*='language-'] {
-    font-family: 'Monoid Regular';
+    font-family: $font-family-code, $font-family-monospace;
   }
 }
 
