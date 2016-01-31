@@ -1,0 +1,21 @@
+<nav{% if include.id %} id="{{ include.id }}"{% endif %}>
+  <ul>
+    {% for item in include.links %}
+      <li>
+        <a class="zmdi {{ item.icon }}"
+           href="{{ item.url }}"
+           title="{{ item.name }}"></a>
+      </li>
+    {% endfor %}
+    <li>
+      <a class="zmdi zmdi-email"
+         href=""
+         data-reveal-id="email_modal"
+         title="Email"></a>
+    </li>
+    <li>
+      <a href="{{ site.url }}{{ site.baseurl }}/cv/"
+         title="Curriculum Vitae">CV</a>
+    </li>
+  </ul>
+</nav>
