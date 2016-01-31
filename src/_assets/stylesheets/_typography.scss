@@ -1,0 +1,68 @@
+//
+// Font families
+//
+
+@function font($family) {
+  @return map-get($font-families, $family);
+}
+
+$font-families: (
+  heading: (
+    'Overpass',
+    serif
+  ),
+  body: (
+    'Noto Sans',
+    'Open Sans',
+    'Source Sans Pro',
+    'Helvetica Neue',
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif
+  ),
+  monospace: (
+    'Inconsolata-g',
+    'Inconsolata-dz',
+    Inconsolata,
+    'DejaVu Mono',
+    Consolas,
+    monospace
+  ),
+  code: (
+    'Monoid Regular',
+  )
+);
+
+//
+// Typography styles
+//
+
+body {
+  font-family: font(body);
+  font-size: 10px; // 0.1rem = 1px
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: font(heading);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+code,
+pre {
+  font-family: font(code), font(monospace);
+}
+
+.highlight {
+  // scss-lint:disable QualifyingElement
+  code[class*='language-'],
+  pre[class*='language-'] {
+    font-family: font(code), font(monospace);
+  }
+}

@@ -1,24 +1,4 @@
 @import 'susy/sass/susy';
 @import 'include-media/dist/include-media';
 @import 'settings';
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: 'Noto Sans';
-}
-
-
-.highlight {
-  // scss-lint:disable QualifyingElement
-  code[class*='language-'],
-  pre[class*='language-'] {
-    font-family: 'Monoid Regular';
-  }
-}
-
-p {
-  border: 0;
-}
+@import 'typography';
