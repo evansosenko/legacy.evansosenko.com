@@ -4,6 +4,9 @@ require 'scss_lint/rake_task'
 desc 'Default task'
 task default: :build
 
+desc 'Lint JavaScript and Sass files'
+task lint: [:standard, :scss_lint]
+
 desc 'Remove build files with jekyll clean'
 task :clean do
   sh(*%w{bundle exec jekyll clean})
@@ -19,7 +22,7 @@ task :clean do
 end
 
 desc 'Generate and test a production build of the Jekyll site'
-task build: :clean do
+task build: [:lint, :clean] do
   ENV['JEKYLL_ENV'] = 'production'
   sh(*%W{bundle exec jekyll build
          --config _config.yml,_config.#{ENV['JEKYLL_ENV']}.yml})

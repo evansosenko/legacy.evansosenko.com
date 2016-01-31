@@ -98,6 +98,7 @@ rake build             # Generate and test a production build of the Jekyll site
 rake clean             # Remove build files with jekyll clean
 rake default           # Default task
 rake dev               # Start a local Jekyll development server
+rake lint              # Lint JavaScript and Sass files
 rake scss_lint[files]  # Run `scss-lint src/_assets/stylesheets [files...]`
 rake standard[file]    # Lint JavaScript against the JavaScript Standard Style
 ```
@@ -178,6 +179,14 @@ or according to the following rules.
 
 [Open Graph]: http://ogp.me/
 [Twitter Cards]: https://dev.twitter.com/cards/
+
+### Testing and Linting
+
+Linting JavaScript and Sass is enforced before production builds,
+run automatically by Guard, and may be run manually with Rake.
+
+The `dist` directory is verified immediately
+after production builds by HTML::Proofer.
 
 ### HTMLMinifier
 
