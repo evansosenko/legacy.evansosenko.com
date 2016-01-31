@@ -1,5 +1,5 @@
 {% for section in include.data %}
-  <section{% if include.id %} id="{{ include.id }}"{% endif %}>
+  <section>
     {% if section.name %}
       {% assign title = section.name %}
     {% else %}
