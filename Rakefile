@@ -31,6 +31,12 @@ task dev: :clean do
   spawn(*%W{bundle exec jekyll serve --host #{Socket.gethostname}})
 end
 
+desc 'Lint JavaScript against the JavaScript Standard Style'
+task :standard, [:file] do |_, args|
+  test_args = args[:file] ? "-- #{args[:file]}" : ''
+  sh "npm test -s" + test_args
+end
+
 # Load SCSS-Lint Rake task.
 SCSSLint::RakeTask.new do |t|
   t.files = %w{src/_assets/stylesheets}

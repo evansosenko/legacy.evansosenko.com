@@ -11,4 +11,8 @@ guard 'shell' do
   watch %r{src/_assets/stylesheets/.+\.scss$} do |m|
     eager "bundle exec scss-lint #{m.first}"
   end
+
+  watch %r{src/_assets/javascripts/.+\.js$} do |m|
+    eager "npm run test -s -- #{m.first}"
+  end
 end

@@ -99,6 +99,7 @@ rake clean             # Remove build files with jekyll clean
 rake default           # Default task
 rake dev               # Start a local Jekyll development server
 rake scss_lint[files]  # Run `scss-lint src/_assets/stylesheets [files...]`
+rake standard[file]    # Lint JavaScript against the JavaScript Standard Style
 ```
 
 ### LiveReload
