@@ -10,10 +10,15 @@ body {
   font-family: 'Noto Sans';
 }
 
-code,
-pre {
-  color: 'blue';
-  font-family: 'Monoid Regular';
+
+.highlight {
+  // scss-lint:disable QualifyingElement
+  code[class*='language-'],
+  pre[class*='language-'] {
+    font-family: 'Monoid Regular';
+  }
+}
+
 }
 
 p {
