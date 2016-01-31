@@ -2,6 +2,10 @@
 @import 'include-media/dist/include-media';
 @import 'settings';
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: 'Noto Sans';
 }
