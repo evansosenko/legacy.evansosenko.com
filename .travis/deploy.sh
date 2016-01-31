@@ -38,6 +38,8 @@ eval "$(ssh-agent -s)"
 chmod 600 .travis/deploy.key
 ssh-add .travis/deploy.key
 
+git remote set-url origin git@github.com:${TRAVIS_REPO_SLUG}.git
+
 npm run deploy
 
 exit

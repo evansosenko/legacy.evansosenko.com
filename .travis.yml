@@ -5,8 +5,12 @@ dist: trusty
 cache:
   bundler: true
   directories:
+    - .deploy
     - bower_components
     - node_modules
+
+before_cache:
+  - rm -rf ./node_modules/.bin/which
 
 before_install:
   - nvm install
