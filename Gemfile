@@ -9,9 +9,6 @@ gem 'autoprefixer-rails', '~> 6.3'
 gem 'sass', '~> 3.4'
 gem 'uglifier', '~> 2.7'
 
-# Jekyll Extensions
-gem 'redcarpet', '~> 3.3'
-
 # Jekyll Plugins
 gem 'jekyll-gist', '~> 1.4'
 gem 'jekyll-scholar', '~> 5.5'
