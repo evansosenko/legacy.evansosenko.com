@@ -11,17 +11,9 @@
   description: Simple and intelligent configuration file management.
   url: https://github.com/razor-x/config_curator
 
-- name: Palimpsest
-  description: Give any custom or legacy project a modern workflow and toolset.
-  url: https://github.com/razor-x/palimpsest
-
-- name: Ruby Gem Skeleton
-  description: Modern skeleton for making Ruby gems.
-  url: https://github.com/razor-x/ruby-gem
-
-- name: Chef Skeleton Cookbook
-  description: Modern cookbook skeleton for Ruby Chef.
-  url: https://github.com/razor-x/chef-cookbook
+- name: Make New Project Skeletons
+  description: Tested project skeletons to instantly bootstrap and reliably maintain your next project.
+  url: https://makenew.github.io/
 
 - name: EVE Online Overview Generator
   description: Generate DRY modular overviews.
