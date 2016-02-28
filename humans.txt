@@ -3,22 +3,12 @@ Author: Evan Sosenko
 Email: razorx@evansosenko.com
 
 /* SITE */
-Last update: 2016-02-11 00:23:45 +0000
+Last update: 2016-02-27 23:02:14 -0800
 URL: https://evansosenko.com/
 Source: https://github.com/evansosenko/evansosenko.github.io
 
 /* LIBRARIES */
-https://disqus.com/
 https://github.com/paulmillr/console-polyfill
 https://ftlabs.github.io/fastclick/
-https://github.com/razor-x/gist-async
-https://www.google.com/analytics/
-https://zavoloklom.github.io/material-design-iconic-font/index.html
 https://modernizr.com/
-https://larsenwork.com/monoid/
-https://www.google.com/get/noto/
-http://overpassfont.org/
-http://prismjs.com/
-http://susy.oddbird.net/
-https://10up.github.io/sanitize.css/
-https://github.com/typekit/webfontloader
+https://necolas.github.io/normalize.css/
