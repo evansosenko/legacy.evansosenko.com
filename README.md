@@ -112,6 +112,49 @@ Start the livereload server in the background with
 $ guard
 ```
 
+### gulp
+
+Linting and deployment is handled by [gulp].
+
+In a separate window, use gulp to watch for changes
+and lint JavaScript, Sass, and HTML files with
+
+```
+$ npm run lint:watch
+```
+
+If installed globally, `gulp` may be invoked directly.
+View available commands with
+
+```
+$ gulp --tasks
+```
+
+[gulp]: http://gulpjs.com/
+
+### HTMLMinifier
+
+Minify all `.html` files in the `dist` directory with
+
+```
+$ npm run minify
+```
+
+### Deploy to GitHub Pages
+
+Deploy the `dist` directory to GitHub Pages with
+
+```
+$ npm run deploy
+```
+
+This will minify the HTML before deployment.
+Deploy the `public` directory as-is with
+
+```
+$ npm run gh-pages
+```
+
 ## Other Features
 
 ### Modernizr
