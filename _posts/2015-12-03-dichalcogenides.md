@@ -14,4 +14,9 @@ related to my work on transition metal dichalcogenides.
 
 Our recent paper is in the early submission process.
 This page will contain all supplemental resources
-and **will be updated within the next week.**
+and **will be updated closer to journal publicaion.**
+
+A preprint of [Superconductivity in transition metal dichalcogenides][preprint]
+is available on the arXiv.
+
+[preprint]: http://arxiv.org/abs/1512.01261
