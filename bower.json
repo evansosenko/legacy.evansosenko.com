@@ -1,7 +1,7 @@
 {
-  "name": "makenew-jekyll-site",
-  "version": "1.3.2",
-  "description": "Jekyll site skeleton.",
+  "name": "evansosenko.com",
+  "version": "1.0.0",
+  "description": "Personal site and blog of Evan Sosenko: Ph.D. physics student, developer, gamer, and tinkerer.",
   "main": "index.html",
   "private": true,
   "authors": [
@@ -11,17 +11,16 @@
     "jekyll"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/makenew/jekyll-site",
+  "homepage": "https://github.com/evansosenko/evansosenko.github.io",
   "repository": {
     "type": "git",
-    "url": "git://github.com/makenew/jekyll-site.git"
+    "url": "git://github.com/evansosenko/evansosenko.github.io.git"
   },
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "dist",
-    "makenew.sh",
     "package.json",
     "npm-shrinkwrap.json",
     "Gemfile",

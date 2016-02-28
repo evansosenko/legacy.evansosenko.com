@@ -1,152 +1,22 @@
-# Jekyll Site Skeleton
+# evansosenko.com
 
-[<img src="https://makenew.github.io/makenew.svg" alt="Make New" height="20">](https://makenew.github.io/)
-[![GitHub release](https://img.shields.io/github/release/makenew/jekyll-site.svg)](https://github.com/makenew/jekyll-site/releases)
-[![GitHub license](https://img.shields.io/github/license/makenew/jekyll-site.svg)](./LICENSE.txt)
-[![Gemnasium](https://img.shields.io/gemnasium/makenew/jekyll-site.svg)](https://gemnasium.com/makenew/jekyll-site)
-[![Travis](https://img.shields.io/travis/makenew/jekyll-site.svg)](https://travis-ci.org/makenew/jekyll-site)
+[![GitHub release](https://img.shields.io/github/release/evansosenko/evansosenko.github.io.svg)](https://github.com/evansosenko/evansosenko.github.io/releases)
+[![GitHub license](https://img.shields.io/github/license/evansosenko/evansosenko.github.io.svg)](./LICENSE.txt)
+[![Gemnasium](https://img.shields.io/gemnasium/evansosenko/evansosenko.github.io.svg)](https://gemnasium.com/evansosenko/evansosenko.github.io)
+[![Travis](https://img.shields.io/travis/evansosenko/evansosenko.github.io.svg)](https://travis-ci.org/evansosenko/evansosenko.github.io)
+
+> Built from [makenew/jekyll-site](https://github.com/makenew/jekyll-site).
 
 ## Description
 
-Bootstrap a new [Jekyll] site in less than a minute.
-
-Check out the **[live demo]** and its **[source code]**!
-
-[Jekyll]: https://jekyllrb.com/
-[live demo]: https://makenew.github.io/jekyll-site/
-[source code]: https://github.com/makenew/jekyll-site/tree/demo
-
-### Features
-
-- Extreamly minimal HTML5 layout based on [HTML5 Boilerplate].
-- Asset pipeline with [Jekyll 3 Assets],
-  [Autoprefixer], [Sass], and [Uglifier].
-- Extensive page-specific meta tag support with intelligent fallbacks.
-- Includes [FastClick], [Normalize.css], and [console-polyfill].
-- Customize [Modernizr] via configuration file.
-- Development dependency management with [Bundler].
-- [Rake] tasks for building and development.
-- Cross-device [LiveReload] using [guard-livereload].
-- Production build testing with [HTML::Proofer].
-- Front end dependency management with [Bower] and [npm].
-- Favicons with [Favic-o-matic].
-- The internet is for humans with [humans.txt].
-- [Travis CI] ready.
-- [Keep a CHANGELOG].
-- Consistent coding with [EditorConfig].
-- Badges from [Shields.io].
-
-[Autoprefixer]: https://github.com/postcss/autoprefixer
-[Bower]: http://bower.io/
-[Bundler]: http://bundler.io/
-[console-polyfill]: https://github.com/paulmillr/console-polyfill
-[EditorConfig]: http://editorconfig.org/
-[FastClick]: https://ftlabs.github.io/fastclick/
-[Favic-o-matic]: http://www.favicomatic.com/
-[guard-livereload]: https://github.com/guard/guard-livereload
-[HTML::Proofer]: https://github.com/gjtorikian/html-proofer
-[HTML5 Boilerplate]: https://html5boilerplate.com/
-[humans.txt]: http://humanstxt.org/
-[Jekyll 3 Assets]: https://jekyll.github.io/jekyll-assets/
-[Keep a CHANGELOG]: http://keepachangelog.com/
-[LiveReload]: http://livereload.com/
-[Modernizr]: https://modernizr.com/
-[Normalize.css]: https://necolas.github.io/normalize.css/
-[npm]: https://www.npmjs.com/
-[Rake]: https://github.com/ruby/rake
-[Sass]: http://sass-lang.com/
-[Shields.io]: http://shields.io/
-[Travis CI]: https://travis-ci.org/
-[Uglifier]: https://github.com/lautis/uglifier
-
-### Bootstrapping a New Project
-
-1. Clone the master branch of this repository with
-
-   ```
-   $ git clone --single-branch https://github.com/makenew/jekyll-site.git new-jekyll-site
-   $ cd new-jekyll-site
-   ```
-
-   Optionally, reset to the latest [release][Releases] with
-
-   ```
-   $ git reset --hard jekyll-site-v1.3.2
-   ```
-
-2. Run
-
-   ```
-   $ ./makenew.sh
-   ```
-
-   and follow the prompts.
-   This will replace the boilerplate, delete itself,
-   and stage changes for commit.
-   This script assumes the project repository will be hosted on GitHub.
-   For an alternative location, you must update the URLs manually.
-
-3. Fill in the README Description section.
-
-4. If [choosing a license][Choose a license] other than the one provided:
-   update `LICENSE.txt`, the README License section,
-   `package.json`, and `bower.json` with your chosen license.
-
-5. Add your own favicons from [Favic-o-matic]
-   to `src/_assets/images/favicon/` and overwrite `favicon.ico`.
-   You can make a quick [Font Awesome] favicon at [FA2PNG].
-
-6. Further customize the meta data in `src/_data/meta.yml`.
-
-7. [Lock your dependencies](#updating-requirements)
-   with `Gemfile.lock` and `npm-shrinkwrap.json`.
-   Optionally, lock the Ruby and Node.js versions
-   with `.ruby-version` and `.nvmrc`.
-
-[Choose a license]: http://choosealicense.com/
-[FA2PNG]: http://fa2png.io/
-[Font Awesome]: https://fortawesome.github.io/Font-Awesome/
-[Releases]: https://github.com/makenew/jekyll-site/releases
-[The Unlicense]: http://unlicense.org/UNLICENSE
-
-### Updating
-
-If you want to pull in future updates from this skeleton,
-you can fetch and merge in changes from this repository.
-
-If this repository is already set as `origin`,
-rename it to `upstream` with
-
-```
-$ git remote rename origin upstream
-```
-
-and then configure your `origin` branch as normal.
-
-Otherwise, add this as a new remote with
-
-```
-$ git remote add upstream https://github.com/makenew/jekyll-site.git
-```
-
-You can then fetch and merge changes with
-
-```
-$ git fetch upstream
-$ git merge upstream/master
-```
-
-#### Changelog
-
-Note that `CHANGELOG.md` is just a template for this skeleton.
-The actual changes for this project are documented in the commit history
-and summarized under [Releases].
+Personal site and blog of Evan Sosenko:
+Ph.D. physics student, developer, gamer, and tinkerer.
 
 ## Quickstart
 
 ```
-$ git clone https://github.com/makenew/jekyll-site.git
-$ cd jekyll-site
+$ git clone https://github.com/evansosenko/evansosenko.github.io.git
+$ cd evansosenko.github.io
 $ bundle
 $ npm install
 $ rake dev
@@ -164,14 +34,14 @@ Navigate to [http://localhost:4000](http://localhost:4000/).
 
 ### Source Code
 
-The [makenew-jekyll-site source] is hosted on GitHub.
+The [evansosenko.com source] is hosted on GitHub.
 Clone the project with
 
 ```
-$ git clone https://github.com/makenew/jekyll-site.git
+$ git clone https://github.com/evansosenko/evansosenko.github.io.git
 ```
 
-[makenew-jekyll-site source]: https://github.com/makenew/jekyll-site
+[evansosenko.com source]: https://github.com/evansosenko/evansosenko.github.io
 
 ### Requirements
 
@@ -315,7 +185,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/makenew/jekyll-site/fork).
+1. Fork it (https://github.com/evansosenko/evansosenko.github.io/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).
@@ -323,10 +193,6 @@ To submit a patch:
 6. Create a new Pull Request.
 
 ## License
-
-This software can be used freely, see [The Unlicense].
-The copyright text appearing below and elsewhere in this repository
-is for demonstration purposes only and does not apply to this software.
 
 This site source is licensed under the MIT license.
 

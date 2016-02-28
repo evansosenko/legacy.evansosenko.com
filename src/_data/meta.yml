@@ -1,7 +1,9 @@
 ---
-title: Jekyll Site Skeleton
-description: Jekyll site skeleton.
-name: makenew-jekyll-site
+title: evansosenko.com
+description: >-
+  Personal site and blog of Evan Sosenko:
+  Ph.D. physics student, developer, gamer, and tinkerer.
+name: evansosenko.com
 locale: en_US
 image: ~
 image_asset: ~
