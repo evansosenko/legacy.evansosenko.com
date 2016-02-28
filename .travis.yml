@@ -13,3 +13,6 @@ before_install:
 
 before_script:
   - npm install
+
+after_success:
+  - ./.travis/deploy.sh
