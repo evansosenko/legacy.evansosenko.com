@@ -66,14 +66,6 @@ gulp.task('watch', () => {
     .pipe($.sassLint.format())
 })
 
-gulp.task('modernizr', () => {
-  return gulp.src('dist/**/*')
-    .pipe($.modernizr('assets/modernizr.js'), {options: modernizr.options})
-    .pipe($.replace('testRunner();', 'testRunner(); setClasses(classes);'))
-    .pipe($.uglify())
-    .pipe(gulp.dest('dist'))
-})
-
 gulp.task('hash', () => {
   const src = 'assets/modernizr'
 
