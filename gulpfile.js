@@ -1,8 +1,12 @@
+const crypto = require('crypto')
+const fs = require('fs')
+
 const gitRevSync = require('git-rev-sync')
 const gulp = require('gulp')
 const $ = require('gulp-load-plugins')()
 
 const pkg = require('./package.json')
+const modernizr = require('./modernizr-config.json')
 
 const js = [
   'src/_assets/javascripts/**/*.js',
@@ -60,6 +64,31 @@ gulp.task('watch', () => {
     .pipe($.plumber())
     .pipe($.sassLint())
     .pipe($.sassLint.format())
+})
+
+gulp.task('modernizr', () => {
+  return gulp.src('dist/**/*')
+    .pipe($.modernizr('assets/modernizr.js'), {options: modernizr.options})
+    .pipe($.replace('testRunner();', 'testRunner(); setClasses(classes);'))
+    .pipe($.uglify())
+    .pipe(gulp.dest('dist'))
+})
+
+gulp.task('hash', () => {
+  const src = 'assets/modernizr'
+
+  const hash =
+    crypto.createHash('sha1')
+    .update(fs.readFileSync(`dist/${src}.js`, 'utf8'), 'utf8')
+    .digest('hex')
+
+  const dest = `${src}-${hash}`
+
+  fs.renameSync(`dist/${src}.js`, `dist/${dest}.js`)
+
+  return gulp.src('dist/**/*')
+    .pipe($.replace(`${src}.js"`, `${dest}.js"`))
+    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('minify', () => {

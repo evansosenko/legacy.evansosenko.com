@@ -96,7 +96,7 @@ $ npm run bower
 Run `$ rake -T` to see all Rake tasks.
 
 ```
-rake build    # Generate and test a production build of the Jekyll site
+rake build    # Generate, optimize, and test a production build of the Jekyll site
 rake clean    # Remove build files with jekyll clean
 rake default  # Default task
 rake dev      # Start a local Jekyll development server
@@ -132,13 +132,15 @@ $ gulp --tasks
 
 [gulp]: http://gulpjs.com/
 
-### HTMLMinifier
+### Build Optimization
 
-Minify all `.html` files in the `dist` directory with
+Optimize files in the `dist` directory with
 
 ```
-$ npm run minify
+$ npm run optimize
 ```
+
+This will tailor a customized Modernizr build and minify all html files.
 
 ### Deploy to GitHub Pages
 
@@ -146,13 +148,6 @@ Deploy the `dist` directory to GitHub Pages with
 
 ```
 $ npm run deploy
-```
-
-This will minify the HTML before deployment.
-Deploy the `public` directory as-is with
-
-```
-$ npm run gh-pages
 ```
 
 If `SOURCE_BRANCH` is set as a Travis CI environment variable,

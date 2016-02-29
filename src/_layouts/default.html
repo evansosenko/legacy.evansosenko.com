@@ -6,7 +6,11 @@
     {% endif %}
     {% include head.html %}
     {% stylesheet main %}
-    {% javascript vendor/modernizr %}
+    {% if jekyll.environment == 'development' %}
+      {% javascript vendor/modernizr %}
+    {% elsif jekyll.environment == 'production' %}
+      <script src="{{ site.assets.cdn }}{{ site.baseurl }}{{ site.assets.prefix }}/modernizr.js">
+    {% endif %}
     {% javascript webfontloader/webfontloader %}
     <script>{% asset fonts %}</script>
   </head>
