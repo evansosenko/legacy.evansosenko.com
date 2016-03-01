@@ -13,6 +13,7 @@ highlighter: none
 
 kramdown:
   input: GFM
+  math_engine: none
 
 assets:
   sources:

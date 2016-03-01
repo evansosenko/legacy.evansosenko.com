@@ -244,6 +244,13 @@ Additional languages and plugins are loaded in
 
 [Prism]: https://gist.github.com/
 
+### Math with KaTeX
+
+Math rendering is handled automatically by [KaTeX]
+on pages where `page.math` is set true.
+
+[KaTeX]: https://khan.github.io/KaTeX/
+
 ### Gists
 
 [Gists][Gist] may be included using the `{% gist %}` liquid tag.

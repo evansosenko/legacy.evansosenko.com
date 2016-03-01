@@ -26,6 +26,10 @@
     {% javascript vendor/prism defer %}
   {% endif %}
 
+  {% if page.math %}
+    {% javascript vendor/katex %}
+  {% endif %}
+
   {% if page.gist %}
     {% javascript jquery defer %}
     {% javascript gist-async/js/gist-async.min defer %}
