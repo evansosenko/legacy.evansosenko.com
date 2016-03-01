@@ -236,9 +236,11 @@ Fonts are loaded by [Web Font Loader] and configured in
 
 ### Syntax Highlighting
 
-Syntax highlighting is handled by [Prism].
-Additional languages and plugins should be loaded
-in `src/_assets/javascripts/main.js` as needed.
+Syntax highlighting is handled by [Prism]
+on any page that sets `page.code` true.
+
+Additional languages and plugins are loaded in
+`src/_assets/javascripts/vendor/prism.js`.
 
 [Prism]: https://gist.github.com/
 

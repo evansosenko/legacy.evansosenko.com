@@ -22,6 +22,10 @@
 
   {% javascript main defer %}
 
+  {% if page.code %}
+    {% javascript vendor/prism defer %}
+  {% endif %}
+
   {% if page.gist %}
     {% javascript jquery defer %}
     {% javascript gist-async/js/gist-async.min defer %}

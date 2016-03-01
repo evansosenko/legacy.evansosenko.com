@@ -1,6 +1,5 @@
 //= require console-polyfill
 //= require fastclick
-//= require prism
 //= require webfontloader/webfontloader
 //= require vendor/disqus
 //= require _init
