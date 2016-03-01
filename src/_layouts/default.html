@@ -9,7 +9,7 @@
     {% if jekyll.environment == 'development' %}
       {% javascript vendor/modernizr %}
     {% elsif jekyll.environment == 'production' %}
-      <script src="{{ site.assets.cdn }}{{ site.baseurl }}{{ site.assets.prefix }}/modernizr.js">
+      <script src="{{ site.assets.cdn }}{{ site.baseurl }}{{ site.assets.prefix }}/modernizr.js" defer>
     {% endif %}
     {% javascript webfontloader/webfontloader defer %}
     {% javascript fonts defer %}
