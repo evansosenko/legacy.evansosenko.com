@@ -227,6 +227,14 @@ or according to the following rules.
 [Open Graph]: http://ogp.me/
 [Twitter Cards]: https://dev.twitter.com/cards/
 
+### Syntax Highlighting
+
+Syntax highlighting is handled by [Prism].
+Additional languages and plugins should be loaded
+in `src/_assets/javascripts/main.js` as needed.
+
+[Prism]: https://gist.github.com/
+
 ### Gists
 
 [Gists][Gist] may be included using the `{% gist %}` liquid tag.
