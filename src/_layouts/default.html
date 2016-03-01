@@ -17,8 +17,9 @@
   <body>
     {{ content }}
   </body>
-  {% if jekyll.environment == 'production' %}
-    <script>{% asset vendor/google-analytics %}</script>
-  {% endif %}
   {% javascript main defer %}
+  {% if jekyll.environment == 'production' %}
+    <script src="{{ site.data.vendor.google.analytics.src }}" defer></script>
+    {% javascript vendor/google-analytics defer %}
+  {% endif %}
 </html>

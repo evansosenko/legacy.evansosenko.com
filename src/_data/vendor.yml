@@ -2,3 +2,4 @@
 google:
   analytics:
     id: UA-19631381-4
+    src: https://www.google-analytics.com/analytics.js
