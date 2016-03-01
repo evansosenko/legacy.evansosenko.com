@@ -253,6 +253,12 @@ on any page that includes gists.
 [Gist]: https://gist.github.com/
 [gist-async]: https://github.com/razor-x/gist-async
 
+### Google Analytics
+
+[Google Analytics] is configured in `src/_data/vendor.yml`.
+
+[Google Analytics]: https://www.google.com/analytics/
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.
