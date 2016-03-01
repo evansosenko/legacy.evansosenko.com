@@ -227,6 +227,13 @@ or according to the following rules.
 [Open Graph]: http://ogp.me/
 [Twitter Cards]: https://dev.twitter.com/cards/
 
+### Fonts
+
+Fonts are loaded by [Web Font Loader] and configured in
+`src/_assets/javascripts/fonts.js`.
+
+[Web Font Loader]: https://github.com/typekit/webfontloader
+
 ### Syntax Highlighting
 
 Syntax highlighting is handled by [Prism].
