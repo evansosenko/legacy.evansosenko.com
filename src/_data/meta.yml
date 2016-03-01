@@ -9,9 +9,15 @@ image: ~
 image_asset: ~
 color: ~
 keywords:
-  - jekyll
+  - physics
+  - math
+  - code
+  - development
+  - web development
+  - blog
+  - personal
 
 twitter:
-  site: ~
-  creator: ~
-  card: ~
+  card: summary
+  site: '@evansosenko'
+  creator: '@evansosenko'
