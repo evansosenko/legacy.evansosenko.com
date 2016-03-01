@@ -1,0 +1,33 @@
+$cdn: '{{ site.data.vendor.monoid.cdn }}';
+
+@function font-src($name) {
+  $src: (
+    url('#{$cdn}/#{$name}.eot') format('embedded-opentype'),
+    url('#{$cdn}/#{$name}.woff2') format('woff2'),
+    url('#{$cdn}/#{$name}.woff') format('woff'),
+    url('#{$cdn}/#{$name}.ttf') format('truetype')
+  );
+
+  @return $src;
+}
+
+@font-face {
+  font-family: 'Monoid Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: font-src('Monoid-Regular');
+}
+
+@font-face {
+  font-family: 'Monoid Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: font-src('Monoid-Bold');
+}
+
+@font-face {
+  font-family: 'Monoid Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: font-src('Monoid-Italic');
+}

@@ -17,6 +17,7 @@ https://github.com/razor-x/gist-async
 https://www.google.com/analytics/
 https://jquery.com/
 https://modernizr.com/
+https://larsenwork.com/monoid/
 http://prismjs.com/
 https://10up.github.io/sanitize.css/
 https://github.com/typekit/webfontloader

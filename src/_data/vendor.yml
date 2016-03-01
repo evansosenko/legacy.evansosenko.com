@@ -3,6 +3,9 @@ disqus:
   shortname: evansosenko
   devshortname: dev-evansosenko
 
+monoid:
+  cdn: https://cdn.rawgit.com/larsenwork/monoid/8ac7e74e3933c2d4b136f40c51351471daffe195/css
+
 google:
   analytics:
     id: UA-19631381-4
