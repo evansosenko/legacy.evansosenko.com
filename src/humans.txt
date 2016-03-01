@@ -17,6 +17,7 @@ https://ftlabs.github.io/fastclick/
 https://github.com/razor-x/gist-async
 https://www.google.com/analytics/
 https://jquery.com/
+https://khan.github.io/KaTeX/
 https://modernizr.com/
 https://larsenwork.com/monoid/
 http://prismjs.com/
