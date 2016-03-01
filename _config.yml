@@ -7,6 +7,7 @@ include:
 gems:
   - jekyll-assets
   - jekyll-gist
+  - jekyll/scholar
 
 highlighter: none
 
@@ -19,3 +20,10 @@ assets:
 
 livereload:
   port: 35729
+
+scholar:
+  source: _assets/bower_components/references
+  reference_tagname: cite
+  bibtex_filters:
+    - latex
+    - markdown

@@ -253,6 +253,14 @@ on any page that includes gists.
 [Gist]: https://gist.github.com/
 [gist-async]: https://github.com/razor-x/gist-async
 
+### Citations with Jekyll-Scholar
+
+[Jekyll-Scholar] is installed and configured to use
+[evansosenko/references].
+
+[Jekyll-Scholar]: https://github.com/inukshuk/jekyll-scholar
+[evansosenko/references]: https://github.com/evansosenko/references
+
 ### Google Analytics
 
 [Google Analytics] is configured in `src/_data/vendor.yml`.

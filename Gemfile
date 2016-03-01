@@ -11,6 +11,7 @@ gem 'uglifier', '~> 2.7'
 
 # Jekyll Plugins
 gem 'jekyll-gist', '~> 1.4'
+gem 'jekyll-scholar', '~> 5.5'
 
 # Development Tools
 gem 'guard-livereload', '~> 2.5'
