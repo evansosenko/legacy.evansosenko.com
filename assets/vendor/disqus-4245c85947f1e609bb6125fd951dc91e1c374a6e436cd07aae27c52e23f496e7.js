@@ -1,0 +1,1 @@
+"use strict";var disqus_config=function(){this.page.url="https://evansosenko.com",this.page.identifier=""};
