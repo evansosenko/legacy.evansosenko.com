@@ -3,6 +3,9 @@ disqus:
   shortname: evansosenko
   devshortname: dev-evansosenko
 
+katex:
+  src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
+
 monoid:
   cdn: https://cdn.rawgit.com/larsenwork/monoid/8ac7e74e3933c2d4b136f40c51351471daffe195/css
 
