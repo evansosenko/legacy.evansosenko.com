@@ -17,6 +17,10 @@
   <body>
     {{ content }}
   </body>
+  {% if page.gist %}
+    {% javascript jquery defer %}
+    {% javascript gist-async/js/gist-async.min defer %}
+  {% endif %}
   {% javascript main defer %}
   {% if jekyll.environment == 'production' %}
     <script src="{{ site.data.vendor.google.analytics.src }}" defer></script>

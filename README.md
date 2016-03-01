@@ -227,6 +227,17 @@ or according to the following rules.
 [Open Graph]: http://ogp.me/
 [Twitter Cards]: https://dev.twitter.com/cards/
 
+### Gists
+
+[Gists][Gist] may be included using the `{% gist %}` liquid tag.
+They will be loaded asynchronously using [gist-async].
+
+The Jekyll variable `page.gist` must be set `true`
+on any page that includes gists.
+
+[Gist]: https://gist.github.com/
+[gist-async]: https://github.com/razor-x/gist-async
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.

@@ -12,7 +12,9 @@ Source: https://github.com/evansosenko/evansosenko.github.io
 /* LIBRARIES */
 https://github.com/paulmillr/console-polyfill
 https://ftlabs.github.io/fastclick/
+https://github.com/razor-x/gist-async
 https://www.google.com/analytics/
+https://jquery.com/
 https://modernizr.com/
 http://prismjs.com/
 https://10up.github.io/sanitize.css/

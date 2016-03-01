@@ -31,9 +31,14 @@
   "dependencies": {
     "console-polyfill": "0.2.2",
     "fastclick": "1.0.6",
+    "gist-async": "1.0.1",
     "normalize-css": "3.0.3",
     "prism": "1.4.1",
     "webfontloader": "1.6.21",
-    "sanitize-css": "3.2.0"
+    "sanitize-css": "3.2.0",
+    "jquery": "3.0.0-beta1"
+  },
+  "resolutions": {
+    "jquery": "3.0.0-beta1"
   }
 }
