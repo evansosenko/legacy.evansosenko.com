@@ -1,7 +1,7 @@
-/* global renderMathInElement */
+//= require katex
+//= require katex/dist/contrib/auto-render.min
 
-{% asset katex %}
-{% asset katex/dist/contrib/auto-render.min %}
+/* global renderMathInElement */
 
 'use strict'
 
