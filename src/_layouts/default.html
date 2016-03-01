@@ -11,8 +11,8 @@
     {% elsif jekyll.environment == 'production' %}
       <script src="{{ site.assets.cdn }}{{ site.baseurl }}{{ site.assets.prefix }}/modernizr.js">
     {% endif %}
-    {% javascript webfontloader/webfontloader %}
-    <script>{% asset fonts %}</script>
+    {% javascript webfontloader/webfontloader defer %}
+    {% javascript fonts defer %}
   </head>
   <body>
     {{ content }}
@@ -20,5 +20,5 @@
   {% if jekyll.environment == 'production' %}
     <script>{% asset vendor/google-analytics %}</script>
   {% endif %}
-  {% javascript main %}
+  {% javascript main defer %}
 </html>
