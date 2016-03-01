@@ -230,7 +230,7 @@ or according to the following rules.
 ### Fonts
 
 Fonts are loaded by [Web Font Loader] and configured in
-`src/_assets/javascripts/fonts.js`.
+`src/_assets/javascripts/_fonts.js`.
 
 [Web Font Loader]: https://github.com/typekit/webfontloader
 
