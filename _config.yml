@@ -9,6 +9,9 @@ gems:
 
 highlighter: none
 
+kramdown:
+  input: GFM
+
 assets:
   sources:
     - _assets/bower_components
