@@ -10,6 +10,7 @@ URL: {{ site.url }}{{ site.baseurl }}
 Source: https://github.com/evansosenko/evansosenko.github.io
 
 /* LIBRARIES */
+https://disqus.com/
 https://github.com/paulmillr/console-polyfill
 https://ftlabs.github.io/fastclick/
 https://github.com/razor-x/gist-async

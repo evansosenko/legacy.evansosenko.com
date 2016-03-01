@@ -261,6 +261,12 @@ on any page that includes gists.
 [Jekyll-Scholar]: https://github.com/inukshuk/jekyll-scholar
 [evansosenko/references]: https://github.com/evansosenko/references
 
+### Comments by Disqus
+
+To enable comments by [Disqus], set `page.comments` true.
+
+[Disqus]: https://disqus.com/
+
 ### Google Analytics
 
 [Google Analytics] is configured in `src/_data/vendor.yml`.
