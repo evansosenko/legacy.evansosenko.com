@@ -38,3 +38,9 @@ google:
   analytics:
     id: UA-19631381-4
     src: https://www.google-analytics.com/analytics.js
+
+# Material Design Iconic Font
+zmdi:
+  src: https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css
+  families:
+    - Material-Design-Iconic-Font
