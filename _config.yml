@@ -22,6 +22,9 @@ assets:
 livereload:
   port: 35729
 
+gist:
+  noscript: false
+
 scholar:
   source: _assets/bower_components/references
   reference_tagname: cite
