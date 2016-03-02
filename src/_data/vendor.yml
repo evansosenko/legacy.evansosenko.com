@@ -5,9 +5,34 @@ disqus:
 
 katex:
   src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
+  families:
+    - KaTeX_AMS
+    - KaTeX_Caligraphic
+    - KaTeX_Caligraphic
+    - KaTeX_Fraktur
+    - KaTeX_Fraktur
+    - KaTeX_Main
+    - KaTeX_Main
+    - KaTeX_Main
+    - KaTeX_Math
+    - KaTeX_Math
+    - KaTeX_Math
+    - KaTeX_SansSerif
+    - KaTeX_SansSerif
+    - KaTeX_SansSerif
+    - KaTeX_Script
+    - KaTeX_Size1
+    - KaTeX_Size2
+    - KaTeX_Size3
+    - KaTeX_Size4
+    - KaTeX_Typewriter
 
 monoid:
   cdn: https://cdn.rawgit.com/larsenwork/monoid/8ac7e74e3933c2d4b136f40c51351471daffe195/css
+  families:
+    - Monoid Regular
+    - Monoid Bold
+    - Monoid Italic
 
 google:
   analytics:
