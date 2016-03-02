@@ -11,7 +11,7 @@
     {{ content }}
   </body>
   {% if jekyll.environment == 'development' %}
-    {% javascript vendor/modernizr %}
+    {% javascript vendor/modernizr defer %}
   {% elsif jekyll.environment == 'production' %}
     <script src="{{ site.assets.cdn }}{{ site.baseurl }}{{ site.assets.prefix }}/modernizr.js" defer>
   {% endif %}
