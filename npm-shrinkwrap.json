@@ -532,10 +532,22 @@
       "resolved": "https://registry.npmjs.org/escope/-/escope-3.5.0.tgz"
     },
     "eslint": {
-      "version": "2.2.0",
+      "version": "2.3.0",
       "from": "eslint@>=2.2.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/eslint/-/eslint-2.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-2.3.0.tgz",
       "dependencies": {
+        "doctrine": {
+          "version": "1.2.0",
+          "from": "doctrine@>=1.2.0 <2.0.0",
+          "resolved": "https://registry.npmjs.org/doctrine/-/doctrine-1.2.0.tgz",
+          "dependencies": {
+            "esutils": {
+              "version": "1.1.6",
+              "from": "esutils@>=1.1.6 <2.0.0",
+              "resolved": "https://registry.npmjs.org/esutils/-/esutils-1.1.6.tgz"
+            }
+          }
+        },
         "esutils": {
           "version": "2.0.2",
           "from": "esutils@>=2.0.2 <3.0.0",
@@ -545,6 +557,11 @@
           "version": "6.0.4",
           "from": "glob@>=6.0.4 <7.0.0",
           "resolved": "https://registry.npmjs.org/glob/-/glob-6.0.4.tgz"
+        },
+        "isarray": {
+          "version": "1.0.0",
+          "from": "isarray@>=1.0.0 <2.0.0",
+          "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
         },
         "minimatch": {
           "version": "3.0.0",
@@ -1254,9 +1271,9 @@
       "resolved": "https://registry.npmjs.org/inquirer/-/inquirer-0.12.0.tgz",
       "dependencies": {
         "lodash": {
-          "version": "4.5.1",
+          "version": "4.6.1",
           "from": "lodash@>=4.3.0 <5.0.0",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.5.1.tgz"
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.6.1.tgz"
         }
       }
     },
