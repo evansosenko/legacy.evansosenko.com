@@ -10,7 +10,7 @@
 ## Description
 
 Personal site and blog of Evan Sosenko:
-Ph.D. physics student, developer, gamer, and tinkerer.
+Physics Ph.D. candidate, developer, gamer, and tinkerer.
 
 ## Quickstart
 
