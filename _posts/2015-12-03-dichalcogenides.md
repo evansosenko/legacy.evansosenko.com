@@ -19,4 +19,10 @@ and **will be updated closer to journal publicaion.**
 A preprint of [Superconductivity in transition metal dichalcogenides][preprint]
 is available on the arXiv.
 
+Web slides for my [Contributed Talk, APS March Meeting 2016][talk].
+
+In development: Python [analysis code] for dichalcogenide systems.
+
+[analysis code]: https://github.com/razor-x/dichalcogenides
 [preprint]: http://arxiv.org/abs/1512.01261
+[talk]: https://evansosenko.com/deck-tmdsc/
