@@ -8,6 +8,7 @@ cache:
     - node_modules
 
 before_install:
+  - gem install bundler
   - nvm install
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 

@@ -1,4 +1,4 @@
-require 'html/proofer'
+require 'html-proofer'
 
 desc 'Default task'
 task default: :build
@@ -24,7 +24,7 @@ task build: :clean do
          --config _config.yml,_config.#{ENV['JEKYLL_ENV']}.yml))
   sh(*%w(npm run lint))
   sh(*%w(npm run optimize))
-  HTML::Proofer.new('dist', disable_external: true).run
+  HTMLProofer.check_directory('dist', disable_external: true).run
 end
 
 desc 'Start a local Jekyll development server'
