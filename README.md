@@ -140,7 +140,8 @@ Optimize files in the `dist` directory with
 $ npm run optimize
 ```
 
-This will tailor a customized Modernizr build and minify all html files.
+This will tailor a customized Modernizr build
+and minify all html and image files.
 
 ### Deploy to GitHub Pages
 
