@@ -6,7 +6,6 @@ const gulp = require('gulp')
 const $ = require('gulp-load-plugins')()
 
 const pkg = require('./package.json')
-const modernizr = require('./modernizr-config.json')
 
 const js = [
   'src/_assets/javascripts/**/*.js',
