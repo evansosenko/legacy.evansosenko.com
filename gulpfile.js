@@ -7,31 +7,40 @@ const $ = require('gulp-load-plugins')()
 
 const pkg = require('./package.json')
 
-const js = [
-  'src/_assets/javascripts/**/*.js',
-  '!src/_assets/javascripts/vendor/**/*.js',
-  '!src/_assets/javascripts/main.js'
-]
+const paths = {
+  dist: {
+    src: 'dist/**/*',
+    dest: 'dist'
+  },
 
-const scss = [
-  'src/_assets/stylesheets/**/*.scss'
-]
+  html: {
+    src: 'dist/**/*.html'
+  },
 
-const html = [
-  'dist/**/*.html'
-]
+  scripts: {
+    src: [
+      'src/_assets/javascripts/**/*.js',
+      '!src/_assets/javascripts/vendor/**/*.js',
+      '!src/_assets/javascripts/main.js'
+    ]
+  },
+
+  styles: {
+    src: 'src/_assets/stylesheets/**/*.scss'
+  }
+}
 
 gulp.task('default', ['watch'])
 gulp.task('lint', ['standard', 'sass-lint', 'htmlhint'])
 
 gulp.task('htmlhint', () => {
-  return gulp.src(html)
+  return gulp.src(paths.html.src)
     .pipe($.htmlhint())
     .pipe($.htmlhint.failReporter())
 })
 
 gulp.task('standard', () => {
-  return gulp.src(js)
+  return gulp.src(paths.scripts.src)
     .pipe($.standard())
     .pipe($.standard.reporter('default', {
       breakOnError: true
@@ -39,27 +48,27 @@ gulp.task('standard', () => {
 })
 
 gulp.task('sass-lint', () => {
-  return gulp.src(scss)
+  return gulp.src(paths.styles.src)
     .pipe($.sassLint())
     .pipe($.sassLint.format())
     .pipe($.sassLint.failOnError())
 })
 
 gulp.task('watch', () => {
-  gulp.src(html)
-    .pipe($.watch(html))
+  gulp.src(paths.html.src)
+    .pipe($.watch(paths.html.src))
     .pipe($.plumber())
     .pipe($.htmlhint())
     .pipe($.htmlhint.reporter())
 
-  gulp.src(js)
-    .pipe($.watch(js))
+  gulp.src(paths.scripts.src)
+    .pipe($.watch(paths.scripts.src))
     .pipe($.plumber())
     .pipe($.standard())
     .pipe($.standard.reporter('default'))
 
-  return gulp.src(scss)
-    .pipe($.watch(scss))
+  return gulp.src(paths.styles.src)
+    .pipe($.watch(paths.styles.src))
     .pipe($.plumber())
     .pipe($.sassLint())
     .pipe($.sassLint.format())
@@ -70,20 +79,20 @@ gulp.task('hash', () => {
 
   const hash =
     crypto.createHash('sha1')
-    .update(fs.readFileSync(`dist/${src}.js`, 'utf8'), 'utf8')
+    .update(fs.readFileSync(`${paths.dist.dest}/${src}.js`, 'utf8'), 'utf8')
     .digest('hex')
 
   const dest = `${src}-${hash}`
 
-  fs.renameSync(`dist/${src}.js`, `dist/${dest}.js`)
+  fs.renameSync(`${paths.dist.dest}/${src}.js`, `${paths.dist.dest}/${dest}.js`)
 
-  return gulp.src('dist/**/*')
+  return gulp.src(paths.dist.src)
     .pipe($.replace(`${src}.js"`, `${dest}.js"`))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(paths.dist.dest))
 })
 
 gulp.task('minify', () => {
-  return gulp.src('dist/**/*.html')
+  return gulp.src(paths.html.src)
     .pipe($.htmlmin({
       collapseWhitespace: true,
       preserveLineBreaks: true,
@@ -91,11 +100,11 @@ gulp.task('minify', () => {
       removeStyleLinkTypeAttributes: true,
       minifyJS: true
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(paths.dist.dest))
 })
 
 gulp.task('deploy', () => {
-  return gulp.src('dist/**/*')
+  return gulp.src(paths.dist.src)
     .pipe($.ghPages({
       remoteUrl: `git@github.com:${pkg.repository}.git`,
       message: `Deploy ${gitRevSync.short()} from v${pkg.version}`
