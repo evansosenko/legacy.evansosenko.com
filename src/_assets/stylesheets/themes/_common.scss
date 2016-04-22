@@ -1,0 +1,11 @@
+@function font($family) {
+  @return map-get($font-families, $family);
+}
+
+@function font-weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+@function color($name) {
+  @return map-get($palette, map-get($colors, $name));
+}

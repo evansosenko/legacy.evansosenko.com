@@ -1,11 +1,3 @@
-// Theme must define the following global variables:
-//
-//   $font-families
-
-@function font($family) {
-  @return map-get($font-families, $family);
-}
-
 body {
   font-family: font(body);
 }
