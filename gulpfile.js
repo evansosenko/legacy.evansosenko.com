@@ -27,6 +27,10 @@ const paths = {
 
   styles: {
     src: 'src/_assets/stylesheets/**/*.scss'
+  },
+
+  modernizr: {
+    js: 'assets/modernizr'
   }
 }
 
@@ -76,19 +80,33 @@ gulp.task('watch', () => {
 })
 
 gulp.task('hash', () => {
-  const src = 'assets/modernizr'
+  const makeHashed = (src, ext) => {
+    const distSrc = `${paths.dist.dest}/${src}.${ext}`
 
-  const hash =
-    crypto.createHash('sha1')
-    .update(fs.readFileSync(`${paths.dist.dest}/${src}.js`, 'utf8'), 'utf8')
-    .digest('hex')
+    try {
+      fs.statSync(distSrc)
+    } catch (err) {
+      return src
+    }
 
-  const dest = `${src}-${hash}`
+    const hash =
+      crypto.createHash('sha1')
+      .update(fs.readFileSync(distSrc, 'utf8'), 'utf8')
+      .digest('hex')
 
-  fs.renameSync(`${paths.dist.dest}/${src}.js`, `${paths.dist.dest}/${dest}.js`)
+    const dest = `${src}-${hash}.${ext}`
+
+    fs.renameSync(distSrc, `${paths.dist.dest}/${dest}`)
+
+    return dest
+  }
+
 
   return gulp.src(paths.dist.src)
-    .pipe($.replace(`${src}.js"`, `${dest}.js"`))
+    .pipe($.replace(
+      `${paths.modernizr.js}.js"`,
+      `${makeHashed(paths.modernizr.js, 'js')}"`
+    ))
     .pipe(gulp.dest(paths.dist.dest))
 })
 
