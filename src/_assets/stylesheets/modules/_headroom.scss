@@ -1,0 +1,19 @@
+@mixin headroom($height: auto, $color: initial) {
+  .headroom {
+    width: 100%;
+    height: $height;
+    transition: transform 500ms linear;
+    background-color: $color;
+    will-change: transform;
+
+    &.is-pinned {
+      position: fixed;
+      top: 0;
+      transform: translateY(0%);
+    }
+
+    &.is-unpinned {
+      transform: translateY(-100%);
+    }
+  }
+}

@@ -1,6 +1,7 @@
 //= require console-polyfill
 //= require fastclick
 //= require webfontloader/webfontloader
+//= require headroom.js/dist/headroom
 //= require vendor/disqus
 //= require _init
 //= require _fonts
