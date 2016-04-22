@@ -1,4 +1,4 @@
-@mixin headroom($height: auto, $color: initial) {
+@mixin headroom($height: auto) {
   .headroom {
     position: fixed;
     top: 0;
@@ -6,7 +6,6 @@
     left: 0;
     width: 100%;
     height: $height;
-    background-color: $color;
     z-index: 10;
 
     animation-fill-mode: both;
