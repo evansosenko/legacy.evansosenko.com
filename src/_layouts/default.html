@@ -10,7 +10,6 @@
   </head>
   <body>
     {{ content }}
-  </body>
   {% if jekyll.environment == 'development' %}
     {% javascript vendor/modernizr defer %}
   {% elsif jekyll.environment == 'production' %}
@@ -44,4 +43,5 @@
     {% endif %}
     <script src="https://{{ shortname }}.disqus.com/embed.js" defer></script>
   {% endif %}
+  </body>
 </html>
