@@ -10,15 +10,19 @@ if ('addEventListener' in document) {
 }
 
 // Headroom.js
-new Headroom(document.getElementById('header'), {
-  offset: 200,
-  tolerance: 15,
-  classes: {
-    pinned: 'is-pinned',
-    unpinned: 'is-unpinned',
-    top: 'is-top',
-    notTop: 'is-not-top',
-    bottom: 'is-bottom',
-    notBottom: 'is-not-bottom'
-  }
-}).init()
+var headerEl = document.getElementById('header')
+if (headerEl) {
+  new Headroom(headerEl, {
+    offset: 200,
+    tolerance: 15,
+    classes: {
+      pinned: 'is-pinned',
+      unpinned: 'is-unpinned',
+      top: 'is-top',
+      notTop: 'is-not-top',
+      bottom: 'is-bottom',
+      notBottom: 'is-not-bottom'
+    }
+  })
+  .init()
+}
