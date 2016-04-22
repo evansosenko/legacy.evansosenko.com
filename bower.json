@@ -39,6 +39,7 @@
     "prism": "1.4.1",
     "references": "evansosenko/references#0.1.0",
     "sanitize-css": "3.3.0",
+    "susy": "2.2.7",
     "webfontloader": "1.6.24"
   },
   "resolutions": {
