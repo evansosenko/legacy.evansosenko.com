@@ -4,6 +4,7 @@
     height: $height;
     transition: transform 500ms linear;
     background-color: $color;
+    z-index: 10;
     will-change: transform;
 
     &.is-pinned {
