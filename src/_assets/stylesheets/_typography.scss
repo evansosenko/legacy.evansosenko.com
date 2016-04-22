@@ -1,7 +1,26 @@
+// Theme must define the following global variables:
+//
+//   $font-families
+
+@function font($family) {
+  @return map-get($font-families, $family);
+}
+
+body {
+  font-family: font(body);
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: font(heading);
+  }
+}
+
 code,
 pre {
-  &,
+  font-family: font(monospace);
+
   &[class*='language-'] {
-    font-family: 'Monoid Regular', monospace;
+    font-family: font(code), font(monospace);
   }
 }

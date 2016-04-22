@@ -3,6 +3,13 @@
 'use strict'
 
 WebFont.load({
+  google: {
+    families: [
+      'Noto Sans',
+      'Noto Serif',
+      'Inconsolata'
+    ]
+  },
   custom: {
     families: [
       '{{ site.data.vendor.monoid.families | join:"', '" }}',

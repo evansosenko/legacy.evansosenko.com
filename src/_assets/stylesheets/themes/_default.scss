@@ -1,0 +1,29 @@
+$font-families: (
+  heading: (
+    'Noto Serif',
+    'Roboto Slab',
+    serif
+  ),
+  body: (
+    'Noto Sans',
+    'Open Sans',
+    'Source Sans Pro',
+    'Helvetica Neue',
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif
+  ),
+  monospace: (
+    'Inconsolata-g',
+    'Inconsolata-dz',
+    Inconsolata,
+    'DejaVu Mono',
+    Consolas,
+    monospace
+  ),
+  code: (
+    'Monoid Regular',
+    monospace
+  )
+);
