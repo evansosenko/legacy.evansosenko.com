@@ -34,6 +34,11 @@ monoid:
     - Monoid Bold
     - Monoid Italic
 
+overpass:
+  src: https://overpass-30e2.kxcdn.com/overpass.css
+  families:
+    - Overpass
+
 google:
   analytics:
     id: UA-19631381-4
