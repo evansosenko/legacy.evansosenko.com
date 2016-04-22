@@ -1,19 +1,43 @@
 @mixin headroom($height: auto, $color: initial) {
   .headroom {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     height: $height;
-    transition: transform 500ms linear;
     background-color: $color;
     z-index: 10;
-    will-change: transform;
+
+    animation-fill-mode: both;
+    animation-duration: .5s;
+    will-change: transform, opacity;
 
     &.is-pinned {
-      position: fixed;
-      top: 0;
-      transform: translateY(0%);
+      animation-name: headroom-slideDown;
     }
 
     &.is-unpinned {
+      animation-name: headroom-slideUp;
+    }
+  }
+
+  @keyframes headroom-slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes headroom-slideUp {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
       transform: translateY(-100%);
     }
   }
