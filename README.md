@@ -132,6 +132,21 @@ $ gulp --tasks
 
 [gulp]: http://gulpjs.com/
 
+### Vulcanized Web Components
+
+Web components imported in `src/_assets/elements/elements.html`
+will be vulcanized to `src/_assets/elements/vulcanized.html`.
+
+Run vulcanize with
+
+```
+$ npm run vulcanize
+```
+
+If Guard is running, then `vulcanized.html`
+will be regenerated automatically whenever other files
+in `src/_assets/elements` change.
+
 ### Build Optimization
 
 Optimize files in the `dist` directory with
@@ -140,7 +155,7 @@ Optimize files in the `dist` directory with
 $ npm run optimize
 ```
 
-This will tailor a customized Modernizr build
+This will tailor a customized Modernizr build, run crisper,
 and minify all html and image files.
 
 ### Deploy to GitHub Pages

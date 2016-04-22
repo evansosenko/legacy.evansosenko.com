@@ -14,7 +14,10 @@ const paths = {
   },
 
   html: {
-    src: 'dist/**/*.html'
+    src: [
+      'dist/**/*.html',
+      '!dist/assets/vulcanized*.html'
+    ]
   },
 
   scripts: {
@@ -31,6 +34,12 @@ const paths = {
 
   modernizr: {
     js: 'assets/modernizr'
+  },
+
+  crisper: {
+    dest: 'assets',
+    src: 'assets/vulcanized-*.html',
+    js: 'assets/vulcanized'
   }
 }
 
@@ -79,6 +88,12 @@ gulp.task('watch', () => {
     .pipe($.sassLint.format())
 })
 
+gulp.task('crisper', () => {
+  return gulp.src(`${paths.dist.dest}/${paths.crisper.src}`)
+    .pipe($.crisper())
+    .pipe(gulp.dest(`${paths.dist.dest}/${paths.crisper.dest}`))
+})
+
 gulp.task('hash', () => {
   const makeHashed = (src, ext) => {
     const distSrc = `${paths.dist.dest}/${src}.${ext}`
@@ -101,6 +116,12 @@ gulp.task('hash', () => {
     return dest
   }
 
+  gulp.src(paths.dist.src)
+    .pipe($.replace(
+      `${paths.crisper.js}.js"`,
+      `${makeHashed(paths.crisper.js, 'js')}"`
+    ))
+    .pipe(gulp.dest(paths.dist.dest))
 
   return gulp.src(paths.dist.src)
     .pipe($.replace(
