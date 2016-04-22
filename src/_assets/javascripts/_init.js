@@ -11,7 +11,8 @@ if ('addEventListener' in document) {
 
 // Headroom.js
 new Headroom(document.getElementById('header'), {
-  offset: 300,
+  offset: 200,
+  tolerance: 15,
   classes: {
     pinned: 'is-pinned',
     unpinned: 'is-unpinned',
