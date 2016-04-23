@@ -14,10 +14,7 @@ const paths = {
   },
 
   html: {
-    src: [
-      'dist/**/*.html',
-      '!dist/assets/vulcanized*.html'
-    ]
+    src: 'dist/**/*.html'
   },
 
   scripts: {
@@ -57,7 +54,7 @@ gulp.task('optimize', ['minify', 'imagemin'])
 gulp.task('lint', ['standard', 'sass-lint', 'htmlhint'])
 
 gulp.task('htmlhint', () => {
-  return gulp.src(paths.html.src)
+  return gulp.src([paths.html.src, `!${paths.dist.dest}/${paths.crisper.src}`])
     .pipe($.htmlhint())
     .pipe($.htmlhint.failReporter())
 })
@@ -162,10 +159,13 @@ gulp.task('precache', () => {
 gulp.task('minify', () => {
   return gulp.src(paths.html.src)
     .pipe($.htmlmin({
+      collapseBooleanAttributes: true,
       collapseWhitespace: true,
       preserveLineBreaks: true,
+      removeComments: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
+      minifyCSS: true,
       minifyJS: true
     }))
     .pipe(gulp.dest(paths.dist.dest))
