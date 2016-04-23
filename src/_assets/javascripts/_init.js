@@ -9,6 +9,17 @@ if ('addEventListener' in document) {
   }, false)
 }
 
+// Service Worker Events
+(function () {
+  var swEl = document.getElementById('service-worker')
+
+  if (!swEl) { return null }
+
+  swEl.addEventListener('service-worker-installed', function () {
+    document.getElementById('toast-service-worker').open()
+  })
+})();
+
 // Headroom.js
 (function () {
   var headerEl = document.getElementById('header')
