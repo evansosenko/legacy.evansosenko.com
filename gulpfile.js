@@ -22,6 +22,12 @@ const paths = {
       'src/_assets/javascripts/**/*.js',
       '!src/_assets/javascripts/vendor/**/*.js',
       '!src/_assets/javascripts/main.js'
+    ],
+    minify: [
+      'dist/sw-import.js',
+      'dist/assets/platinum-sw/bootstrap/*.js',
+      'dist/assets/sw-toolbox/*.js',
+      'dist/assets/vulcanized-*.js'
     ]
   },
 
@@ -157,6 +163,10 @@ gulp.task('precache', () => {
 })
 
 gulp.task('minify', () => {
+  gulp.src(paths.scripts.minify, {base: 'dist'})
+    .pipe($.uglify())
+    .pipe(gulp.dest(paths.dist.dest))
+
   return gulp.src(paths.html.src)
     .pipe($.htmlmin({
       collapseBooleanAttributes: true,
