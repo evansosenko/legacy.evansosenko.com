@@ -40,6 +40,15 @@ const paths = {
     dest: 'assets',
     src: 'assets/vulcanized-*.html',
     js: 'assets/vulcanized'
+  },
+
+  precache: {
+    src: [
+      'dist/**/*',
+      '!dist/CNAME',
+      '!dist/404.html'
+    ],
+    json: 'dist/cache.json'
   }
 }
 
@@ -129,6 +138,25 @@ gulp.task('hash', () => {
       `${makeHashed(paths.modernizr.js, 'js')}"`
     ))
     .pipe(gulp.dest(paths.dist.dest))
+})
+
+gulp.task('precache', () => {
+  return gulp.src(paths.precache.src)
+    .pipe($.filenames('assets'))
+    .on('end', () => {
+      const json = JSON.parse(fs.readFileSync(paths.precache.json))
+
+      json.precacheFingerprint = gitRevSync.long()
+      json.precache =
+        $.filenames.get('assets')
+        .map((f) => {
+          if (f === 'index.html') { return '/' }
+          return f.replace('/index.html', '/')
+        })
+        .sort()
+
+      fs.writeFileSync(paths.precache.json, JSON.stringify(json))
+    })
 })
 
 gulp.task('minify', () => {

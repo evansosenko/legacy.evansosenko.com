@@ -1,27 +1,6 @@
 ---
 layout: ~
 ---
-{% if jekyll.environment == "production" %}
-  {% assign shortname = site.data.vendor.disqus.shortname %}
-{% else %}
-  {% assign shortname = site.data.vendor.disqus.devshortname %}
-{% endif %}
-
 {
-  "cacheId": "{{ site.data.meta.name }}",
-  "precache": [
-    "{% asset_path main.css %}",
-    "{% asset_path main.js %}",
-    "{% asset_path webcomponentsjs/webcomponents-lite %}",
-    "{% asset_path vulcanized %}",
-    "{% asset_path vendor/prism %}",
-    "{% asset_path vendor/katex %}",
-    "{% asset_path jquery %}",
-    "{% asset_path gist-async/js/gist-async.min %}",
-  {% if jekyll.environment == 'development' %}
-    "{% asset_path vendor/modernizr %}"
-  {% elsif jekyll.environment == 'production' %}
-    "{{ site.assets.cdn }}{{ site.assets.prefix }}/modernizr.js"
-  {% endif %}
-  ]
+  "cacheId": "{{ site.data.meta.name }}"
 }

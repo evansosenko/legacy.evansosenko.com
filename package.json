@@ -27,7 +27,7 @@
     "modernizr": "modernizr -c modernizr-config.json -d src/_assets/javascripts/vendor/modernizr.js",
     "vulcanize": "vulcanize --inline-scripts --inline-css src/_assets/elements/elements.html --out-html src/_assets/elements/vulcanized.html && npm run sw",
     "sw": "mkdir -p dist/assets/platinum-sw dist/assets/sw-toolbox && cp -r src/_assets/bower_components/platinum-sw/bootstrap dist/assets/platinum-sw && cp -r src/_assets/bower_components/sw-toolbox/sw-toolbox.js src/_assets/bower_components/sw-toolbox/sw-toolbox.map.json dist/assets/sw-toolbox",
-    "optimize": "npm run customizr && gulp crisper && gulp hash && gulp optimize"
+    "optimize": "npm run customizr && gulp crisper && gulp hash && gulp optimize && gulp precache"
   },
   "files": [
     "dist"
@@ -43,6 +43,7 @@
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.1",
     "gulp-crisper": "^1.0.0",
+    "gulp-filenames": "^2.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlhint": "^0.3.1",
     "gulp-htmlmin": "^1.3.0",
