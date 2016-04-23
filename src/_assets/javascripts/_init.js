@@ -10,8 +10,11 @@ if ('addEventListener' in document) {
 }
 
 // Headroom.js
-var headerEl = document.getElementById('header')
-if (headerEl) {
+(function () {
+  var headerEl = document.getElementById('header')
+
+  if (!headerEl) { return null }
+
   new Headroom(headerEl, {
     offset: 200,
     tolerance: 15,
@@ -25,4 +28,4 @@ if (headerEl) {
     }
   })
   .init()
-}
+})()
