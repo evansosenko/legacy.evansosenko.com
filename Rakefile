@@ -30,6 +30,7 @@ end
 
 desc 'Start a local Jekyll development server'
 task dev: :clean do
+  sh(*%w(npm run vulcanize))
   spawn(*%w(bundle exec jekyll serve --host 0.0.0.0))
 end
 

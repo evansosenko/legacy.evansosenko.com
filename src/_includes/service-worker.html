@@ -1,0 +1,8 @@
+<platinum-sw-register id="service-worker"
+  href="{{ site.url }}{{ site.baseurl }}/sw-import.js"
+  base-uri="{{ site.url }}{{ site.baseurl }}{{ site.assets.prefix }}/platinum-sw/"
+  auto-register>
+  <platinum-sw-offline-analytics></platinum-sw-offline-analytics>
+  <platinum-sw-cache cache-config-file="{{ site.url }}{{ site.baseurl }}/cache.json">
+  </platinum-sw-cache>
+</platinum-sw-register>

@@ -11,6 +11,7 @@
     <link rel="import" href="{% asset_path vulcanized %}">
   </head>
   <body unresolved>
+    {% include service-worker.html %}
     {{ content }}
   {% if jekyll.environment == 'development' %}
     {% javascript vendor/modernizr defer %}
