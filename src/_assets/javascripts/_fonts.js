@@ -3,7 +3,7 @@
 window.WebFontConfig = {
   google: {
     families: [
-      'Inconsolata'
+      'Inconsolata:400,700:latin'
     ]
   },
   custom: {
