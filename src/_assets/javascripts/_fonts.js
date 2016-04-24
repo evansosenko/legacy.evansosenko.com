@@ -3,6 +3,7 @@
 window.WebFontConfig = {
   google: {
     families: [
+      'Noto+Sans:400,400italic,700,700italic:latin',
       'Inconsolata:400,700:latin'
     ]
   },
