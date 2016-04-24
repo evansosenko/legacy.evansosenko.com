@@ -41,7 +41,7 @@ const paths = {
 
   crisper: {
     dest: 'assets',
-    src: 'assets/vulcanized-*.html',
+    src: 'assets/vulcanized*.html',
     js: 'assets/vulcanized'
   },
 
