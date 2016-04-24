@@ -10,7 +10,7 @@
     {% javascript webcomponentsjs/webcomponents-lite %}
     <link rel="import" href="{% asset_path vulcanized %}">
   </head>
-  <body unresolved>
+  <body>
     {% include service-worker.html %}
     {{ content }}
   {% if jekyll.environment == 'development' %}
