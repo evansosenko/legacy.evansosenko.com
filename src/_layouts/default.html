@@ -11,8 +11,13 @@
     <link rel="import" href="{% asset_path vulcanized %}">
   </head>
   <body>
-    {% include service-worker.html %}
     {{ content }}
+
+    {% include service-worker.html %}
+
+    {% javascript fonts defer %}
+    {% javascript webfontloader/webfontloader defer %}
+
   {% if jekyll.environment == 'development' %}
     {% javascript vendor/modernizr defer %}
   {% elsif jekyll.environment == 'production' %}
@@ -24,7 +29,6 @@
   {% endif %}
 
   {% javascript main defer %}
-  {% javascript webfontloader/webfontloader defer %}
 
   {% if page.code %}
     {% javascript vendor/prism defer %}

@@ -2,7 +2,6 @@
 //= require fastclick
 //= require headroom.js/dist/headroom
 //= require vendor/disqus
-//= require _fonts
 //= require _init
 
 'use strict'
