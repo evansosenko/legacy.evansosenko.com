@@ -1,8 +1,6 @@
-/* global WebFont */
-
 'use strict'
 
-WebFont.load({
+window.WebFontConfig = {
   google: {
     families: [
       'Noto Sans',
@@ -24,4 +22,4 @@ WebFont.load({
       '{{ site.data.vendor.katex.src }}'
     ]
   }
-})
+}
