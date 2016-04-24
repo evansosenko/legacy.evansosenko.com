@@ -3,8 +3,6 @@
 window.WebFontConfig = {
   google: {
     families: [
-      'Noto Sans',
-      'Noto Serif',
       'Inconsolata'
     ]
   },
