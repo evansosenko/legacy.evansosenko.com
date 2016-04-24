@@ -15,7 +15,7 @@ window.WebFontConfig = {
       '{{ site.data.vendor.zmdi.families | join:"', '" }}'
     ],
     urls: [
-      '{{ site.data.vendor.overpass.src }}',
+      '{% asset_path vendor/overpass %}',
       '{% asset_path vendor/monoid %}',
       '{{ site.data.vendor.zmdi.src }}'
     ]

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-Bold.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-Bold.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-Bold.ttf %}') format('truetype');
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: italic;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-Bold-Italic.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-Bold-Italic.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-Bold-Italic.ttf %}') format('truetype');
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-Regular.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-Regular.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-Regular.ttf %}') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: italic;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-Italic.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-Italic.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-Italic.ttf %}') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-Light.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-Light.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-Light.ttf %}') format('truetype');
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-Light-Italic.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-Light-Italic.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-Light-Italic.ttf %}') format('truetype');
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-ExtraLight.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-ExtraLight.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-ExtraLight.ttf %}') format('truetype');
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: italic;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  src: url('{% asset_path overpass/Webfonts/Overpass-ExtraLight-Italic.eot %}'),
+  url('{% asset_path overpass/Webfonts/Overpass-ExtraLight-Italic.woff %}') format('woff'),
+  url('{% asset_path overpass/Webfonts/Overpass-ExtraLight-Italic.ttf %}') format('truetype');
+}
+

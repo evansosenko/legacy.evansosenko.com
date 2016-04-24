@@ -35,7 +35,6 @@ monoid:
     - Monoid Italic
 
 overpass:
-  src: https://overpass-30e2.kxcdn.com/overpass.css
   families:
     - Overpass
 
