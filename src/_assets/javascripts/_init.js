@@ -1,4 +1,4 @@
-/* global FastClick, Headroom */
+/* global FastClick */
 
 'use strict'
 
@@ -26,7 +26,7 @@ if ('addEventListener' in document) {
 
   if (!headerEl) { return null }
 
-  new Headroom(headerEl, {
+  new window.Headroom(headerEl, {
     offset: 200,
     tolerance: 15,
     classes: {

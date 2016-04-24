@@ -1,12 +1,10 @@
 //= require katex
 //= require katex/dist/contrib/auto-render.min
 
-/* global renderMathInElement, WebFont */
-
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function () {
-  WebFont.load({
+  window.WebFont.load({
     custom: {
       families: [
         '{{ site.data.vendor.katex.families | join:"', '" }}'
@@ -17,5 +15,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  renderMathInElement(document.body)
+  window.renderMathInElement(document.body)
 })

@@ -5,11 +5,9 @@
 //= require _fonts
 //= require _init
 
-/* global ga */
-
 'use strict'
 
 {% if jekyll.environment == 'production' %}
-  ga('create', '{{ site.data.vendor.google.analytics.id }}', 'auto')
-  ga('send', 'pageview')
+  window.ga('create', '{{ site.data.vendor.google.analytics.id }}', 'auto')
+  window.ga('send', 'pageview')
 {% endif %}
