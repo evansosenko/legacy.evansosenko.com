@@ -50,7 +50,7 @@
     {% else %}
       {% assign shortname = site.data.vendor.disqus.devshortname %}
     {% endif %}
-    <script src="https://{{ shortname }}.disqus.com/embed.js" defer></script>
+    <script src="https://{{ shortname }}.{{ site.data.vendor.disqus.src }}" defer></script>
   {% endif %}
   </body>
 </html>
