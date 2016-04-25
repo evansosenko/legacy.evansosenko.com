@@ -2102,6 +2102,11 @@
         }
       }
     },
+    "gulp-vulcanize": {
+      "version": "6.1.0",
+      "from": "gulp-vulcanize@latest",
+      "resolved": "https://registry.npmjs.org/gulp-vulcanize/-/gulp-vulcanize-6.1.0.tgz"
+    },
     "gulp-watch": {
       "version": "4.3.5",
       "from": "gulp-watch@>=4.3.5 <5.0.0",

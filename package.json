@@ -25,7 +25,7 @@
     "lint": "gulp lint",
     "lint:watch": "gulp watch",
     "modernizr": "modernizr -c modernizr-config.json -d src/_assets/javascripts/vendor/modernizr.js",
-    "vulcanize": "vulcanize --inline-scripts --inline-css src/_assets/elements/elements.html --out-html src/_assets/elements/vulcanized.html && npm run sw",
+    "vulcanize": "gulp vulcanize && npm run sw",
     "sw": "mkdir -p dist/assets/platinum-sw dist/assets/sw-toolbox && cp -r src/_assets/bower_components/platinum-sw/bootstrap dist/assets/platinum-sw && cp -r src/_assets/bower_components/sw-toolbox/sw-toolbox.js src/_assets/bower_components/sw-toolbox/sw-toolbox.map.json dist/assets/sw-toolbox",
     "optimize": "npm run customizr && gulp crisper && gulp hash && gulp optimize && gulp precache"
   },
@@ -50,11 +50,12 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass-lint": "^1.1.1",
     "gulp-standard": "^6.0.5",
     "gulp-uglify": "^1.5.3",
-    "gulp-watch": "^4.3.5",
-    "vulcanize": "^1.14.8"
+    "gulp-vulcanize": "^6.1.0",
+    "gulp-watch": "^4.3.5"
   }
 }
