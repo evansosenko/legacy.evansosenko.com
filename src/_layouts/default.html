@@ -9,9 +9,10 @@
     {% stylesheet main %}
     {% javascript fonts %}
     {% javascript webfontloader/webfontloader %}
+
     {% javascript webcomponentsjs/webcomponents-lite %}
-    <link rel="import" href="{% asset_path polymer-vulcanized %}">
-    <link rel="import" href="{% asset_path vulcanized %}">
+    <link rel="import" href="{% asset_path polymer-vulcanized %}" defer>
+    <link rel="import" href="{% asset_path vulcanized %}" defer>
   </head>
   <body>
     {{ content }}
