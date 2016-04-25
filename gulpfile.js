@@ -39,6 +39,17 @@ const paths = {
     js: 'assets/modernizr'
   },
 
+  sw: {
+    toolbox: {
+      src: 'src/_assets/bower_components/sw-toolbox/sw-toolbox*',
+      dest: 'dist/assets/sw-toolbox'
+    },
+    platinum: {
+      src: 'src/_assets/bower_components/platinum-sw/bootstrap/*.js',
+      dest: 'dist/assets/platinum-sw/bootstrap'
+    }
+  },
+
   vulcanize: {
     dest: 'src/_assets/elements',
     polymer: {
@@ -119,7 +130,15 @@ gulp.task('watch', () => {
     .pipe($.sassLint.format())
 })
 
-gulp.task('vulcanize', () => {
+gulp.task('service-worker', () => {
+  gulp.src(paths.sw.toolbox.src)
+    .pipe(gulp.dest(paths.sw.toolbox.dest))
+
+  return gulp.src(paths.sw.platinum.src)
+    .pipe(gulp.dest(paths.sw.platinum.dest))
+})
+
+gulp.task('vulcanize', ['service-worker'], () => {
   const options = {
     inlineCss: true,
     inlineScripts: true

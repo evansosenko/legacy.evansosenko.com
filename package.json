@@ -25,8 +25,7 @@
     "lint": "gulp lint",
     "lint:watch": "gulp watch",
     "modernizr": "modernizr -c modernizr-config.json -d src/_assets/javascripts/vendor/modernizr.js",
-    "vulcanize": "gulp vulcanize && npm run sw",
-    "sw": "mkdir -p dist/assets/platinum-sw dist/assets/sw-toolbox && cp -r src/_assets/bower_components/platinum-sw/bootstrap dist/assets/platinum-sw && cp -r src/_assets/bower_components/sw-toolbox/sw-toolbox.js src/_assets/bower_components/sw-toolbox/sw-toolbox.map.json dist/assets/sw-toolbox",
+    "vulcanize": "gulp vulcanize",
     "optimize": "npm run customizr && gulp crisper && gulp hash && gulp optimize && gulp precache"
   },
   "files": [
