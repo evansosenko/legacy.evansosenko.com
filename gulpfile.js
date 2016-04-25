@@ -27,7 +27,7 @@ const paths = {
       'dist/sw-import.js',
       'dist/assets/platinum-sw/bootstrap/*.js',
       'dist/assets/sw-toolbox/*.js',
-      'dist/assets/vulcanized-*.js'
+      'dist/assets/*vulcanized-*.js'
     ]
   },
 
