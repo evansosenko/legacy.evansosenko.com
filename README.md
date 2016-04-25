@@ -136,6 +136,8 @@ $ gulp --tasks
 
 Web components imported in `src/_assets/elements/elements.html`
 will be vulcanized to `src/_assets/elements/vulcanized.html`.
+Polymer is vulcanized separately to
+`src/_assets/elements/polymer-vulcanized.html`.
 
 Run vulcanize with
 
@@ -143,7 +145,10 @@ Run vulcanize with
 $ npm run vulcanize
 ```
 
-If Guard is running, then `vulcanized.html`
+This also copies to `dist` any files
+imported directly by the service workers scripts.
+
+If Guard is running, then the vulcanized files
 will be regenerated automatically whenever other files
 in `src/_assets/elements` change.
 
@@ -156,7 +161,7 @@ $ npm run optimize
 ```
 
 This will tailor a customized Modernizr build, run crisper,
-and minify all html and image files.
+minify any unprocessed scripts, and minify all html and image files.
 
 ### Deploy to GitHub Pages
 
