@@ -22,7 +22,9 @@
   {% if jekyll.environment == 'development' %}
     {% javascript vendor/modernizr defer %}
   {% elsif jekyll.environment == 'production' %}
-    <script src="{{ site.assets.cdn }}{{ site.assets.prefix }}/modernizr.js" defer>
+    <script src="{{ site.assets.cdn }}{{ site.assets.prefix }}/modernizr.js"
+            defer>
+    </script>
   {% endif %}
 
   {% if jekyll.environment == 'production' %}
@@ -50,7 +52,9 @@
     {% else %}
       {% assign shortname = site.data.vendor.disqus.devshortname %}
     {% endif %}
-    <script src="https://{{ shortname }}.{{ site.data.vendor.disqus.src }}" defer></script>
+    <script src="https://{{ shortname }}.{{ site.data.vendor.disqus.src }}"
+            defer>
+    </script>
   {% endif %}
   </body>
 </html>
