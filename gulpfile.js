@@ -188,21 +188,15 @@ gulp.task('hash', () => {
     return dest
   }
 
-  gulp.src(paths.dist.src)
+  return gulp.src(paths.dist.src)
     .pipe($.replace(
       `${paths.crisper.polymer.js}.js"`,
       `${makeHashed(paths.crisper.polymer.js, 'js')}"`
     ))
-    .pipe(gulp.dest(paths.dist.dest))
-
-  gulp.src(paths.dist.src)
     .pipe($.replace(
       `${paths.crisper.elements.js}.js"`,
       `${makeHashed(paths.crisper.elements.js, 'js')}"`
     ))
-    .pipe(gulp.dest(paths.dist.dest))
-
-  return gulp.src(paths.dist.src)
     .pipe($.replace(
       `${paths.modernizr.js}.js"`,
       `${makeHashed(paths.modernizr.js, 'js')}"`
