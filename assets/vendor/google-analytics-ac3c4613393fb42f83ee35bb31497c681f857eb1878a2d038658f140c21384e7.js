@@ -1,1 +1,0 @@
-"use strict";ga("create","UA-19631381-4","auto"),ga("send","pageview");
