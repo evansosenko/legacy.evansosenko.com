@@ -19,13 +19,23 @@ end
 
 desc 'Generate, optimize, and test a production build of the Jekyll site'
 task build: :clean do
-  ENV['JEKYLL_ENV'] ||= 'production'
+  jekyll_config = (ENV['JEKYLL_ENV'] ||= 'production')
+  if jekyll_config == 'staging'
+    ENV['JEKYLL_ENV'] = 'production'
+    jekyll_config = 'staging'
+  end
   sh(*%w(npm run vulcanize))
   sh(*%W(bundle exec jekyll build
-         --config _config.yml,_config.#{ENV['JEKYLL_ENV']}.yml))
+         --config _config.yml,_config.#{jekyll_config}.yml))
   sh(*%w(npm run lint))
   sh(*%w(npm run optimize))
   HTMLProofer.check_directory('dist', disable_external: true).run
+end
+
+desc 'Generate, optimize, and test a staging build of the Jekyll site'
+task :staging do
+  ENV['JEKYLL_ENV'] = 'staging'
+  sh(*%w(bundle exec rake))
 end
 
 desc 'Start a local Jekyll development server'
