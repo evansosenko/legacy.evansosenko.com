@@ -257,6 +257,7 @@ gulp.task('imagemin', () => {
 gulp.task('deploy', () => {
   return gulp.src(paths.dist.src)
     .pipe($.ghPages({
+      branch: process.env.DEPLOY_BRANCH || 'gh-pages',
       remoteUrl: `git@github.com:${pkg.repository}.git`,
       message: `Deploy ${gitRevSync.short()} from v${pkg.version}`
     }))
