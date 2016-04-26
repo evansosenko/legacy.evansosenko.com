@@ -51,15 +51,17 @@ const paths = {
   },
 
   vulcanize: {
-    dest: 'src/_assets/elements',
     polymer: {
       build: 'polymer.html',
       name: 'polymer-vulcanized.html',
-      src: 'src/_assets/bower_components/polymer'
+      src: 'src/_assets/bower_components/polymer',
+      dest: 'dist/assets',
+      html: 'polymer-vulcanized'
     },
     elements: {
       name: 'vulcanized.html',
-      src: 'src/_assets/elements/elements.html'
+      src: 'src/_assets/elements/elements.html',
+      dest: 'src/_assets/elements'
     }
   },
 
@@ -67,11 +69,10 @@ const paths = {
     dest: 'assets',
     polymer: {
       src: 'assets/polymer-vulcanized*.html',
-      js: 'assets/polymer-vulcanized'
+      js: 'polymer-vulcanized'
     },
     elements: {
-      src: 'assets/vulcanized*.html',
-      js: 'assets/vulcanized'
+      src: 'assets/vulcanized*.html'
     }
   },
 
@@ -139,30 +140,32 @@ gulp.task('service-worker', () => {
 })
 
 gulp.task('vulcanize', ['service-worker'], () => {
-  const options = {
-    inlineCss: true,
-    inlineScripts: true
-  }
-
   gulp.src(`${paths.vulcanize.polymer.src}/${paths.vulcanize.polymer.build}`)
-    .pipe($.vulcanize(options))
+    .pipe($.vulcanize({
+      inlineCss: true,
+      inlineScripts: true
+    }))
     .pipe($.rename(paths.vulcanize.polymer.name))
-    .pipe(gulp.dest(paths.vulcanize.dest))
+    .pipe(gulp.dest(paths.vulcanize.polymer.dest))
 
-  options.stripExcludes = ['polymer.html']
   return gulp.src(paths.vulcanize.elements.src)
-    .pipe($.vulcanize(options))
+    .pipe($.vulcanize({
+      inlineCss: true,
+      inlineScripts: true,
+      stripExcludes: ['polymer.html'],
+      addedImports: ['polymer-vulcanized.html']
+    }))
     .pipe($.rename(paths.vulcanize.elements.name))
-    .pipe(gulp.dest(paths.vulcanize.dest))
+    .pipe(gulp.dest(paths.vulcanize.elements.dest))
 })
 
 gulp.task('crisper', () => {
   gulp.src(`${paths.dist.dest}/${paths.crisper.polymer.src}`)
-    .pipe($.crisper())
+    .pipe($.crisper({scriptInHead: false}))
     .pipe(gulp.dest(`${paths.dist.dest}/${paths.crisper.dest}`))
 
   return gulp.src(`${paths.dist.dest}/${paths.crisper.elements.src}`)
-    .pipe($.crisper())
+    .pipe($.crisper({scriptInHead: false}))
     .pipe(gulp.dest(`${paths.dist.dest}/${paths.crisper.dest}`))
 })
 
@@ -188,19 +191,27 @@ gulp.task('hash', () => {
     return dest
   }
 
+  const replacements = [
+    [
+      `${paths.vulcanize.polymer.html}.html`,
+      makeHashed(`assets/${paths.vulcanize.polymer.html}`, 'html')
+        .replace('assets/', '')
+    ],
+    [
+      `${paths.crisper.polymer.js}.js`,
+      makeHashed(`assets/${paths.crisper.polymer.js}`, 'js')
+        .replace('assets/', '')
+    ],
+    [
+      `${paths.modernizr.js}.js`,
+      makeHashed(paths.modernizr.js, 'js')
+    ]
+  ]
+
   return gulp.src(paths.dist.src)
-    .pipe($.replace(
-      `${paths.crisper.polymer.js}.js"`,
-      `${makeHashed(paths.crisper.polymer.js, 'js')}"`
-    ))
-    .pipe($.replace(
-      `${paths.crisper.elements.js}.js"`,
-      `${makeHashed(paths.crisper.elements.js, 'js')}"`
-    ))
-    .pipe($.replace(
-      `${paths.modernizr.js}.js"`,
-      `${makeHashed(paths.modernizr.js, 'js')}"`
-    ))
+    .pipe($.replace(replacements[0][0], replacements[0][1], {skipBinary: true}))
+    .pipe($.replace(replacements[1][0], replacements[1][1], {skipBinary: true}))
+    .pipe($.replace(replacements[2][0], replacements[2][1], {skipBinary: true}))
     .pipe(gulp.dest(paths.dist.dest))
 })
 
