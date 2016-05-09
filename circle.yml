@@ -1,3 +1,10 @@
+general:
+  branches:
+    ignore:
+      - master
+      - staging
+      - gh-pages
+
 machine:
   timezone:
     America/Los_Angeles
