@@ -1,0 +1,15 @@
+machine:
+  timezone:
+    America/Los_Angeles
+  node:
+    version: 5.11.0
+  ruby:
+    version: 2.3.1
+
+dependencies:
+  pre:
+    - 'echo ''gem: --no-document'' > ~/.gemrc'
+
+test:
+  override:
+    - bundle exec rake
