@@ -6,7 +6,7 @@
 # https://github.com/github/gitignore
 
 # Deploy directory and keys
-.publish/
+.deploy/
 .travis/deploy.key
 .travis/deploy.key.pub
 

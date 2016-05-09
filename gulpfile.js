@@ -5,6 +5,7 @@ const fs = require('fs')
 const path = require('path')
 
 const gitRevSync = require('git-rev-sync')
+const ghpages = require('gh-pages')
 const gulp = require('gulp')
 const replace = require('replace')
 const $ = require('gulp-load-plugins')()
@@ -261,11 +262,18 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest(paths.dist.dest))
 })
 
-gulp.task('deploy', () => {
-  return gulp.src(paths.dist.src)
-    .pipe($.ghPages({
+gulp.task('deploy', (done) => {
+  ghpages.publish(
+    path.join(process.cwd(), 'dist'), {
+      clone: '.deploy',
+      depth: 2,
+      dotfiles: true,
+      message: `Deploy ${gitRevSync.short()} from v${pkg.version}`,
+      repo: `git@github.com:${pkg.repository}.git`,
       branch: process.env.DEPLOY_BRANCH || 'gh-pages',
-      remoteUrl: `git@github.com:${pkg.repository}.git`,
-      message: `Deploy ${gitRevSync.short()} from v${pkg.version}`
-    }))
+      user: {
+        name: pkg.author.name,
+        email: pkg.author.email
+      }
+    }, done)
 })
