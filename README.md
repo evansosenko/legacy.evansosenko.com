@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/github/release/evansosenko/evansosenko.github.io.svg)](https://github.com/evansosenko/evansosenko.github.io/releases)
 [![GitHub license](https://img.shields.io/badge/license-CC--BY--SA--4.0-blue.svg)](./LICENSE.txt)
 [![Gemnasium](https://img.shields.io/gemnasium/evansosenko/evansosenko.github.io.svg)](https://gemnasium.com/evansosenko/evansosenko.github.io)
-[![Travis](https://img.shields.io/travis/evansosenko/evansosenko.github.io.svg)](https://travis-ci.org/evansosenko/evansosenko.github.io)
+[![CircleCI](https://img.shields.io/circleci/project/evansosenko/evansosenko.github.io.svg)](https://circleci.com/gh/evansosenko/evansosenko.github.io)
 
 > Built from [makenew/jekyll-site](https://github.com/makenew/jekyll-site).
 
@@ -171,11 +171,8 @@ Deploy the `dist` directory to GitHub Pages with
 $ npm run deploy
 ```
 
-If `SOURCE_BRANCH` is set as a Travis CI environment variable,
-then commits pushed to that branch will be deployed automatically.
-This requires `.travis/deploy.key.enc` to be encrypted on Travis,
-the corresponding decryption command in `.travis/deploy.sh`, and
-the corresponding public key added as a deploy key to the GitHub repository.
+Commits pushed to CircleCI deployment branches are deployed automatically.
+This requires a deployment key added to CircleCI.
 
 ## Other Features
 

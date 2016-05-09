@@ -7,8 +7,6 @@
 
 # Deploy directory and keys
 .deploy/
-.travis/deploy.key
-.travis/deploy.key.pub
 
 # Bower components directory
 bower_components/
