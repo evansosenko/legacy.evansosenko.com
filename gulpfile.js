@@ -1,8 +1,12 @@
+'use strict'
+
 const crypto = require('crypto')
 const fs = require('fs')
+const path = require('path')
 
 const gitRevSync = require('git-rev-sync')
 const gulp = require('gulp')
+const replace = require('replace')
 const $ = require('gulp-load-plugins')()
 
 const pkg = require('./package.json')
@@ -22,12 +26,6 @@ const paths = {
       'src/_assets/javascripts/**/*.js',
       '!src/_assets/javascripts/vendor/**/*.js',
       '!src/_assets/javascripts/main.js'
-    ],
-    minify: [
-      'dist/sw-import.js',
-      'dist/assets/platinum-sw/bootstrap/*.js',
-      'dist/assets/sw-toolbox/*.js',
-      'dist/assets/*vulcanized-*.js'
     ]
   },
 
@@ -39,23 +37,12 @@ const paths = {
     js: 'assets/modernizr'
   },
 
-  sw: {
-    toolbox: {
-      src: 'src/_assets/bower_components/sw-toolbox/sw-toolbox*',
-      dest: 'dist/assets/sw-toolbox'
-    },
-    platinum: {
-      src: 'src/_assets/bower_components/platinum-sw/bootstrap/*.js',
-      dest: 'dist/assets/platinum-sw/bootstrap'
-    }
-  },
-
   vulcanize: {
     polymer: {
       build: 'polymer.html',
       name: 'polymer-vulcanized.html',
       src: 'src/_assets/bower_components/polymer',
-      dest: 'dist/assets',
+      dest: 'src/_assets/elements',
       html: 'polymer-vulcanized'
     },
     elements: {
@@ -66,14 +53,20 @@ const paths = {
   },
 
   crisper: {
-    dest: 'assets',
+    dest: 'dist/assets',
     polymer: {
-      src: 'assets/polymer-vulcanized*.html',
-      js: 'polymer-vulcanized'
+      src: 'assets/polymer-vulcanized*.html'
     },
     elements: {
       src: 'assets/vulcanized*.html'
     }
+  },
+
+  hashed: {
+    src: [
+      'dist/assets/sw-toolbox/**/*',
+      'dist/assets/platinum-sw/**/*'
+    ]
   },
 
   precache: {
@@ -131,15 +124,7 @@ gulp.task('watch', () => {
     .pipe($.sassLint.format())
 })
 
-gulp.task('service-worker', () => {
-  gulp.src(paths.sw.toolbox.src)
-    .pipe(gulp.dest(paths.sw.toolbox.dest))
-
-  return gulp.src(paths.sw.platinum.src)
-    .pipe(gulp.dest(paths.sw.platinum.dest))
-})
-
-gulp.task('vulcanize', ['service-worker'], () => {
+gulp.task('vulcanize', () => {
   gulp.src(`${paths.vulcanize.polymer.src}/${paths.vulcanize.polymer.build}`)
     .pipe($.vulcanize({
       inlineCss: true,
@@ -162,11 +147,46 @@ gulp.task('vulcanize', ['service-worker'], () => {
 gulp.task('crisper', () => {
   gulp.src(`${paths.dist.dest}/${paths.crisper.polymer.src}`)
     .pipe($.crisper({scriptInHead: false}))
-    .pipe(gulp.dest(`${paths.dist.dest}/${paths.crisper.dest}`))
+    .pipe(gulp.dest(paths.crisper.dest))
 
   return gulp.src(`${paths.dist.dest}/${paths.crisper.elements.src}`)
     .pipe($.crisper({scriptInHead: false}))
-    .pipe(gulp.dest(`${paths.dist.dest}/${paths.crisper.dest}`))
+    .pipe(gulp.dest(paths.crisper.dest))
+})
+
+gulp.task('hashed', () => {
+  gulp.src(`${paths.dist.dest}/${paths.crisper.polymer.src}`, {
+    base: paths.dist.dest
+  }).pipe($.filenames('polymer'))
+
+  gulp.src([
+    `${paths.dist.dest}/${paths.crisper.elements.src}`,
+    `${paths.dist.dest}/${paths.crisper.elements.src.replace('.html', '.js')}`
+  ], {base: paths.dist.dest})
+    .pipe($.filenames('elements'))
+
+  return gulp.src(paths.hashed.src, {base: paths.dist.dest})
+    .pipe($.filenames('hashed'))
+    .on('end', () => {
+      const elements = $.filenames.get('elements')
+      const polymer = $.filenames.get('polymer')
+      const assets = $.filenames.get('hashed').concat(polymer)
+      const names = assets.map(
+        (f) => (f.replace(/-[a-z0-9]+\.?([a-z]+)$/, '.$1'))
+      )
+      const replacePaths = assets.concat(elements).map(
+        (f) => `${paths.dist.dest}/${f}`
+      )
+
+      assets.forEach((f, i) => {
+        replace({
+          silent: true,
+          regex: path.basename(names[i]),
+          replacement: path.basename(f),
+          paths: replacePaths
+        })
+      })
+    })
 })
 
 gulp.task('hash', () => {
@@ -181,8 +201,8 @@ gulp.task('hash', () => {
 
     const hash =
       crypto.createHash('sha1')
-      .update(fs.readFileSync(distSrc, 'utf8'), 'utf8')
-      .digest('hex')
+        .update(fs.readFileSync(distSrc, 'utf8'), 'utf8')
+        .digest('hex')
 
     const dest = `${src}-${hash}.${ext}`
 
@@ -191,32 +211,18 @@ gulp.task('hash', () => {
     return dest
   }
 
-  const replacements = [
-    [
-      `${paths.vulcanize.polymer.html}.html`,
-      makeHashed(`assets/${paths.vulcanize.polymer.html}`, 'html')
-        .replace('assets/', '')
-    ],
-    [
-      `${paths.crisper.polymer.js}.js`,
-      makeHashed(`assets/${paths.crisper.polymer.js}`, 'js')
-        .replace('assets/', '')
-    ],
-    [
-      `${paths.modernizr.js}.js`,
-      makeHashed(paths.modernizr.js, 'js')
-    ]
-  ]
+  const replacement = {
+    src: `${paths.modernizr.js}.js`,
+    dest: makeHashed(paths.modernizr.js, 'js')
+  }
 
   return gulp.src(paths.dist.src)
-    .pipe($.replace(replacements[0][0], replacements[0][1], {skipBinary: true}))
-    .pipe($.replace(replacements[1][0], replacements[1][1], {skipBinary: true}))
-    .pipe($.replace(replacements[2][0], replacements[2][1], {skipBinary: true}))
+    .pipe($.replace(replacement.src, replacement.dest, {skipBinary: true}))
     .pipe(gulp.dest(paths.dist.dest))
 })
 
 gulp.task('precache', () => {
-  return gulp.src(paths.precache.src)
+  return gulp.src(paths.precache.src, {base: paths.dist.dest})
     .pipe($.filenames('assets'))
     .on('end', () => {
       const json = JSON.parse(fs.readFileSync(paths.precache.json))
@@ -235,10 +241,6 @@ gulp.task('precache', () => {
 })
 
 gulp.task('minify', () => {
-  gulp.src(paths.scripts.minify, {base: 'dist'})
-    .pipe($.uglify())
-    .pipe(gulp.dest(paths.dist.dest))
-
   return gulp.src(paths.html.src)
     .pipe($.htmlmin({
       collapseBooleanAttributes: true,
