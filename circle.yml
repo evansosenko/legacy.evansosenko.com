@@ -21,10 +21,14 @@ dependencies:
 
 test:
   override:
-    - bundle exec rake
+    - bundle exec rake circleci
 
 deployment:
+  production:
+    branch: new
+    commands:
+      - npm run deploy
   staging:
     branch: wip-new
     commands:
-      - npm run deploy
+      - npm run deploy:staging

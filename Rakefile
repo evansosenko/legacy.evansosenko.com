@@ -38,6 +38,18 @@ task :staging do
   sh(*%w(bundle exec rake))
 end
 
+desc 'CircleCI build task'
+task :circleci do
+  abort('Aborting: not in CircleCI.') unless ENV['CIRCLECI'].to_s == 'true'
+
+  case ENV['CIRCLE_BRANCH'].to_s
+  when ENV['STAGING_BRANCH'].to_s
+    sh(*%w(bundle exec rake staging))
+  else
+    sh(*%w(bundle exec rake))
+  end
+end
+
 desc 'Start a local Jekyll development server'
 task dev: :clean do
   spawn(*%w(bundle exec jekyll serve --host 0.0.0.0))

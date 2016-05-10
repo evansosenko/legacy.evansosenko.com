@@ -171,7 +171,9 @@ Deploy the `dist` directory to GitHub Pages with
 $ npm run deploy
 ```
 
-Commits pushed to CircleCI deployment branches are deployed automatically.
+Commits pushed to production or staging branches are deployed automatically.
+Set the corresponding branches with the CircleCI environment variables
+`PRODUCTION_BRANCH` and `STAGING_BRANCH`.
 This requires a deployment key added to CircleCI.
 
 ## Other Features
