@@ -1,0 +1,9 @@
+@import 'global';
+
+.no-js {
+  @each $selector in $font-selectors {
+    #{$selector} {
+      opacity: initial;
+    }
+  }
+}

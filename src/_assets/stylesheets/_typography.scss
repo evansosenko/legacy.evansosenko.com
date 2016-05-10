@@ -16,3 +16,21 @@ pre {
     font-family: font(code), font(monospace);
   }
 }
+
+.no-js,
+.js {
+  @each $selector in $font-selectors {
+    #{$selector} {
+      transition: opacity .25s ease-in-out;
+      opacity: 0;
+    }
+  }
+}
+
+.wf-active {
+  @each $selector in $font-selectors {
+    #{$selector} {
+      opacity: initial;
+    }
+  }
+}

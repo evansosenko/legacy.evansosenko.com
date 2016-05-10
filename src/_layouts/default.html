@@ -7,9 +7,7 @@
     {% endif %}
     {% include head.html %}
     {% stylesheet main %}
-    {% javascript fonts %}
-    {% javascript webfontloader/webfontloader %}
-
+    <noscript>{% stylesheet noscript %}</noscript>
     {% javascript webcomponentsjs/webcomponents-lite %}
     <!-- imported by vulcanize {% asset_path polymer-vulcanized %} -->
     <link rel="import" href="{% asset_path vulcanized %}">
@@ -37,8 +35,11 @@
     {% javascript vendor/prism async data-manual %}
   {% endif %}
 
+  {% javascript fonts defer %}
+  {% javascript webfontloader/webfontloader defer %}
+
   {% if page.math %}
-    {% javascript vendor/katex async %}
+    {% javascript vendor/katex defer %}
   {% endif %}
 
   {% if page.gist %}
