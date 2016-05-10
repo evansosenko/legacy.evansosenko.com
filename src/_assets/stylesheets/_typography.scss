@@ -27,7 +27,8 @@ pre {
   }
 }
 
-.wf-active {
+.wf-active,
+.wf-inactive {
   @each $selector in $font-selectors {
     #{$selector} {
       opacity: initial;
