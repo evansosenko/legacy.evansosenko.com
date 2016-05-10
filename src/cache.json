@@ -2,5 +2,6 @@
 layout: ~
 ---
 {
-  "cacheId": "{{ site.data.meta.name }}"
+  "cacheId": "{{ site.data.meta.name }}",
+  "precache": []
 }

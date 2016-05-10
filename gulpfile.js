@@ -236,6 +236,7 @@ gulp.task('precache', () => {
           if (f === 'index.html') { return '/' }
           return f.replace('/index.html', '/')
         })
+        .concat(json.precache)
         .sort()
 
       fs.writeFileSync(paths.precache.json, JSON.stringify(json))
