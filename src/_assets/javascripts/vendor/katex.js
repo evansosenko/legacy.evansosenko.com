@@ -1,19 +1,27 @@
 //= require katex
 //= require katex/dist/contrib/auto-render.min
 
-'use strict'
+(function () {
+  'use strict'
 
-document.addEventListener('DOMContentLoaded', function () {
-  window.WebFont.load({
-    custom: {
-      families: [
-        '{{ site.data.vendor.katex.families | join:"', '" }}'
-      ],
-      urls: [
-        '{{ site.data.vendor.katex.src }}'
-      ]
-    }
-  })
+  function init () {
+    window.WebFont.load({
+      custom: {
+        families: [
+          '{{ site.data.vendor.katex.families | join:"', '" }}'
+        ],
+        urls: [
+          '{{ site.data.vendor.katex.src }}'
+        ]
+      }
+    })
 
-  window.renderMathInElement(document.body)
-})
+    window.renderMathInElement(document.body)
+  }
+
+  if (document.readyState !== 'loading') {
+    init()
+  } else {
+    document.addEventListener('DOMContentLoaded', init)
+  }
+})()
