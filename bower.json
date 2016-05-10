@@ -32,7 +32,7 @@
     "console-polyfill": "0.2.2",
     "fastclick": "1.0.6",
     "gist-async": "1.0.1",
-    "headroom.js": "https://npmcdn.com/headroom.js/bower.zip",
+    "headroom.js": "https://npmcdn.com/headroom.js@0.9.3/bower.zip",
     "include-media": "1.4.2",
     "jquery": "3.0.0-beta1",
     "katex": "0.6.0",
