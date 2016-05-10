@@ -1,8 +1,8 @@
 //= require prism
 
-(function () {
-  'use strict'
+'use strict'
 
+;(function () {
   function init () {
     window.Prism.highlightAll()
   }
