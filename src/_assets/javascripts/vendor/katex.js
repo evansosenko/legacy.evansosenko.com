@@ -3,7 +3,7 @@
 
 'use strict'
 
-;(function () {
+;(function (window, document) {
   function init () {
     window.renderMathInElement(document.body)
   }
@@ -13,4 +13,4 @@
   } else {
     document.addEventListener('DOMContentLoaded', init)
   }
-})()
+})(window, document)

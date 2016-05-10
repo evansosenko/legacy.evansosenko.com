@@ -2,7 +2,7 @@
 
 'use strict'
 
-;(function () {
+;(function (window, document) {
   function init () {
     window.Prism.highlightAll()
   }
@@ -12,4 +12,4 @@
   } else {
     document.addEventListener('DOMContentLoaded', init)
   }
-})()
+})(window, document)

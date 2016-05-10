@@ -1,14 +1,14 @@
 'use strict'
 
 // FastClick
-if ('addEventListener' in document) {
+;(function (window, document) {
   document.addEventListener('DOMContentLoaded', function () {
     window.FastClick.attach(document.body)
   }, false)
-}
+})(window, document)
 
 // Service Worker Events
-;(function () {
+;(function (document) {
   var swEl = document.getElementById('service-worker')
 
   if (!swEl) { return null }
@@ -16,10 +16,10 @@ if ('addEventListener' in document) {
   swEl.addEventListener('service-worker-installed', function () {
     document.getElementById('toast-service-worker').open()
   })
-})()
+})(document)
 
 // Headroom.js
-;(function () {
+;(function (window, document) {
   var headerEl = document.getElementById('header')
 
   if (!headerEl) { return null }
@@ -37,4 +37,4 @@ if ('addEventListener' in document) {
     }
   })
   .init()
-})()
+})(window, document)
