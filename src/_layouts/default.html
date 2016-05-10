@@ -34,7 +34,7 @@
   {% javascript main defer %}
 
   {% if page.code %}
-    {% javascript vendor/prism defer %}
+    {% javascript vendor/prism async data-manual %}
   {% endif %}
 
   {% if page.math %}
