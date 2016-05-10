@@ -22,7 +22,7 @@
     "bower": "bower install",
     "customizr": "customizr -c customizr.json",
     "deploy": "gulp deploy",
-    "deploy:staging": "DEPLOY_BRANCH=staging gulp deploy",
+    "deploy:staging": "DEPLOY_BRANCH=deploy-staging gulp deploy",
     "lint": "gulp lint",
     "lint:watch": "gulp watch",
     "modernizr": "modernizr -c modernizr-config.json -d src/_assets/javascripts/vendor/modernizr.js",

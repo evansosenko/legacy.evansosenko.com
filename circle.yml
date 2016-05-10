@@ -2,8 +2,8 @@ general:
   branches:
     ignore:
       - master
-      - staging
       - gh-pages
+      - /deploy-.*/
 
 machine:
   timezone:
