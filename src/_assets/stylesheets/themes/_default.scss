@@ -33,6 +33,22 @@ $font-families: (
   )
 );
 
+$webfont-transistion: opacity .25s ease-in-out;
+
+$webfont-families: (
+  heading: ('overpass-n4'),
+  body: ('notosans-n4'),
+  monospace: ('inconsolata-n4'),
+  code: ('monoidregular-n4')
+);
+
+$webfont-selectors: (
+  heading: (h1, h2, h3, h4, h5, h6),
+  body: (p, li),
+  monospace: (p code),
+  code: (pre code)
+);
+
 //
 // Palette
 //

@@ -21,15 +21,28 @@ pre {
 .js {
   @each $selector in $font-selectors {
     #{$selector} {
-      transition: opacity .25s ease-in-out;
+      transition: $webfont-transistion;
       opacity: 0;
     }
   }
 }
 
-.wf-active,
-.wf-inactive {
-  @each $selector in $font-selectors {
+@each $key, $selector in $webfont-selectors {
+  $classes-active: ();
+  $classes-inactive: ();
+
+  @each $family in map-get($webfont-families, $key) {
+    $classes-active: append($classes-active, '.wf-#{$family}-active');
+    $classes-inactive: append($classes-inactive, '.wf-#{$family}-inactive');
+  }
+
+  #{$classes-active} {
+    #{$selector} {
+      opacity: initial;
+    }
+  }
+
+  #{$classes-inactive} {
     #{$selector} {
       opacity: initial;
     }
