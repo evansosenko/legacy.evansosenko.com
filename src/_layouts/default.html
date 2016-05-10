@@ -48,14 +48,7 @@
   {% endif %}
 
   {% if page.comments %}
-    {% if jekyll.environment == 'production' %}
-      {% assign shortname = site.data.vendor.disqus.shortname %}
-    {% else %}
-      {% assign shortname = site.data.vendor.disqus.devshortname %}
-    {% endif %}
-    <script src="https://{{ shortname }}.{{ site.data.vendor.disqus.src }}"
-            defer>
-    </script>
+    {% javascript vendor/disqus async %}
   {% endif %}
   </body>
 </html>
