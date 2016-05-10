@@ -5,7 +5,7 @@ disqus:
   src: disqus.com/embed.js
 
 katex:
-  src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
+  src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css
   families:
     - KaTeX_AMS
     - KaTeX_Caligraphic
