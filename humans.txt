@@ -1,0 +1,23 @@
+/* TEAM */
+Author: Evan Sosenko
+Email: razorx@evansosenko.com
+
+/* SITE */
+Last update: 2016-05-10 00:31:32 +0000
+URL: https://staging.evansosenko.com
+Source: https://github.com/evansosenko/evansosenko.github.io
+
+/* LIBRARIES */
+https://disqus.com/
+https://github.com/paulmillr/console-polyfill
+https://ftlabs.github.io/fastclick/
+https://github.com/razor-x/gist-async
+https://www.google.com/analytics/
+https://jquery.com/
+https://khan.github.io/KaTeX/
+https://zavoloklom.github.io/material-design-iconic-font/index.html
+https://modernizr.com/
+https://larsenwork.com/monoid/
+http://prismjs.com/
+https://10up.github.io/sanitize.css/
+https://github.com/typekit/webfontloader
