@@ -96,10 +96,12 @@ $ npm run bower
 Run `$ rake -T` to see all Rake tasks.
 
 ```
-rake build    # Generate, optimize, and test a production build of the Jekyll site
-rake clean    # Remove build files with jekyll clean
-rake default  # Default task
-rake dev      # Start a local Jekyll development server
+rake build     # Generate, optimize, and test a production build of the Jekyll site
+rake circleci  # CircleCI build task
+rake clean     # Remove build files with jekyll clean
+rake default   # Default task
+rake dev       # Start a local Jekyll development server
+rake staging   # Generate, optimize, and test a staging build of the Jekyll site
 ```
 
 ### LiveReload
@@ -145,9 +147,6 @@ Run vulcanize with
 $ npm run vulcanize
 ```
 
-This also copies to `dist` any files
-imported directly by the service workers scripts.
-
 If Guard is running, then the vulcanized files
 will be regenerated automatically whenever other files
 in `src/_assets/elements` change.
@@ -161,7 +160,7 @@ $ npm run optimize
 ```
 
 This will tailor a customized Modernizr build, run crisper,
-minify any unprocessed scripts, and minify all html and image files.
+minify all html and image files, and fix references to hashed asset names.
 
 ### Deploy to GitHub Pages
 
