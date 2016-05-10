@@ -26,6 +26,7 @@ const paths = {
     src: [
       'src/_assets/javascripts/**/*.js',
       '!src/_assets/javascripts/vendor/**/*.js',
+      '!src/_assets/javascripts/fonts/set-*.js',
       '!src/_assets/javascripts/main.js'
     ]
   },

@@ -25,21 +25,24 @@
     </script>
   {% endif %}
 
+  {% javascript main defer %}
+
   {% if jekyll.environment == 'production' %}
     {% javascript vendor/google-analytics async %}
   {% endif %}
 
-  {% javascript main defer %}
+  {% if page.math %}
+    {% javascript fonts/set-math async %}
+  {% else %}
+    {% javascript fonts/set-default async %}
+  {% endif %}
 
   {% if page.code %}
     {% javascript vendor/prism data-manual async %}
   {% endif %}
 
-  {% javascript fonts defer %}
-  {% javascript webfontloader/webfontloader defer %}
-
   {% if page.math %}
-    {% javascript vendor/katex defer %}
+    {% javascript vendor/katex async %}
   {% endif %}
 
   {% if page.gist %}
