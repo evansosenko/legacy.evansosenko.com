@@ -26,7 +26,7 @@
   {% endif %}
 
   {% if jekyll.environment == 'production' %}
-    <script src="{{ site.data.vendor.google.analytics.src }}" defer></script>
+    {% javascript vendor/google-analytics async %}
   {% endif %}
 
   {% javascript main defer %}
