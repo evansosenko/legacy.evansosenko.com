@@ -25,10 +25,12 @@ test:
 
 deployment:
   production:
-    branch: development
+    branch: production
     commands:
       - npm run deploy
   staging:
-    branch: wip-new
+    branch:
+      - staging
+      - development
     commands:
       - npm run deploy:staging
