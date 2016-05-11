@@ -10,3 +10,5 @@ git {
   branch {$BRANCH}
   hook /caddy-git-deploy-hook {$WEBHOOK_SECRET}
 }
+
+proxy /curriculum-vitae https://evansosenko.github.io
