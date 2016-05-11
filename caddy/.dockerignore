@@ -1,0 +1,9 @@
+Dockerfile
+.dockerignore
+.editorconfig
+.git
+.gitignore
+CHANGELOG.md
+LICENSE.txt
+README.md
+VERSION

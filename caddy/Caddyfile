@@ -1,0 +1,12 @@
+https://{$FQDN}
+tls {$EMAIL}
+
+gzip
+log stdout
+errors stdout
+
+git {
+  repo {$REPO}
+  branch {$BRANCH}
+  hook caddy-git-deploy-hook {$WEBHOOK_SECRET}
+}
