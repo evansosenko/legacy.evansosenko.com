@@ -8,5 +8,5 @@ errors stdout
 git {
   repo {$REPO}
   branch {$BRANCH}
-  hook caddy-git-deploy-hook {$WEBHOOK_SECRET}
+  hook /caddy-git-deploy-hook {$WEBHOOK_SECRET}
 }
