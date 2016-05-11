@@ -8,7 +8,7 @@ errors stdout
 git {
   repo {$REPO}
   branch {$BRANCH}
-  hook /caddy-git-deploy-hook {$WEBHOOK_SECRET}
+  hook /_deployhook {$WEBHOOK_SECRET}
 }
 
 proxy /curriculum-vitae https://evansosenko.github.io
