@@ -108,7 +108,7 @@ gulp.task('sass-lint', () => {
 
 gulp.task('watch', () => {
   gulp.src([paths.html.src, `!${paths.dist.dest}/assets/*vulcanized*`])
-    .pipe($.watch(paths.html.src))
+    .pipe($.watch([paths.html.src, `!${paths.dist.dest}/assets/*vulcanized*`]))
     .pipe($.plumber())
     .pipe($.htmlhint())
     .pipe($.htmlhint.reporter())
