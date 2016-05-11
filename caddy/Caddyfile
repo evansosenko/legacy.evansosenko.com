@@ -12,3 +12,7 @@ git {
 }
 
 proxy /curriculum-vitae https://evansosenko.github.io
+proxy /deck-tmdsc https://evansosenko.github.io
+proxy /deck-ucr-exam https://evansosenko.github.io
+proxy /deck-dichalcogenides-superconductivity https://evansosenko.github.io
+proxy /deck-spin-lifetime https://evansosenko.github.io
