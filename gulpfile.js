@@ -270,7 +270,7 @@ gulp.task('deploy', (done) => {
       clone: '.deploy',
       depth: 2,
       dotfiles: true,
-      message: `Deploy ${gitRevSync.short()} from v${pkg.version}`,
+      message: `Deploy ${gitRevSync.short()} from v${pkg.version} [ci skip]`,
       repo: `git@github.com:${pkg.repository}.git`,
       branch: process.env.DEPLOY_BRANCH || 'deploy-production',
       user: {
