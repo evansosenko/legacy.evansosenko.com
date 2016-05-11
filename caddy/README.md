@@ -28,10 +28,13 @@ $ docker pull evansosenko/caddy-evansosenko.com
 $ docker run -d caddy-evansosenko.com \
   -v $HOME/.caddy:/root/.caddy \
   -p 443:443 \
-  -e FQDN=evansosenko.com \
   -e EMAIL=razorx@evansosenko.com \
-  -e REPO=https://github.com/evansosenko/evansosenko.github.io.git \
-  -e BRANCH=deploy-production \
+  -e PRODUCTION_FQDN=evansosenko.com \
+  -e PRODUCTION_REPO=https://github.com/evansosenko/evansosenko.github.io.git \
+  -e PRODUCTION_BRANCH=deploy-production \
+  -e STAGING_FQDN=staging.evansosenko.com \
+  -e STAGING_REPO=https://github.com/evansosenko/evansosenko.github.io.git \
+  -e STAGING_BRANCH=deploy-staging \
   -e WEBHOOK_SECRET=secretkey
 ```
 

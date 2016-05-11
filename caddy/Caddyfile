@@ -1,18 +1,33 @@
-https://{$FQDN}
-tls {$EMAIL}
+https://{$PRODUCTION_FQDN} {
+  root production
+  tls {$EMAIL}
+  gzip
+  log stdout
+  errors stdout
 
-gzip
-log stdout
-errors stdout
+  git {
+    repo {$PRODUCTION_REPO}
+    branch {$PRODUCTION_BRANCH}
+    hook /_deployhook/production {$WEBHOOK_SECRET}
+  }
 
-git {
-  repo {$REPO}
-  branch {$BRANCH}
-  hook /_deployhook {$WEBHOOK_SECRET}
+  proxy /curriculum-vitae https://evansosenko.github.io
+  proxy /deck-tmdsc https://evansosenko.github.io
+  proxy /deck-ucr-exam https://evansosenko.github.io
+  proxy /deck-dichalcogenides-superconductivity https://evansosenko.github.io
+  proxy /deck-spin-lifetime https://evansosenko.github.io
 }
 
-proxy /curriculum-vitae https://evansosenko.github.io
-proxy /deck-tmdsc https://evansosenko.github.io
-proxy /deck-ucr-exam https://evansosenko.github.io
-proxy /deck-dichalcogenides-superconductivity https://evansosenko.github.io
-proxy /deck-spin-lifetime https://evansosenko.github.io
+https://{$STAGING_FQDN} {
+  root staging
+  tls {$EMAIL}
+  gzip
+  log stdout
+  errors stdout
+
+  git {
+    repo {$STAGING_REPO}
+    branch {$STAGING_BRANCH}
+    hook /_deployhook/staging {$WEBHOOK_SECRET}
+  }
+}
