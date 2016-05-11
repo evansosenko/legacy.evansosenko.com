@@ -25,7 +25,7 @@ test:
 
 deployment:
   production:
-    branch: new
+    branch: development
     commands:
       - npm run deploy
   staging:

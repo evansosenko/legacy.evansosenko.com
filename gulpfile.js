@@ -272,7 +272,7 @@ gulp.task('deploy', (done) => {
       dotfiles: true,
       message: `Deploy ${gitRevSync.short()} from v${pkg.version}`,
       repo: `git@github.com:${pkg.repository}.git`,
-      branch: process.env.DEPLOY_BRANCH || 'gh-pages',
+      branch: process.env.DEPLOY_BRANCH || 'deploy-production',
       user: {
         name: pkg.author.name,
         email: pkg.author.email
