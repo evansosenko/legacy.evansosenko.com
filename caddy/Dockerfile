@@ -23,6 +23,7 @@ EXPOSE 80 443
 VOLUME /root/.caddy
 
 COPY Caddyfile /etc/Caddyfile
+COPY Caddyfile.default /etc/Caddyfile.default
 
 WORKDIR /srv
 

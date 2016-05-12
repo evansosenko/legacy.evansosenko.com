@@ -1,9 +1,6 @@
 https://{$PRODUCTION_FQDN} {
+  import Caddyfile.default
   root production
-  tls {$EMAIL}
-  gzip
-  log stdout
-  errors stdout
 
   git {
     repo {$PRODUCTION_REPO}
@@ -19,12 +16,8 @@ https://{$PRODUCTION_FQDN} {
 }
 
 https://{$STAGING_FQDN} {
+  import Caddyfile.default
   root staging
-  tls {$EMAIL}
-  gzip
-  log stdout
-  errors stdout
-
   git {
     repo {$STAGING_REPO}
     branch {$STAGING_BRANCH}
