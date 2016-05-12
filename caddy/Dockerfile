@@ -24,6 +24,7 @@ VOLUME /root/.caddy
 
 COPY Caddyfile /etc/Caddyfile
 COPY Caddyfile.default /etc/Caddyfile.default
+COPY Caddyfile.csp /etc/Caddyfile.csp
 
 WORKDIR /srv
 

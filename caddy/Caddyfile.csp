@@ -1,0 +1,6 @@
+header / Content-Security-Policy "script-src 'self'"
+header /curriculum-vitae -Content-Security-Policy
+header /deck-tmdsc -Content-Security-Policy
+header /deck-ucr-exam -Content-Security-Policy
+header /deck-dichalcogenides-superconductivity -Content-Security-Policy
+header /deck-spin-lifetime -Content-Security-Policy
