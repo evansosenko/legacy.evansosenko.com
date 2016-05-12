@@ -1,6 +1,6 @@
 https://{$PRODUCTION_FQDN} {
-  import Caddyfile.default
-  import Caddyfile.csp
+  import /etc/Caddyfile.default
+  import /etc/Caddyfile.csp
   root production
 
   git {
@@ -17,8 +17,8 @@ https://{$PRODUCTION_FQDN} {
 }
 
 https://{$STAGING_FQDN} {
-  import Caddyfile.default
-  import Caddyfile.csp
+  import /etc/Caddyfile.default
+  import /etc/Caddyfile.csp
   root staging
   git {
     repo {$STAGING_REPO}
