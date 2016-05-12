@@ -8,11 +8,11 @@ https://{$PRODUCTION_FQDN} {
     hook /_deployhook/production {$WEBHOOK_SECRET}
   }
 
-  proxy /curriculum-vitae https://evansosenko.github.io
-  proxy /deck-tmdsc https://evansosenko.github.io
-  proxy /deck-ucr-exam https://evansosenko.github.io
-  proxy /deck-dichalcogenides-superconductivity https://evansosenko.github.io
-  proxy /deck-spin-lifetime https://evansosenko.github.io
+  proxy /curriculum-vitae https://{$PROXY_FQDN}
+  proxy /deck-tmdsc https://{$PROXY_FQDN}
+  proxy /deck-ucr-exam https://{$PROXY_FQDN}
+  proxy /deck-dichalcogenides-superconductivity https://{$PROXY_FQDN}
+  proxy /deck-spin-lifetime https://{$PROXY_FQDN}
 }
 
 https://{$STAGING_FQDN} {
