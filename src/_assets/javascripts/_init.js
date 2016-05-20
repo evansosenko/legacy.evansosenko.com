@@ -9,14 +9,12 @@
 
 // Service Worker Events
 ;(function (document) {
-  document.addEventListener('DOMContentLoaded', function () {
-    var swEl = document.getElementById('service-worker')
+  var swEl = document.getElementById('service-worker')
 
-    if (!swEl) { return null }
+  if (!swEl) { return null }
 
-    swEl.addEventListener('service-worker-installed', function () {
-      document.getElementById('toast-service-worker').open()
-    })
+  swEl.addEventListener('service-worker-installed', function () {
+    document.getElementById('toast-service-worker').open()
   })
 })(document)
 
