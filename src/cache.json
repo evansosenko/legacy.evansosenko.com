@@ -1,15 +1,9 @@
 ---
 layout: ~
 ---
-{% if jekyll.environment == 'production' %}
-  {% assign shortname = site.data.vendor.disqus.shortname %}
-{% else %}
-  {% assign shortname = site.data.vendor.disqus.devshortname %}
-{% endif %}
 {
   "cacheId": "{{ site.data.meta.name }}",
   "precache": [
-    "https://{{ shortname }}.{{ site.data.vendor.disqus.src }}",
     "{{ site.data.vendor.katex.src }}"
   ]
 }
