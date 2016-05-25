@@ -24,12 +24,24 @@ task build: :clean do
     ENV['JEKYLL_ENV'] = 'production'
     jekyll_config = 'staging'
   end
+
+  configs = %W(_config.yml _config.#{jekyll_config}.yml)
+  config = configs.map(&YAML.method(:load_file)).reduce(&:merge)
+
   sh(*%w(npm run vulcanize))
-  sh(*%W(bundle exec jekyll build
-         --config _config.yml,_config.#{jekyll_config}.yml))
+  sh(*%W(bundle exec jekyll build --config #{configs.join(',')}))
   sh(*%w(npm run lint))
   sh(*%w(npm run optimize))
-  HTMLProofer.check_directory('dist', disable_external: true).run
+
+  HTMLProofer.check_directory(
+    'dist',
+    enforce_https: true,
+    check_html: true,
+    check_favicon: true,
+    assume_extension: true,
+    url_ignore: [%r{^#{config['url']}/} => '/'],
+    url_swap: { %r{^#{config['baseurl']}/} => '/' }
+  ).run
 end
 
 desc 'Generate, optimize, and test a staging build of the Jekyll site'
