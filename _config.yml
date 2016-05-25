@@ -16,6 +16,8 @@ kramdown:
   math_engine: none
 
 assets:
+  features:
+    liquid: true
   sources:
     - _assets/bower_components
     - _assets/elements
