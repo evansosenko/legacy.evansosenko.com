@@ -2,3 +2,4 @@ tls {$EMAIL}
 gzip
 log stdout
 errors stdout
+ext .html
