@@ -1,5 +1,9 @@
 tls {$EMAIL}
 gzip
 log stdout
-errors stdout
 ext .html
+
+errors {
+  log stdout
+  404 404.html
+}
