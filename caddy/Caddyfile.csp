@@ -1,4 +1,4 @@
-header / Content-Security-Policy "script-src 'self'"
+header / Content-Security-Policy "script-src 'self' https://evansosenko.disqus.com https://www.google-analytics.com"
 header /curriculum-vitae -Content-Security-Policy
 header /deck-tmdsc -Content-Security-Policy
 header /deck-ucr-exam -Content-Security-Policy
