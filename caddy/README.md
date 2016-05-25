@@ -20,7 +20,7 @@ $ docker pull evansosenko/caddy-evansosenko.com
 ```
 
 [Docker]: https://www.docker.com/
-[evansosenko/caddy-evansosenko.com]: https://hub.docker.com/r/evansosenk/caddy-evansosenko.com/
+[evansosenko/caddy-evansosenko.com]: https://hub.docker.com/r/evansosenko/caddy-evansosenko.com/
 
 ### Running
 
