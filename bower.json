@@ -34,7 +34,7 @@
     "gist-async": "1.0.1",
     "headroom.js": "https://npmcdn.com/headroom.js@0.9.3/bower.zip",
     "include-media": "1.4.2",
-    "jquery": "3.0.0-beta1",
+    "jquery": "3.0.0",
     "katex": "0.6.0",
     "overpass": "2.1",
     "paper-toast": "polymerelements/paper-toast#1.2.2",
@@ -48,6 +48,6 @@
     "webfontloader": "1.6.24"
   },
   "resolutions": {
-    "jquery": "3.0.0-beta1"
+    "jquery": "3.0.0"
   }
 }
