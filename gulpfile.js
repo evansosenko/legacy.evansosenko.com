@@ -139,8 +139,8 @@ gulp.task('vulcanize', () => {
     .pipe($.vulcanize({
       inlineCss: true,
       inlineScripts: true,
-      stripExcludes: ['polymer.html'],
-      addedImports: ['polymer-vulcanized.html']
+      stripExcludes: [paths.vulcanize.polymer.build],
+      addedImports: [paths.vulcanize.polymer.name]
     }))
     .pipe($.rename(paths.vulcanize.elements.name))
     .pipe(gulp.dest(paths.vulcanize.elements.dest))
