@@ -7,3 +7,5 @@ errors {
   log stdout
   404 404.html
 }
+
+header / -Cache-Control
