@@ -55,6 +55,16 @@
   name: publications and talks
 
 - type: entry
+  name: Doctoral Thesis Defense at UCR
+  start: August 2016
+  location: Riverside, CA, US
+  description: >-
+    Spin and valley physics in two dimensional systems:
+    Graphene and superconducting transition metal dichalcogenides.
+  url: https://evansosenko.com/deck-doctoral-thesis/
+  icon: fi-projection-screen
+
+- type: entry
   name: Contributed Talk, APS March Meeting
   start: March 2016
   location: Baltimore, MD, US
