@@ -68,7 +68,7 @@ keywords: [ physics, math, code, development, web development, blog, personal ]
 # Uncomment below to set default meta info.
 meta:
   locale: en_US
-  description: "Personal site and blog of Evan Sosenko: Physics Ph.D. candidate, developer, gamer, and tinkerer."
+  description: "Personal site and blog of Evan Sosenko: Physics Ph.D., developer, gamer, and tinkerer."
   title:
     prefix: ""
     suffix: " - Evan Sosenko"
