@@ -55,6 +55,14 @@
   name: publications and talks
 
 - type: entry
+  name: Doctoral Thesis
+  start: 2016
+  location: University of California, Riverside, Riverside, CA, US
+  description: Spin and Valley Physics in Two Dimensional Systems: Graphene and Superconducting Transition Metal Dichalcogenides
+  url: https://escholarship.org/uc/item/4941w4t0
+  icon: fi-page-filled
+
+- type: entry
   name: Unconventional superconductivity and anomalous response in hole-doped transition metal dichalcogenides
   start: April 2017
   location: University of California, Riverside, Riverside, CA, US
