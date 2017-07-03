@@ -139,6 +139,9 @@ desc 'Prepare the Travis CI build environment'
 task :travis_env do
   next if ENV['SKIP_DEPLOY'].to_s == 'true' && ENV['REQUIRE_KEY'].to_s != 'true'
 
+  sh "git config --global user.name ${ENV[DEPLOY_NAME]}"
+  sh "git config --global user.email ${ENV[DEPLOY_EMAIL]}"
+
   deploy_key = ENV['DEPLOY_KEY'].to_s
   .split('[NL]').join("\n").gsub('[SP]', ' ')
   unless deploy_key.empty?
