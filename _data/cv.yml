@@ -156,6 +156,14 @@
   id: business
 
 - type: entry
+  name: Senior Software Engineer
+  start: 2016
+  end: 2021
+  location: Meltwater, San Francisco, CA, US
+  description: Team lead and full stack developer for data driven reporting solutions.
+  url: https://www.meltwater.com/
+
+- type: entry
   name: Owner &amp; Technical Administrator
   start: 2001
   end: present
