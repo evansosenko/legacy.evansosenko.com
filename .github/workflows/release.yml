@@ -20,9 +20,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Install dependencies
-        run: npm install
-      - name: Install dependencies
+      - name: Install Node.js dependencies
         run: npm install
       - name: Build
         run: bundle exec rake build
