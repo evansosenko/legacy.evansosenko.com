@@ -1,7 +1,7 @@
 # evansosenko.com
 
 [![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-blue.svg)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/evansosenko/evansosenko.github.io.svg)](https://gemnasium.com/evansosenko/evansosenko.github.io)
+[![release](https://github.com/evansosenko/evansosenko.github.io/actions/workflows/release.yml/badge.svg?branch=source)](https://github.com/evansosenko/evansosenko.github.io/actions/workflows/release.yml)
 
 Source for [my personal site](https://evansosenko.com/) running on Jekyll and Foundation.
 
