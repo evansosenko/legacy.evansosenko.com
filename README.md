@@ -2,7 +2,6 @@
 
 [![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-blue.svg)](./LICENSE.txt)
 [![Dependency Status](https://img.shields.io/gemnasium/evansosenko/evansosenko.github.io.svg)](https://gemnasium.com/evansosenko/evansosenko.github.io)
-[![Build Status](https://img.shields.io/travis/evansosenko/evansosenko.github.io/source.svg)](https://travis-ci.org/evansosenko/evansosenko.github.io)
 
 Source for [my personal site](https://evansosenko.com/) running on Jekyll and Foundation.
 
@@ -21,7 +20,7 @@ If you like this, check out the sister project
   * Basic [Rake](https://github.com/jimweirich/rake) tasks with support
     for dev and testing modes, run `rake -D` for info.
   * Automatically publish to [GitHub pages](http://pages.github.com/)
-    with [Travis CI](https://travis-ci.org/).
+    with GitHub Actions.
   * [LiveReload](http://livereload.com/) support. Just run `guard`.
 
 ### Running [Foundation by ZURB](http://foundation.zurb.com/).
@@ -79,7 +78,7 @@ and only the `index.html` page has been created with minimal markup.
 
 The `demo` branch is a full website that will contain
 real examples and documentation for the included features.
-That branch is automatically built and published by Travis CI.
+That branch is automatically built and published by GitHub Actions.
 
 Demo site hosted on GitHub pages:
 [io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
@@ -113,10 +112,7 @@ $ git fetch upstream
 $ git checkout -b jekyll-and-zurb upstream/master
 ```
 
-## Automatic publishing to GitHub pages with Travis CI
-
-Note: you can still use Travis CI for testing only (no deploy step):
-simply add `SKIP_DEPLOY=true` to the Travis environment.
+## Automatic publishing to GitHub pages with GitHub Actions
 
 If you are hosting at `username.github.io` you will need to leave the `master` branch empty
 and put your code in a different branch.
@@ -145,49 +141,6 @@ $ git add index.html
 $ git commit -m "GitHub Pages placeholder"
 $ git push -u origin gh-pages
 $ git checkout master
-```
-
-Next, install the travis gem,
-
-```bash
-$ gem install travis
-```
-
-create a
-[GitHub Deploy Key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys),
-and name the private key `.deploy_key`.
-Encrypt it with
-
-```bash
-$ travis encrypt-file .deploy_key
-```
-
-Commit the encrypted file `.deploy_key.enc` and modify
-the `before_install` quoted command in `.travis.yml` to match the generated one.
-
-Instead of (or in addition to) checking `.deploy_key.enc` into the repository,
-if the `DEPLOY_KEY` environment variable is not empty, then its value will be
-used to override the contents of the `.deploy_key` file during the build.
-This is useful if you need to have repository specific deploy keys
-(convenient when forking or maintaining a staging site as described below).
-Do not use actual newlines or spaces in the environment variable string;
-instead, `[NL]` will be converted to a real newline and `[SP]` to a real space.
-
-Set the source branch that will be used to build the site.
-
-```bash
-$ travis env set SOURCE_BRANCH master
-```
-
-Other branches will still be built for testing,
-but only changes to the `SOURCE_BRANCH` will be deployed.
-
-Finally, switch on your repo in Travis CI and push your changes.
-
-```bash
-$ git add .travis.yml
-$ git commit -m "Automatic publishing to GitHub pages with Travis CI."
-$ git push
 ```
 
 ### Staging site
