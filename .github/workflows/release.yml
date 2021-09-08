@@ -29,3 +29,4 @@ jobs:
         with:
           branch: master
           folder: _site
+          clean: true
