@@ -13,7 +13,7 @@
 
 - name: Examplr
   description: Node.js Example Runner
-  url: Node.js Example Runner
+  url: https://github.com/meltwater/node-examplr
 
 - name: EVE Online Overview Generator
   description: Generate DRY modular overviews.
